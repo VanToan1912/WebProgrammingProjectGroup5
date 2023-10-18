@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/gioi_thieu_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+    <title> Giới thiệu</title>
+</head>
+<body>
+<div class="container">
+    <section class="introduce-1">
+        <a href="#"><img src="images/logo/Frame 1.png" height="100" width="100" alt="logo" /></a>
+        <div class="text-box">
+            <h1> Cây giống Nông Lâm</h1>
+            <p>Trang web bán cây giống là nơi bạn có cơ hội tiếp cận một loạt các loại cây. <br> Bạn có thể tìm thấy cây giống hiếm, cảnh quan theo phong cách riêng</p>
+            <a href="#" class="join-btn" id="scroll-to-introduce-2">Tìm hiểu thêm</a>
+        </div>
+    </section>
+    <section class="introduce-2" id="introduce-2">
+        <h2>Những điều mà bạn chưa biết về chúng tôi</h2>
+        <p>Cây giống mà chúng tôi cung cấp có nguồn gốc từ...</p>
+
+        <div class="row">
+            <div class="more-col">
+                <h3>Cây Giống Nông Lâm</h3>
+                <p class="p-more">Chúng tôi tự hào là nguồn cung cấp hàng đầu cho cây giống tươi mát.
+                    Với sự quan tâm đặc biệt đến chất lượng và sự tận tâm trong quá trình sản xuất,
+                    chúng tôi cam kết mang đến cho bạn những loại cây giống chất lượng nhất từ nguồn gốc đáng tin cậy.</p>
+            </div>
+
+            <div class="more-col">
+                <h3>Chất Lượng Sản Phẩm</h3>
+                <p class="p-more">Với kỹ thuật chăm sóc và sản xuất tiên tiến,
+                    chúng tôi đảm bảo rằng mọi cây giống trên trang web của chúng tôi đều là sản phẩm đỉnh cao về sức kháng, sự phát triển, và năng suất.</p>
+            </div>
+
+            <div class="more-col">
+                <h3>Đa Dạng Cây Giống</h3>
+                <p class="p-more">
+                    Chúng tôi cung cấp đa dạng các loại cây giống như: <br>
+                    – Cây giống ăn quả<br>
+                    – Cây giống hoa<br>
+                    – Cây giống hoa lan các loại<br>
+                    – Cây giống trang trí sân vườn<br>
+                    – Cây cảnh, cây công trình
+                </p>
+            </div>
+        </div>
+        <a href="#" class="join-btn2" id="scroll-to-introduce-3">Thêm</a>
+    </section>
+    <section class="introduce-3">
+        <h1>Một số loại cây giống mà chúng tôi cung cấp</h1>
+        <p>Bạn có thể tham khảo thêm ở <span><a href="#">Danh mục sản phẩm</a></span></p>
+
+        <div class="row">
+            <div class="introduce3-col">
+                <img src="images/tree/Chùm-ảnh_-So-sánh-cây-Bonsai-và-cây-thật-ở-tự-nhiên___-Cỏ-Dại.png" height="360"
+                     width="360" alt="hoa">
+                <div class="layer">
+                    <h3 class="gt-tree">GIỐNG CÂY 1</h3>
+                </div>
+            </div>
+            <div class="introduce3-col">
+                <img src="images/tree/Chùm-ảnh_-So-sánh-cây-Bonsai-và-cây-thật-ở-tự-nhiên___-Cỏ-Dại.png" height="360"
+                     width="360" alt="hoa">
+                <div class="layer">
+                    <h3 class="gt-tree">GIỐNG CÂY 1</h3>
+                </div>
+            </div>
+            <div class="introduce3-col">
+                <img src="images/tree/Chùm-ảnh_-So-sánh-cây-Bonsai-và-cây-thật-ở-tự-nhiên___-Cỏ-Dại.png" height="360"
+                     width="360" alt="hoa">
+                <div class="layer">
+                    <h3 class="gt-tree">GIỐNG CÂY 1</h3>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>
+<script>
+    document.getElementById('scroll-to-introduce-2').addEventListener('click', function (e) {
+        e.preventDefault();
+        const introduce2Section = document.getElementById('introduce-2');
+        introduce2Section.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    document.getElementById('scroll-to-introduce-3').addEventListener('click', function (e) {
+        e.preventDefault();
+        const introduce3Section = document.querySelector('.introduce-3');
+        const offsetTop = introduce3Section.offsetTop;
+        window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+        });
+    });
+
+</script>
+</body>
+</html>
