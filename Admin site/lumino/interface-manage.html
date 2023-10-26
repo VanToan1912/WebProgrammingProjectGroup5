@@ -81,7 +81,7 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <div class="profile-sidebar">
         <div class="profile-userpic">
-            <img src="/lumino/asset/images/avatar.png" class="img-responsive" alt="avatar">
+            <img src="/Admin%20site/lumino/asset/images/avatar.png" class="img-responsive" alt="avatar">
         </div>
         <div class="profile-usertitle">
             <div class="profile-usertitle-name">Jun</div>
@@ -92,37 +92,391 @@
     <ul class="nav menu">
         <li><a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a></li>
         <li class="active"><a href="interface-manage.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a></li>
-        <li class="parent ">
-            <a data-toggle="collapse" href="#sub-item-1">
-                <em class="fa fa-navicon"></em> Quản lý trang web
-                <span data-toggle="collapse" href="#sub-item-1" class="icon pull-right">
-                    <em class="fa fa-plus"></em>
-                </span>
+        <li>
+            <a class="" href="employee-manage.html">
+                <span class="fa fa-user"></span> Quản lý nhân viên
             </a>
-            <ul class="children collapse" id="sub-item-1">
-                <li>
-                    <a class="" href="employee-manage.html">
-                        <span class="fa fa-arrow-right"></span> Quản lý nhân viên
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="stock-manage.html">
-                        <span class="fa fa-arrow-right"></span> Quản lý hàng hóa
-                    </a>
-                </li>
-                <li>
-                    <a class="" href="bill-manage.html">
-                        <span class="fa fa-arrow-right"></span> Quản lý hóa đơn
-                    </a>
-                </li>
-            </ul>
+        </li>
+        <li>
+            <a class="" href="stock-manage.html">
+                <span class="fa fa-stack-exchange"></span> Quản lý hàng hóa
+            </a>
+        </li>
+        <li>
+            <a class="" href="bill-manage.html">
+                <span class="fa fa-money"></span> Quản lý hóa đơn
+            </a>
         </li>
         <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
     </ul>
 </div>
 <!--Sidebar-->
 
+<!--Content-->
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Quản lý giao diện</h1>
+        </div>
+    </div>
 
+    <div class="panel">
+        <table class="interface-table">
+            <tr class="rows">
+                <th class="column">Tên danh mục</th>
+                <th class="column">Trang chủ</th>
+                <th class="column">Danh mục</th>
+                <th class="column">Hiển thị</th>
+                <th class="column">Chỉnh sửa</th>
+            </tr>
+            <tr class="rows">
+                <td class="column name">DANH MỤC SẢN PHẨM</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">TRANG CHỦ</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">GIỚI THIỆU</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">SẢN PHẨM</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">HƯỚNG DẪN MUA HÀNG</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">TIN TỨC</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa fa fa-pencil-square"></a> <a class="fa fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY ĂN TRÁI</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY CÓ HOA</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY DƯA LEO</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY CẢNH</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY LỚN</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY ĐỘC LẠ - HIẾM</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY BONSAI</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY GIỐNG</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">HOA LAN</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">HOA LAN CÂY GIỐNG</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">PHÂN BÓN - VẬT TƯ</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">SẢN PHẨM KHUYẾN MÃI</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                </td>
+                <td class="column"><a class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<!--Content-->
+
+<!--Script-->
 <script src="js/jquery-1.11.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/chart.min.js"></script>
