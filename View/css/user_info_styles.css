@@ -1,27 +1,28 @@
-
 body {
-    background-color: #fff;
-    margin-top: 20px;
-    padding: 40px;
+    background-color: #f7f7f7;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-
 .container {
-    padding: 20px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .card {
-    border: 1px solid #008000;
+    border: 1px solid #ddd;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 10px;
     padding: 40px;
 }
-.card-body{
+
+.card-body {
     justify-content: center;
     margin: 10px;
 }
@@ -31,15 +32,18 @@ body {
     padding: 10px 15px;
     text-decoration: none;
     color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .list-group-item a:hover {
     background-color: #008000;
     color: #fff;
 }
-.mt-1{
+
+.mt-1 {
     color: grey;
 }
+
 .ui-w-80 {
     display: flex;
     justify-content: center;
@@ -53,7 +57,6 @@ body {
     max-height: 100%;
 }
 
-
 label.btn {
     margin-bottom: 0;
 }
@@ -64,7 +67,6 @@ label.btn {
     color: #008000;
 }
 
-
 .form-label {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -73,12 +75,11 @@ label.btn {
 }
 
 .form-group {
-    /*margin: auto;*/
     margin-bottom: 25px;
 }
+
 .form-control {
     margin-top: 8px;
-    margin-right: 30px;
     width: 100%;
     padding: 10px;
     border: 1px solid #008000;
@@ -86,14 +87,13 @@ label.btn {
     background-color: #fff;
 }
 
-
 .alert.alert-warning {
     margin-top: 10px;
-    background-color: #ffffff;
-    color: black;
+    background-color: #fff;
+    color: #000;
 }
-.alert.alert-warning a{
 
+.alert.alert-warning a {
     padding: 3px;
     border-radius: 1px;
 }
@@ -103,24 +103,26 @@ label.btn {
 }
 
 .btn-primary {
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 5px;
     background-color: #008000;
     color: #fff;
-    border: black;
+    border: none;
+    cursor: pointer;
 }
 
 .btn-default {
-    padding: 5px;
+    padding: 10px 20px;
     border-radius: 5px;
     background-color: #fff;
     color: #008000;
-    border: none;
+    border: 1px solid #008000;
+    cursor: pointer;
 }
 
-
 .btn:hover {
-    opacity: 0.5;
-    background-color: black;
-    color: #fff;
+    opacity: 0.8;
+}
+.tab-pane{
+    margin-top: 10px;
 }
