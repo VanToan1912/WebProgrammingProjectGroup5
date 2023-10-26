@@ -81,7 +81,12 @@ input[type="password"] {
     margin-left: 15px;
     transition: background 0.3s, color 0.3s;
 }
-
+.btn a{
+    color: white;
+}
+.btn a:hover{
+    color: #000;
+}
 .btn:hover {
     background: #ff4500;
     color: white;
