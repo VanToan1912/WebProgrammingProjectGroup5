@@ -2,99 +2,217 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/gioi_thieu_styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-    <title> Giới thiệu</title>
+    <link rel="stylesheet" href="css/gioi_thieu_styles.css">
+    <link rel="stylesheet" href="images/icons/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Hướng dẫn</title>
 </head>
 <body>
-<div class="container">
-    <section class="introduce-1">
-        <a href="#"><img src="images/logo/Frame 1.png" height="100" width="100" alt="logo" /></a>
-        <div class="text-box">
-            <h1> Cây giống Nông Lâm</h1>
-            <p>Trang web bán cây giống là nơi bạn có cơ hội tiếp cận một loạt các loại cây. <br> Bạn có thể tìm thấy cây giống hiếm, cảnh quan theo phong cách riêng</p>
-            <a href="#" class="join-btn" id="scroll-to-introduce-2">Tìm hiểu thêm</a>
+<!--Header Section--><header class="header">
+    <div class="nav-bar top-bar">
+        <div class="web-name" style="font-weight: bold"> Trung Tâm Cây Giống Nông Lâm</div>
+        <nav class="list">
+            <ul>
+                <li>
+                    <a href="#" class="tooltip ti-help"> Hỗ Trợ
+                        <span class="tooltiptext">Hỗ Trợ</span></a>
+                </li>
+                <li>
+                    <a href="#" class="tooltip ti-time"> 8:00 - 17:00
+                        <span class="tooltiptext">8:00 - 17:00</span></a>
+                </li>
+                <li>
+                    <a href="#" class="tooltip ti-mobile"> 0929729120
+                        <span class="tooltiptext">0929729120</span></a>
+                </li>
+                <li>
+                    <a href="#" class="tooltip ti-facebook">
+                        <span class="tooltiptext">Theo dõi chúng tôi</span></a>
+                </li>
+                <li>
+                    <a href="https://mail.google.com" class="tooltip ti-email">
+                        <span class="tooltiptext">Đóng góp ý kiến</span></a>
+                </li>
+                <li>
+                    <button class="sign-up-button">
+                        Đăng Ký
+                    </button>
+                    /
+                    <button class="login-button">
+                        Đăng Nhập
+                    </button>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="nav-bar middle-bar row">
+        <div class="col">
+            <a href="#"><img src="images/header/logo.png" alt="logo" class="logo" style="width: 100px"></a>
         </div>
-    </section>
-    <section class="introduce-2" id="introduce-2">
-        <h2>Những điều mà bạn chưa biết về chúng tôi</h2>
-        <p>Cây giống mà chúng tôi cung cấp có nguồn gốc từ...</p>
+        <div class="col">
+            <form>
+                <label>
+                    <input placeholder="Tìm kiếm...">
+                </label>
+                <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
+            </form>
+        </div>
+        <div class="col">
+            <button class="cart-button">
+                <i class="ti-shopping-cart">0.000đ</i>
+            </button>
+        </div>
+    </div>
+</header>
+<ul id="nav" class="back-dark-green">
+    <li>
+        <a href="#">
+            <i class="nav-menu ti-menu"></i>
+            DANH MỤC SẢN PHẨM
+        </a>
+        <!--        <ul class="sub-nav">-->
+        <!--            <li><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY ĂN TRÁI-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY CÓ HOA-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY HOA LEO-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY CÂY CẢNH-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY LỚN-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY ĐỘC LẠ - HIẾM-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY BONSAI-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                CÂY GIỐNG-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                HOA LAN-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                HOA LAN CÂY GIỐNG-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                PHÂN BÓN-VẬT TƯ-->
+        <!--            </a></li>-->
+        <!--            <a href="#">-->
+        <!--            </a>-->
+        <!--            <li><a href="#"></a><a href="#">-->
+        <!--                <i class="ti-control-play"></i>-->
+        <!--                SẢN PHẨM KHUYẾN MÃI-->
+        <!--            </a></li>-->
+        <!--        </ul>-->
+    </li>
+    <li class="nav-togethger"><a href="#"></a><a href="#">TRANG CHỦ</a></li>
+    <li class="head-nav nav-togethger"><a href="gioi_thieu.html" class="nav-togethger">GIỚI THIỆU</a></li>
+    <li class="nav-togethger"><a href="#">SẢN PHẨM</a></li>
+    <li class="nav-togethger"><a href="huong-dan.html">HƯỚNG DẪN MUA HÀNG</a></li>
+    <li class="nav-togethger"><a href="#">TIN TỨC</a></li>
+</ul>
+<!--Body Section-->
+<div id="content" class="content-area page-wrapper" role="main">
+    <div class="row row-main">
+        <div class="large-12 col">
+            <div class="col-inner">
+                <p><img decoding="async" class="wp-image-659 size-full aligncenter" src="http://caygiongsaigon.com/wp-content/uploads/2019/08/cay-canh-van-phong.jpg" alt=""</p>
+                <p>Lời đầu tiên, cho phép CAYGIONGNONGLAM.COM gửi đến Quý Khách hàng lời chúc sức khoẻ và thành công.<br>CAYGIONGNONGLAM.COM ra đời nhằn đáp ứng và cung cấp ra thị trường những loại cây giống chất lượng tốt nhất, phụ hợp với khí hậu vùng miền.<br>CAYGIONGNONGLAM.COM chuyên cung cấp các loại cây giống nhập khẩu và trong nước như<br>– Cây giống ăn quả.<br>– Cây giống hoa.<br>– Cây giống hoa lan các loại<br>– Cây giống trang trí sân vườn.<br>– Cây cảnh, cây công trình<br>– Vật tư nông nghiệp</p>
+                <p>Với mong muốn đem đến cho Quý khách hàng sự lựa chọn tin cậy<br>Chúng tôi đáng giá sự thành công của mình không chỉ trong thành tựu kinh doanh của chúng tôi, mà còn bằng mức độ phục vụ cộng đồng tốt đến đâu.<br>CAYGIONGSAIGON.COM hoan nghênh sự hợp tác và đóng góp ý kiến của Quý khách hàng để sản phẩm và dịch vụ được tốt hơn nữa</p>
+                <p>Trân trọng!</p>
 
-        <div class="row">
-            <div class="more-col">
-                <h3>Cây Giống Nông Lâm</h3>
-                <p class="p-more">Chúng tôi tự hào là nguồn cung cấp hàng đầu cho cây giống tươi mát.
-                    Với sự quan tâm đặc biệt đến chất lượng và sự tận tâm trong quá trình sản xuất,
-                    chúng tôi cam kết mang đến cho bạn những loại cây giống chất lượng nhất từ nguồn gốc đáng tin cậy.</p>
-            </div>
 
-            <div class="more-col">
-                <h3>Chất Lượng Sản Phẩm</h3>
-                <p class="p-more">Với kỹ thuật chăm sóc và sản xuất tiên tiến,
-                    chúng tôi đảm bảo rằng mọi cây giống trên trang web của chúng tôi đều là sản phẩm đỉnh cao về sức kháng, sự phát triển, và năng suất.</p>
-            </div>
-
-            <div class="more-col">
-                <h3>Đa Dạng Cây Giống</h3>
-                <p class="p-more">
-                    Chúng tôi cung cấp đa dạng các loại cây giống như: <br>
-                    – Cây giống ăn quả<br>
-                    – Cây giống hoa<br>
-                    – Cây giống hoa lan các loại<br>
-                    – Cây giống trang trí sân vườn<br>
-                    – Cây cảnh, cây công trình
-                </p>
             </div>
         </div>
-        <a href="#" class="join-btn2" id="scroll-to-introduce-3">Thêm</a>
-    </section>
-    <section class="introduce-3">
-        <h1>Một số loại cây giống mà chúng tôi cung cấp</h1>
-        <p>Bạn có thể tham khảo thêm ở <span><a href="#">Danh mục sản phẩm</a></span></p>
-
-        <div class="row">
-            <div class="introduce3-col">
-                <img src="images/tree/Chùm-ảnh_-So-sánh-cây-Bonsai-và-cây-thật-ở-tự-nhiên___-Cỏ-Dại.png" height="360"
-                     width="360" alt="hoa">
-                <div class="layer">
-                    <h3 class="gt-tree">GIỐNG CÂY 1</h3>
-                </div>
-            </div>
-            <div class="introduce3-col">
-                <img src="images/tree/Chùm-ảnh_-So-sánh-cây-Bonsai-và-cây-thật-ở-tự-nhiên___-Cỏ-Dại.png" height="360"
-                     width="360" alt="hoa">
-                <div class="layer">
-                    <h3 class="gt-tree">GIỐNG CÂY 1</h3>
-                </div>
-            </div>
-            <div class="introduce3-col">
-                <img src="images/tree/Chùm-ảnh_-So-sánh-cây-Bonsai-và-cây-thật-ở-tự-nhiên___-Cỏ-Dại.png" height="360"
-                     width="360" alt="hoa">
-                <div class="layer">
-                    <h3 class="gt-tree">GIỐNG CÂY 1</h3>
-                </div>
-            </div>
-
-        </div>
-    </section>
+    </div>
 </div>
-<script>
-    document.getElementById('scroll-to-introduce-2').addEventListener('click', function (e) {
-        e.preventDefault();
-        const introduce2Section = document.getElementById('introduce-2');
-        introduce2Section.scrollIntoView({ behavior: 'smooth' });
-    });
+<!--Footer Section-->
+<footer>
+    <div class="row">
+        <div class="col">
+            <h3>Giới Thiệu</h3>
+            <p>Điểm đến lý tưởng cho những người yêu đam mê và đang tìm kiếm cây giống nông nghiệp chất lượng cao. Với
+                mục tiêu hỗ trợ và nâng cao năng suất trong nông nghiệp.</p>
+        </div>
+        <div class="col">
+            <h3>Văn phòng</h3>
+            <p>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</p>
+            <p class="email-id">nls@hcmuaf.edu.vn</p>
+            <p>028-38974560</p>
+        </div>
+        <div class="col">
+            <h3>Thông Tin</h3>
+            <ul>
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#">Giới Thiệu</a></li>
+                <li><a href="#">Sản Phẩm</a></li>
+                <li><a href="#">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="#">Tin Tức</a></li>
 
-    document.getElementById('scroll-to-introduce-3').addEventListener('click', function (e) {
-        e.preventDefault();
-        const introduce3Section = document.querySelector('.introduce-3');
-        const offsetTop = introduce3Section.offsetTop;
-        window.scrollTo({
-            top: offsetTop,
-            behavior: 'smooth'
-        });
-    });
-
-</script>
+            </ul>
+        </div>
+        <div class="col">
+            <h3>Nhận Email Thông Báo</h3>
+            <form>
+                <i class="ti ti-email"></i>
+                <label>
+                    <input type="email" placeholder="Nhập email của bạn..." required="">
+                </label>
+                <button type="submit"><i class="ti ti-arrow-right"></i></button>
+            </form>
+            <nav class="socials">
+                <a href="#" class="tooltip ti-facebook">
+                    <span class="tooltiptext">Theo Dõi Chúng Tôi</span>
+                </a>
+                <a href="#" class="tooltip ti-mobile">
+                    <span class="tooltiptext">0929729120</span>
+                </a>
+                <a href="https://mail.google.com" class="tooltip ti-email">
+                    <span class="tooltiptext">Đóng Góp Ý Kiến</span>
+                </a>
+            </nav>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

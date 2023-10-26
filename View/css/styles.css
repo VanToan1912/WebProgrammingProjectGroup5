@@ -1,0 +1,444 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    font-size: 13px;
+    visibility: hidden;
+    width: auto;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*Header portion*/
+/*Top bar*/
+header .nav-bar.top-bar {
+    height: 12%;
+    display: flex;
+    align-items: center;
+    background-color: #148259;
+    font-size: 13px;
+    padding: 5px 10%;
+    color: white;
+}
+
+.list {
+    flex: 1;
+    text-align: right;
+}
+
+header .nav-bar.top-bar .list ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+header .nav-bar.top-bar .list ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header .nav-bar.top-bar .list ul li a:hover {
+    color: lightgray;
+    transition: 0.25s;
+}
+
+header .nav-bar.top-bar .list ul li button.login-button, button.sign-up-button {
+    padding: 5px;
+    background: transparent;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+}
+
+header .nav-bar.top-bar .list ul li button.login-button:hover, button.sign-up-button:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+/*Middle Bar*/
+header .row {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header .middle-bar .col .logo {
+    width: 140px;
+}
+
+header .middle-bar .col form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .middle-bar .col input {
+    width: 40vw;
+    padding: 5px;
+    font-size: 16px;
+    background: transparent;
+    color: black;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+header .middle-bar .col button {
+    padding: 5px;
+    background: #fa461e;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+header .middle-bar .col button.search-button:hover {
+    background-color: #C83818;
+    transition: 0.25s;
+}
+
+header .middle-bar .col button.cart-button {
+    float: right;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 16px;
+    color: white;
+    margin-right: 0;
+}
+
+header .middle-bar .col button.cart-button:hover {
+    background-color: #C83818;
+    transition: 0.25s;
+}
+
+header .middle-bar .col button .ti.ti-search {
+    font-size: 16px;
+    color: white;
+}
+
+/*Quoc Trung's Header portion*/
+#nav {
+    /* position: fixed; */;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* thể hiện độ sâu: để khi mà kéo xuống không bị biến mất thanh header */
+    /* z-index: 1; */
+    background-color: #148259;
+    padding: 0 10%;
+}
+
+#nav {
+    display: flex;
+}
+
+#nav, .sub-nav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    font-weight: 600;
+}
+
+#nav > .nav-togethger:hover > a {
+    color: red;
+
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 44px;
+    font-size: 13px;
+}
+
+#nav > li:first-child {
+    padding-left: 5px;
+    width: 200px;
+    height: 44px;
+    background-color: rgb(29, 113, 171);
+}
+
+#nav .nav-menu {
+    font-size: 13px;
+    color: #fff;
+    margin-left: 0;
+}
+
+#nav .sub-nav a {
+    color: #000;
+    font-size: 13px;
+    margin-left: 0;
+}
+
+#nav .sub-nav li {
+    border: 1px solid #ccc;
+    height: 39px;
+    width: 200px;
+    margin-left: -5px;
+}
+
+#nav .sub-nav li:first-child {
+    margin-top: 1px;
+}
+
+#nav .head-nav {
+    background-color: #fff;
+    border-top: 1px solid #fa461e;
+
+}
+
+#nav .head-nav a {
+    color: rgb(20, 130, 89);
+}
+
+/*Body portion*/
+.card {
+    margin: 10px 15%;
+}
+
+.card .news {
+    border-bottom: 1px solid lightgray;
+    margin-top: 10px;
+    padding: 0 10px 10px 10px;
+}
+
+.card .news a.news-title {
+    text-decoration: none;
+    color: #1d71ab;
+}
+
+.card .news a.news-title:hover {
+    color: #fa461e;
+    transition: 0.25s;
+}
+
+.card .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.card .row .col.content a {
+    font-size: 18px;
+}
+
+.card .row .col {
+    margin-top: 5px;
+}
+
+.card .row .col.image {
+    margin-left: 8%;
+    margin-right: 5%;
+}
+
+.card .row .col.content {
+    margin-right: 8%;
+}
+
+.card .row .col.content button {
+    margin-top: 20px;
+    margin-left: 40%;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #fa461e;
+    padding: 5px 0;
+}
+
+.card .row .col.content button:hover {
+    background-color: #fa461e;
+    transition: 0.25s;
+}
+
+.card .row .col.content button a {
+    font-size: 13px;
+    text-decoration: none;
+    color: #fa461e;
+    padding: 10px 15px;
+}
+
+.card .row .col.content button a:hover {
+    color: white;
+    transition: 0.25s;
+}
+
+/*Comment Section*/
+#respond {
+    margin: 20px 0;
+    padding: 0 23%;
+}
+
+#respond h3{
+    margin-bottom: 8px;
+}
+
+#respond input[type='text'],#respond input[type='email'],#respond textarea {
+    margin: 8px 0;
+    display: block;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 2em;
+}
+
+#respond input[type='submit']{
+    background-color: #fa461e;
+    padding: 5px;
+    border: 1px solid lightgray;
+    color: white;
+}
+
+/*Footer portion*/
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: #148259;
+    color: white;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+footer .row {
+    height: 180px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .col {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
+footer .col:nth-child(2), .col:nth-child(3) {
+    flex-basis: 15%;
+    padding: 10px;
+}
+
+footer .col h3 {
+    width: fit-content;
+    margin-bottom: 13px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+}
+
+.email-id:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 3px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+footer form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin-bottom: 50px;
+}
+
+footer form .ti {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+footer form input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+}
+
+footer form label input::placeholder {
+    color: white;
+}
+
+footer form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+footer form button .ti.ti-arrow-right {
+    font-size: 18px;
+    color: white;
+}
+
+footer form button .ti.ti-arrow-right:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+footer .col .socials a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+footer .col .socials a:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
