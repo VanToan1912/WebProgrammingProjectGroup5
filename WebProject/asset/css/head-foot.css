@@ -1,0 +1,413 @@
+
+/* COMMON */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.back-dark-green {
+    background-color: rgb(20, 130, 89);
+}
+
+.back-orange {
+    background-color: #fa461e;
+}
+.text-gray{
+    color: #a7a7a7;
+}
+.text-back{
+    color: #000;
+}
+.text-blue{
+    color: #1e73be;;
+}
+.color-hover{
+    background-color: #cf2e2e;;
+}
+ 
+.mg-left{
+    margin-left: 375px;;
+}
+.fs-18{
+    font-size: 18px;
+}
+.fs-14{
+    font-size: 14px;
+}
+.clear {
+    clear: both;
+}
+ /* HEAD */
+#head{
+   
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    font-size: 13px;
+     visibility: hidden;
+    width: auto;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/*Header portion*/
+/*Top bar*/
+    header .nav-bar.top-bar {
+    height: 16%;
+    display: flex;
+    align-items: center;
+    background-color: #148259;
+    font-size: 13px;
+    padding: 5px 0;
+    color: white;
+}
+
+.list-contact-infor {
+    flex: 1;
+    text-align: right;
+    
+}
+header .nav-bar.top-bar .list-contact-infor ul{
+    margin-right: 29%;
+}
+
+header .nav-bar.top-bar .list-contact-infor ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 10px;
+    
+}
+
+header .nav-bar.top-bar .list-contact-infor ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+header .nav-bar.top-bar .list-contact-infort ul li a:hover {
+    color: lightgray;
+    transition: 0.25s;
+}
+
+header .nav-bar.top-bar .list-contact-infor ul li button.login-button, button.sign-up-button {
+     padding: 5px;
+    background: transparent;
+    border: 1px solid lightgray;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 13px;
+    color: white;
+}
+
+    header .nav-bar.top-bar .list-contact-infor ul li button.login-button:hover, button.sign-up-button:hover {
+        color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+/*Middle Bar*/
+header > .row-head {
+    width: 80%;
+    /*  margin: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+header .middle-bar .col-head .logo {
+    width: 140px;
+}
+
+header .middle-bar .col-head form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .middle-bar .col-head input {
+    width: 40vw;
+    padding: 5px;
+    font-size: 16px;
+    background: transparent;
+    color: black;
+    border: 1px solid lightgray;
+    outline: none;
+}
+
+header .middle-bar .col-head button {
+    padding: 5px;
+    background: #fa461e;
+    border: 1px solid lightgray;
+    cursor: pointer;
+}
+
+header .middle-bar .col-head button.search-button:hover {
+    background-color: #C83818;
+    transition: 0.25s;
+}
+
+header .middle-bar .col-head button.cart-button {
+    float: right;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 16px;
+    color: white;
+    margin-right: 0;
+}
+
+header .middle-bar .col-head button.cart-button:hover {
+    background-color: #C83818;
+    transition: 0.25s;
+}
+
+header .middle-bar .col-head button .ti.ti-search {
+    font-size: 16px;
+    color: white;
+}
+
+/*Quoc Trung's Header portion*/
+#nav {
+    /* position: fixed; */
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    /* thể hiện độ sâu: để khi mà kéo xuống không bị biến mất thanh header */
+    /* z-index: 1; */
+}
+
+#nav {
+    display: flex;
+}
+
+#nav,
+.sub-nav {
+    list-style-type: none;
+}
+.sub-nav{
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    min-width: 255px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#nav>li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav>li>a {
+    color: #fff;
+    font-weight: 600;
+}
+
+#nav>.nav-togethger:hover>a {
+    color: red;
+
+}
+
+#nav li a {
+    text-decoration: none;
+    line-height: 44px;
+    font-size: 14px;
+}
+
+#nav>li:first-child {
+    width: 254px;
+    height: 44px;
+    margin-left: 375px;
+    background-color: rgb(29, 113, 171);
+}
+
+#nav .nav-menu {
+    font-size: 15px;
+    color: #fff;
+    padding: 0 12px;
+    margin-left: -14px;
+}
+
+
+#nav .sub-nav a {
+    color: #000;
+    font-size: 14px;
+   
+
+}
+
+#nav .sub-nav a:hover{
+    color: var(--hover-orange);
+}
+
+#nav .sub-nav li {
+    border: 1px solid #ccc;
+    /* width: 248px;    
+    height: 39px; */
+    height: 39px;
+    padding: 0 20px;
+
+}
+
+#nav .head-nav {
+    background-color: #fff;
+    border-top: 2px solid #fa461e;
+
+}
+#nav .nav-text-product {
+    background-color: #fff;
+    border-top: 2px solid #fa461e;
+
+}
+
+
+#nav .head-nav a,
+#nav .nav-text-product a {
+    color: rgb(20, 130, 89);
+}
+
+
+/*Body portion*/
+
+
+/*Footer portion*/
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background-color: #148259;
+    color: white;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+footer .row-footer {
+    height: 180px;
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+   
+}
+
+footer .col-footer {
+    flex-basis: 25%;
+    padding: 10px;
+    line-height: 1.6;
+}
+
+footer .col-footer:nth-child(2), .col-footer:nth-child(3) {
+    flex-basis: 15%;
+    padding: 10px;
+}
+
+footer .col-footer h3 {
+    width: fit-content;
+    margin-bottom: 13px;
+    position: relative;
+}
+
+.email-id {
+    width: fit-content;
+}
+
+.email-id:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 3px;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+footer ul li a:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+footer form {
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid white;
+    margin-bottom: 50px;
+}
+
+footer form .ti {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+footer form input {
+    width: 100%;
+    background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+}
+
+footer form label input::placeholder {
+    color: white;
+}
+
+footer form button {
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+footer form button .ti.ti-arrow-right {
+    font-size: 18px;
+    color: white;
+}
+
+footer form button .ti.ti-arrow-right:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
+
+footer .col-footer .socials a {
+    float: left;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+footer .col-footer .socials a:hover {
+    color: rgb(128, 128, 128);
+    transition: 0.25s;
+}
