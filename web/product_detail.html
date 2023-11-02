@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chi tiết sản phẩm</title>
+  <style>
+    /* CSS để tạo giao diện trang chi tiết sản phẩm */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .product-details {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+    <div id="cay-cha-la" class="product">
+        <div class="row1 container-infor">
+            <div class=" col col-half">
+
+                <img id="main-image" src="./asset/img/cay an qua/chanh chuc/1.jpg" alt="Main Image">
+
+
+                <div id="image-list">
+                    <button id="prev-btn"><i class="ti-angle-left"></i></button>
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/1.jpg" alt="Image 1">
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/Fleur_de_combava-510x429.jpg"
+                        alt="Image 2">
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/unnamed-510x352.jpg"
+                        alt="Image 3">
+                    <button id="next-btn"><i class="ti-angle-right"></i></button>
+                    <!-- Add more images here -->
+                </div>
+
+
+
+                <div class="modal" id="image-modal">
+                    <img class="modal-image" src="image1.jpg" alt="Modal Image">
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        
+        </div>
+
+    </div>
+    <div id="cay-an-trai" class="product">
+        <div class="row1 container-infor">
+            <div class=" col col-half">
+                <img id="main-image" src="./asset/img/cay an qua/chanh ngón tay/1-510x510.jpg" alt="Main Image">
+                <div id="image-list">
+                    <button id="prev-btn"><i class="ti-angle-left"></i></button>
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/1.jpg" alt="Image 1">
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/Fleur_de_combava-510x429.jpg"
+                        alt="Image 2">
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/unnamed-510x352.jpg"
+                        alt="Image 3">
+                    <button id="next-btn"><i class="ti-angle-right"></i></button>
+                    <!-- Add more images here -->
+                </div>
+                <div class="modal" id="image-modal">
+                    <img class="modal-image" src="image1.jpg" alt="Modal Image">
+                </div>
+
+            </div>
+          
+        </div>
+        
+
+        
+       
+
+    </div>
+    <div id="cay-bonsai" class="product">
+        <div class="row1 container-infor">
+            <div class=" col col-half">
+                <img id="main-image" src="./asset/img/cây bonsai/bạch mai/15-510x510.jpg" alt="Main Image">
+                <div id="image-list">
+                    <button id="prev-btn"><i class="ti-angle-left"></i></button>
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/1.jpg" alt="Image 1">
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/Fleur_de_combava-510x429.jpg"
+                        alt="Image 2">
+                    <img class="slider-image" src="./asset/img/cay an qua/chanh chuc/unnamed-510x352.jpg"
+                        alt="Image 3">
+                    <button id="next-btn"><i class="ti-angle-right"></i></button>
+                    <!-- Add more images here -->
+                </div>
+                <div class="modal" id="image-modal">
+                    <img class="modal-image" src="image1.jpg" alt="Modal Image">
+                </div>
+
+            </div>
+          
+        </div>
+        
+
+        
+       
+
+    </div>
+    
+ 
+  <script>
+       // Lấy các chi tiết sản phẩm
+  // Lấy các chi tiết sản phẩm
+    var product1 = document.getElementById("cay-cha-la");
+    var product2 = document.getElementById("cay-an-trai");
+    var product3 = document.getElementById("cay-bonsai");
+
+    // Ẩn tất cả nội dung chi tiết sản phẩm ban đầu
+    product1.style.display = "none";
+    product2.style.display = "none";
+    product3.style.display = "none";
+
+    // Hiển thị nội dung của sản phẩm được chọn
+    var urlParams = new URLSearchParams(window.location.search);
+    var selectedProduct = urlParams.get("id");
+
+    if (selectedProduct === "cay-cha-la") {
+      product1.style.display = "block";
+    } else if (selectedProduct === "cay-an-trai") {
+      product2.style.display = "block";
+    } else if (selectedProduct === "cay-bonsai") {
+      product3.style.display = "block";
+    }
+  </script>
+</body>
+</html>
