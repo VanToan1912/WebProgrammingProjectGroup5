@@ -89,26 +89,6 @@
         </div>
         <div class="clear"></div>
     </div>
-    <ul class="nav menu">
-        <li><a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a></li>
-        <li><a href="interface-manage.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a></li>
-        <li>
-            <a class="" href="employee-manage.html">
-                <span class="fa fa-user"></span> Quản lý nhân viên
-            </a>
-        </li>
-        <li class="active">
-            <a class="" href="stock-manage.html">
-                <span class="fa fa-stack-exchange"></span> Quản lý hàng hóa
-            </a>
-        </li>
-        <li>
-            <a class="" href="bill-manage.html">
-                <span class="fa fa-money"></span> Quản lý hóa đơn
-            </a>
-        </li>
-        <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
-    </ul>
 </div>
 <!--Sidebar-->
 
@@ -116,36 +96,35 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Quản lý hàng hóa</h1>
+            <h1 class="page-header">Quản lý bài viết</h1>
         </div>
     </div>
 
     <div class="panel">
 
     </div>
+
 </div>
 
-<!--Content-->
-
 <!--Script-->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/chart.min.js"></script>
-<script src="js/chart-data.js"></script>
-<script src="js/easypiechart.js"></script>
-<script src="js/easypiechart-data.js"></script>
-<script src="js/bootstrap-datepicker.js"></script>
-<script src="js/custom.js"></script>
-<script>
-    window.onload = function () {
-        let chart1 = document.getElementById("line-chart").getContext("2d");
-        window.myLine = new Chart(chart1).Line(lineChartData, {
-            responsive: true,
-            scaleLineColor: "rgba(0,0,0,.2)",
-            scaleGridLineColor: "rgba(0,0,0,.05)",
-            scaleFontColor: "#c5c7cc"
-        });
-    };
-</script>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/chart-data.js"></script>
+    <script src="js/easypiechart.js"></script>
+    <script src="js/easypiechart-data.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        window.onload = function () {
+            let chart1 = document.getElementById("line-chart").getContext("2d");
+            window.myLine = new Chart(chart1).Line(lineChartData, {
+                responsive: true,
+                scaleLineColor: "rgba(0,0,0,.2)",
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                scaleFontColor: "#c5c7cc"
+            });
+        };
+    </script>
 </body>
 </html>
