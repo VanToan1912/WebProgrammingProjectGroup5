@@ -1,0 +1,365 @@
+body {
+    background: #f1f4f7;
+    padding-top: 60px;
+    font-size: 14px;
+    color: #444;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif
+}
+
+a, a:focus, a:hover {
+    color: #30a5ff
+}
+
+.text-muted {
+    color: #c5c7cc
+}
+
+input.form-control {
+    border: 1px solid #ddd;
+    box-shadow: none;
+    height: 46px
+}
+
+.form-control:focus {
+    border: 1px solid #30a5ff;
+    outline: 0;
+    box-shadow: inset 0 0 0 1px #30a5ff
+}
+
+.navbar-custom {
+    background: #222;
+    height: 60px
+}
+
+.navbar-header .navbar-brand {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    height: 60px;
+    padding-top: 18px
+}
+
+.navbar-header .navbar-brand span {
+    color: #30a5ff
+}
+
+.navbar-toggle {
+    background: rgba(255, 255, 255, .1);
+    padding: 12px;
+    margin-top: 10px
+}
+
+.navbar-toggle:hover {
+    background: rgba(255, 255, 255, .05)
+}
+
+.icon-bar {
+    background: #fff
+}
+
+.dropdown {
+    background: rgba(255, 255, 255, .1);
+    float: left;
+    margin: 10px 8px;
+    padding: 0;
+    border-radius: 4px
+}
+
+.dropdown a.dropdown-toggle {
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    padding-top: 11px;
+    padding-left: 9px
+}
+
+.dropdown:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, .2)
+}
+
+.dropdown .label {
+    top: -4px;
+    left: 22px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    position: absolute;
+    border-radius: 9999px
+}
+
+.navbar-top-links li:last-child {
+    margin-right: 15px
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+    text-decoration: none;
+    background: rgba(255, 255, 255, .2) none
+}
+
+.dropdown-messages {
+    border: 1px solid #fff;
+    width: 360px;
+    background: rgba(255, 255, 255, .9);
+    color: #444;
+    font-size: .9em
+}
+
+.dropdown-messages img {
+    margin: 5px 10px;
+    float: left
+}
+
+.dropdown-messages .message-body {
+    margin: 5px;
+    float: left;
+    width: 280px
+}
+
+.dropdown small {
+    color: #999
+}
+
+.dropdown em {
+    margin: 0 5px
+}
+
+.dropdown-menu > li > a {
+    padding: 5px 10px
+}
+
+.dropdown-menu li .message-body a {
+    color: #444
+}
+
+.dropdown-menu li a:hover {
+    color: #30a5ff;
+    text-decoration: none;
+    background: 0 0
+}
+
+.clear, .divider {
+    clear: both
+}
+
+.dropdown-alerts {
+    border: 1px solid #fff;
+    width: 260px;
+    background: rgba(255, 255, 255, .9);
+    color: #444;
+    font-size: .9em
+}
+
+.all-button a {
+    text-align: center;
+    color: #444;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: block
+}
+
+button:hover {
+    opacity: .8
+}
+
+button:active {
+    box-shadow: inset 0 0 500px rgba(0, 0, 0, .1);
+    opacity: 1
+}
+
+a.label:focus, a.label:hover {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer
+}
+
+.label:empty {
+    display: none
+}
+
+.label-success {
+    background-color: #8ad919
+}
+
+.label-success[href]:focus, .label-success[href]:hover {
+    background-color: #8ad919
+}
+
+.label-info {
+    background-color: #30a5ff
+}
+
+.label-info[href]:focus, .label-info[href]:hover {
+    background-color: #30a5ff
+}
+
+.label-danger {
+    background-color: #f9243f;
+
+}
+
+.label-danger[href]:focus, .label-danger[href]:hover {
+    background-color: #f9243f
+}
+
+.navbar {
+    border: 0
+}
+
+.navbar input {
+    border: 0;
+    background: #444;
+    color: #fff
+}
+
+.navbar input:focus {
+    color: #fff;
+    background: #555;
+    border: 1px solid #30a5ff;
+    outline: 0;
+    box-shadow: inset 0 0 0 1px #30a5ff
+}
+
+.user-menu {
+    display: inline-block;
+    margin-top: 14px;
+    margin-right: 10px;
+    float: right;
+    list-style: none;
+    padding: 0
+}
+
+.user-menu a {
+    color: #fff
+}
+
+.user-menu a:focus, .user-menu a:hover {
+    text-decoration: none
+}
+
+.sidebar {
+    display: block;
+    padding: 0;
+    box-shadow: none;
+    background: #fff
+}
+
+.sidebar ul {
+    margin: 20px 0
+}
+
+.sidebar form {
+    padding: 10px 0 0 0;
+    margin: 10px 10px 20px 10px
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        display: block;
+        position: fixed;
+        top: 60px;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: auto
+    }
+
+    .navbar-header {
+        width: 100%
+    }
+}
+
+.sidebar ul.nav a:hover, .sidebar ul.nav li.parent ul li a:hover {
+    text-decoration: none;
+    background-color: #30a5ff;
+    color: #fff
+}
+
+.sidebar ul.nav .active a, .sidebar ul.nav .active > a:focus, .sidebar ul.nav .active > a:hover, .sidebar ul.nav li.parent a.active, .sidebar ul.nav li.parent a.active:focus, .sidebar ul.nav li.parent a.active:hover {
+    color: #fff;
+    background-color: #30a5ff
+}
+
+.sidebar ul.nav ul, .sidebar ul.nav ul li {
+    list-style: none none
+}
+
+.sidebar ul.nav li a {
+    height: 50px;
+    font-size: 15px;
+    line-height: 2em;
+    color: #444
+}
+
+.sidebar ul.nav ul.children {
+    width: auto;
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9
+}
+
+.sidebar ul.nav ul.children li a {
+    height: 40px;
+    background: #f1f4f7;
+    color: #444
+}
+
+.sidebar ul.nav li.parent ul li a {
+    border: none;
+    display: block;
+    padding-left: 30px;
+    line-height: 40px;
+    border-radius: 0
+}
+
+.sidebar ul.nav li.divider {
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    margin: 0 0
+}
+
+.profile-sidebar {
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecf2
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 9999px;
+    margin-right: 5px
+}
+
+.profile-userpic img {
+    float: left;
+    margin: 10px 0 0 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 9999px !important
+}
+
+.profile-usertitle {
+    float: left;
+    text-align: left;
+    margin: 10px 0 0 12px
+}
+
+.profile-usertitle-name {
+    font-size: 20px;
+    margin-bottom: 0
+}
+
+.profile-usertitle-status {
+    text-transform: uppercase;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 15px
+}
+
+#calendar {
+    width: 100%
+}
