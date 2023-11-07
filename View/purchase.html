@@ -3,138 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <title>Mua hàng</title>
-    <link rel="stylesheet" href="styles/purchase_styles.css">
+    <link rel="stylesheet" href="css/purchase_styles.css">
 </head>
 <body>
-    <div class="content">
-       <div class="row">
-           <div class="col-content-1">
-               <form class="woocommerce-cart-form" action="">
-                   <div class="cart-wrapper sm-touch-scroll">
-                       <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
-                           <thead>
-                           <tr>
-                               <th class="product-name" colspan="2">Sản phẩm</th>
-                               <th class="product-price">Giá</th>
-                               <th class="product-quantity">Số lượng</th>
-                               <th class="product-subtotal">Tạm tính</th>
-                           </tr>
-                           </thead>
-                           <tbody>
-                           <tr class="woocommerce-cart-form__cart-item cart_item">
+<div class="content">
+    <div class="row">
+        <div class="col-content-1">
+            <form class="woocommerce-cart-form" action="">
+                <div class="cart-wrapper sm-touch-scroll">
+                    <table class="shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+                        <thead>
+                        <tr>
+                            <th class="product-name" colspan="2">Sản phẩm</th>
+                            <th class="product-price">Giá</th>
+                            <th class="product-quantity">Số lượng</th>
+                            <th class="product-subtotal">Tạm tính</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr class="woocommerce-cart-form__cart-item cart_item">
 
 
-                               <td class="product-thumbnail">
-                                   <img src="https://th.bing.com/th/id/R.ec1421d783c654da6fe9513b322f8294?rik=jVSvSuQUt3MD4Q&pid=ImgRaw&r=0" alt="" width="110" height="110">
-                               </td>
+                            <td class="product-thumbnail">
+                                <img src="https://th.bing.com/th/id/R.ec1421d783c654da6fe9513b322f8294?rik=jVSvSuQUt3MD4Q&pid=ImgRaw&r=0"
+                                     alt="" width="110" height="110">
+                            </td>
 
-                               <td class="product-name" data-title="Sản phẩm">
-                                   <a href="">Phân Bón Chuyên Ra Hoa Flowermate 240</a>
-                                   <div class="show-for-small mobile-product-price">
-<!--                                        <span class="mobile-product-price__qty"> x </span>-->
-                                        <span class="woocommerce-Price-amount amount"><bdi>35.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>
-                                   </div>
-                               </td>
+                            <td class="product-name" data-title="Sản phẩm">
+                                <a href="">Phân Bón Chuyên Ra Hoa Flowermate 240</a>
+                                <div class="show-for-small mobile-product-price">
+                                    <!--                                        <span class="mobile-product-price__qty"> x </span>-->
+                                    <span class="woocommerce-Price-amount amount"><bdi>35.000<span
+                                            class="woocommerce-Price-currencySymbol">₫</span></bdi></span>
+                                </div>
+                            </td>
 
-                               <td class="product-price" data-title="Giá">
-                                   <span class="woocommerce-Price-amount amount"><bdi>35.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>
-                               </td>
+                            <td class="product-price" data-title="Giá">
+                                <span class="woocommerce-Price-amount amount"><bdi>35.000<span
+                                        class="woocommerce-Price-currencySymbol">₫</span></bdi></span>
+                            </td>
 
-                               <td class="product-quantity" data-title="Số lượng">
-                                   <div class="quantity-buttons_added">
-                                       <input type="button" value="-" class="minus button is-form" cursorshover="true">
-<!--                                       <label class="screen-reader-text">Số lượng</label>-->
-                                       <input type="number" id="quantity_65421b0e1e046" class="input-text qty text" step="1" min="0" max="" name="cart[9a3f263a5e5f63006098a05cd7491997][qty]" value="3" title="SL" size="4" placeholder="" inputmode="numeric">
-                                       <input type="button" value="+" class="plus button is-form" cursorshover="true">
-                                   </div>
-                               </td>
+                            <td class="product-quantity" data-title="Số lượng">
+                                <div class="quantity-buttons_added">
+                                    <input type="button" value="-" class="minus button is-form" cursorshover="true">
+                                    <!--                                       <label class="screen-reader-text">Số lượng</label>-->
+                                    <input type="number" id="quantity_65421b0e1e046" class="input-text qty text"
+                                           step="1" min="0" max="" name="cart[9a3f263a5e5f63006098a05cd7491997][qty]"
+                                           value="3" title="SL" size="4" placeholder="" inputmode="numeric">
+                                    <input type="button" value="+" class="plus button is-form" cursorshover="true">
+                                </div>
+                            </td>
 
-                               <td class="product-subtotal" data-title="Tạm tính">
-                                   <span class="woocommerce-Price-amount amount"><bdi>105.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span>						</td>
-                           </tr>
-
-
-                           <tr>
-                               <td colspan="6" class="actions clear">
-
-
-                                   <div class="continue-shopping pull-left text-left">
-                                       <a class="button-continue-shopping button primary is-outline" href="">
-                                           ←&nbsp;Tiếp tục xem sản phẩm	</a>
-                                   </div>
-
-                                   <div class="continue-shopping pull-left text-left">
-                                       <a class="button-continue-shopping button primary is-outline" href="">
-                                           Cập nhật giỏ hàng</a>
-                                   </div>
-<!--                                   <button type="submit" class="button primary mt-0 pull-left small" name="update_cart" value="Cập nhật giỏ hàng">-->
-<!--                                       <a>Cập nhật giỏ hàng</a></button>-->
-
-<!--                                   <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="e09ac9c2ff"><input type="hidden" name="_wp_http_referer" value="/gio-hang/">-->
-                               </td>
-                           </tr>
-
-                           </tbody>
-                       </table>
-                   </div>
-               </form>
-           </div>
-           <div class="cart-collaterals large-5 col pb-0">
-
-               <div class="cart-sidebar col-inner ">
-                   <div class="cart_totals ">
-
-                       <table cellspacing="1">
-                           <thead>
-                           <tr>
-                               <th class="product-name">Cộng giỏ hàng</th>
-                           </tr>
-                           </thead>
-                       </table>
-                       <table cellspacing="0" class="shop_table shop_table_responsive">
-
-                           <tbody><tr class="cart-subtotal">
-                               <th>Tạm tính</th>
-                               <td data-title="Tạm tính"><span class="woocommerce-Price-amount amount"><bdi>18.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></td>
-                           </tr>
-                           <tr class="woocommerce-shipping-totals shipping ">
-                               <td class="shipping__inner" colspan="2">
-                                   <table class="shipping__table ">
-                                       <tbody>
-                                       <tr>
-                                           <th>Giao hàng</th>
-                                           <td data-title="Giao hàng">
-                                               <ul id="shipping_method" class="shipping__list woocommerce-shipping-methods">
-                                                   <li class="shipping__list_item">
-                                                       <input type="hidden" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate1" value="flat_rate:1" class="shipping_method"><label class="shipping__list_label" for="shipping_method_0_flat_rate1" cursorshover="true">Giao tại nhà toàn quốc chỉ: <span class="woocommerce-Price-amount amount"><bdi>40.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></label>									</li>
-                                               </ul>
-                                               <p class="woocommerce-shipping-destination">
-                                                   Tùy chọn giao hàng sẽ được cập nhật trong quá trình thanh toán.
-                                               </p>
-                                           </td>
-                                       </tr>
-                                       </tbody>
-                                   </table>
-                               </td>
-                           </tr>
-
-                           <tr class="order-total">
-                               <th>Tổng</th>
-                               <td data-title="Tổng"><strong><span class="woocommerce-Price-amount amount"><bdi>18.000<span class="woocommerce-Price-currencySymbol">₫</span></bdi></span></strong> </td>
-                           </tr>
-                           </tbody></table>
-                       <div class="thanh-toan">
-                           <a class="button-thanh-toan">
-                               Tiến hành thanh toán</a>
-                       </div>
+                            <td class="product-subtotal" data-title="Tạm tính">
+                                <span class="woocommerce-Price-amount amount"><bdi>105.000<span
+                                        class="woocommerce-Price-currencySymbol">₫</span></bdi></span></td>
+                        </tr>
 
 
-                   </div>
-                   <div class="cart-sidebar-content relative"></div>	</div>
+                        <tr>
+                            <td colspan="6" class="actions clear">
 
-           </div>
-       </div>
 
+                                <div class="continue-shopping pull-left text-left">
+                                    <a class="button-continue-shopping button primary is-outline" href="">
+                                        ←&nbsp;Tiếp tục xem sản phẩm </a>
+                                </div>
+
+                                <div class="continue-shopping pull-left text-left">
+                                    <a class="button-continue-shopping button primary is-outline" href="">
+                                        Cập nhật giỏ hàng</a>
+                                </div>
+                                <!--                                   <button type="submit" class="button primary mt-0 pull-left small" name="update_cart" value="Cập nhật giỏ hàng">-->
+                                <!--                                       <a>Cập nhật giỏ hàng</a></button>-->
+
+                                <!--                                   <input type="hidden" id="woocommerce-cart-nonce" name="woocommerce-cart-nonce" value="e09ac9c2ff"><input type="hidden" name="_wp_http_referer" value="/gio-hang/">-->
+                            </td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
+        <div class="cart-collaterals large-5 col pb-0">
+
+            <div class="cart-sidebar col-inner ">
+                <div class="cart_totals ">
+
+                    <table cellspacing="1">
+                        <thead>
+                        <tr>
+                            <th class="product-name">Cộng giỏ hàng</th>
+                        </tr>
+                        </thead>
+                    </table>
+                    <table cellspacing="0" class="shop_table shop_table_responsive">
+
+                        <tbody>
+                        <tr class="cart-subtotal">
+                            <th>Tạm tính</th>
+                            <td data-title="Tạm tính"><span class="woocommerce-Price-amount amount"><bdi>18.000<span
+                                    class="woocommerce-Price-currencySymbol">₫</span></bdi></span></td>
+                        </tr>
+                        <tr class="woocommerce-shipping-totals shipping ">
+                            <td class="shipping__inner" colspan="2">
+                                <table class="shipping__table ">
+                                    <tbody>
+                                    <tr>
+                                        <th>Giao hàng</th>
+                                        <td data-title="Giao hàng">
+                                            <ul id="shipping_method"
+                                                class="shipping__list woocommerce-shipping-methods">
+                                                <li class="shipping__list_item">
+                                                    <input type="hidden" name="shipping_method[0]" data-index="0"
+                                                           id="shipping_method_0_flat_rate1" value="flat_rate:1"
+                                                           class="shipping_method"><label class="shipping__list_label"
+                                                                                          for="shipping_method_0_flat_rate1"
+                                                                                          cursorshover="true">Giao tại
+                                                    nhà toàn quốc chỉ: <span class="woocommerce-Price-amount amount"><bdi>40.000<span
+                                                            class="woocommerce-Price-currencySymbol">₫</span></bdi></span></label>
+                                                </li>
+                                            </ul>
+                                            <p class="woocommerce-shipping-destination">
+                                                Tùy chọn giao hàng sẽ được cập nhật trong quá trình thanh toán.
+                                            </p>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr class="order-total">
+                            <th>Tổng</th>
+                            <td data-title="Tổng"><strong><span class="woocommerce-Price-amount amount"><bdi>18.000<span
+                                    class="woocommerce-Price-currencySymbol">₫</span></bdi></span></strong></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="thanh-toan">
+                        <a class="button-thanh-toan">
+                            Tiến hành thanh toán</a>
+                    </div>
+                </div>
+                <div class="cart-sidebar-content relative"></div>
+            </div>
+
+        </div>
     </div>
+
+</div>
 </body>
 </html>
