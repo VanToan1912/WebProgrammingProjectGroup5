@@ -419,7 +419,7 @@ a.label:hover, a.label:focus {
 }
 
 .panel-container {
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .panel-heading .fa-toggle-up, .panel-heading .fa-toggle-down {
@@ -1334,3 +1334,29 @@ p.back-link {
     border: 0;
     float: right;
 }
+
+.row .nav-bills {
+    list-style: none;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.row .nav-bills li {
+    float: left;
+    margin-right: 50px;
+    padding: 5px;
+}
+
+.row .nav-bills li a{
+    text-decoration: none;
+    color: #444444;
+    font-size: 18px;
+}
+
+.row .nav-bills .chosen{
+    background-color: #30a5ff;
+    border-radius: 5px;
+}
+
+.sign-up
