@@ -1348,15 +1348,92 @@ p.back-link {
     padding: 5px;
 }
 
-.row .nav-bills li a{
+.row .nav-bills li a {
     text-decoration: none;
     color: #444444;
     font-size: 18px;
 }
 
-.row .nav-bills .chosen{
+.row .nav-bills .chosen {
     background-color: #30a5ff;
     border-radius: 5px;
 }
 
-.sign-up
+.panel-container.user {
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up {
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.sign-up input {
+    width: 200px;
+}
+
+.sign-up select {
+    width: 200px;
+    padding: 5px 0;
+    font-weight: bold;
+}
+
+.sign-up button {
+    margin-top: 10px;
+    background-color: #30a5ff;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.order-table {
+    width: 100%;
+    margin-top: -10px;
+}
+
+.order-table tr th {
+    height: 60px;
+    border: 1px solid black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.order-table tr td {
+    height: 40px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.profit-table {
+    width: 100%;
+    margin-top: -10px;
+}
+
+.profit-table tr th {
+    height: 60px;
+    border: 1px solid black;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.profit-table tr td {
+    height: 40px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.profit-table td:first-child{
+    width: 7%;
+    font-weight: bolder;
+}
