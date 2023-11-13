@@ -1437,3 +1437,11 @@ p.back-link {
     width: 7%;
     font-weight: bolder;
 }
+
+.interface-button{
+    background-color: #30a5ff;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    color: white;
+    float: right;
+}
