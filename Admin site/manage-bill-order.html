@@ -17,8 +17,10 @@
 <body>
 <!--Top-Bar and Sidebar-->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#"><span>CGNL </span>Admin Site</a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span>CGNL </span>Admin Site</a>
+        </div>
     </div>
 </nav>
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
@@ -34,19 +36,24 @@
     </div>
     <ul class="nav menu">
         <li><a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a></li>
-        <li><a href="interface-manage.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a></li>
+        <li><a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a></li>
         <li>
-            <a class="" href="user-manage.html">
+            <a class="" href="manage-product.html">
+                <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
+            </a>
+        </li>
+        <li>
+            <a class="" href="manage-user.html">
                 <span class="fa fa-user"></span> Quản lý người dùng
             </a>
         </li>
-        <li class="active">
-            <a class="" href="posts-manage.html">
+        <li>
+            <a class="" href="manage-posts.html">
                 <span class="fa fa-stack-exchange"></span> Quản lý bài viết
             </a>
         </li>
-        <li>
-            <a class="" href="bill-manage-order.html">
+        <li class="active">
+            <a class="" href="manage-bill-order.html">
                 <span class="fa fa-money"></span> Quản lý hóa đơn
             </a>
         </li>
@@ -59,62 +66,82 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Quản lý bài viết</h1>
+            <h1 class="page-header">Quản lý hóa đơn</h1>
         </div>
     </div>
 
-    <div class="panel">
-        <table class="interface-table">
+    <div class="panel panel-container">
+        <div class="row">
+            <ul class="nav-bills">
+                <li class="chosen"><a href="manage-bill-order.html">Trạng thái đơn hàng</a></li>
+                <li><a href="manage-bill-profit.html">Tổng kết lợi nhuận trong tháng</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel panel-container">
+        <table class="order-table">
             <tr class="rows">
-                <th class="column">Tên bài viết</th>
-                <th class="column">Hiển thị</th>
-                <th class="column">Chỉnh sửa</th>
+                <th class="column">Mã đơn hàng</th>
+                <th class="column">Tên người dùng</th>
+                <th class="column">Ngày đặt</th>
+                <th class="column">Thanh Toán</th>
+                <th class="column">Trạng thái</th>
             </tr>
             <tr class="rows">
-                <td class="column name">PHÂN BIỆT MAI XANH THÁI VÀ MAI XANH ĐÀ LẠT</td>
                 <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
+                    MD001
                 </td>
-                <td class="column"><a href="edit-post.html" class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">Mua cây chuối tài lộc ở đâu?</td>
                 <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
+                    Trần Văn Toàn
                 </td>
-                <td class="column"><a href="edit-post.html" class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">Cây chuối sen</td>
                 <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
+                    1/11/2023
                 </td>
-                <td class="column"><a href="edit-post.html" class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">Khám phá bất ngờ cây chuối tài lộc hình dáng độc lạ</td>
                 <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
+                    Trực tiếp
                 </td>
-                <td class="column"><a href="edit-post.html" class="fa fa-pencil-square"></a> <a class="fa fa-trash"></a></td>
+                <td class="column">
+                    Đã giao hàng
+                </td>
             </tr>
             <tr class="rows">
-                <td class="column" colspan="3">
-                    <a href="add-post.html"><i class="fa fa-plus"> Thêm bài viết</i></a>
+                <td class="column">
+                    MD002
+                </td>
+                <td class="column">
+                    Lê Thị Hạnh Duyên
+                </td>
+                <td class="column">
+                    12/11/2023
+                </td>
+                <td class="column">
+                    Chuyển Khoản
+                </td>
+                <td class="column">
+                    Đang giao hàng
+                </td>
+            </tr>
+            <tr class="rows">
+                <td class="column">
+                    MD003
+                </td>
+                <td class="column">
+                    Lê Quốc Trung
+                </td>
+                <td class="column">
+                    26/11/2023
+                </td>
+                <td class="column">
+                    Trực tiếp
+                </td>
+                <td class="column">
+                    Đang giao hàng
                 </td>
             </tr>
         </table>
     </div>
 </div>
-
 <!--Content-->
 
 <!--Script-->
