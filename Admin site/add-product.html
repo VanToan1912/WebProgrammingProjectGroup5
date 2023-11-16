@@ -58,38 +58,65 @@
         <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
     </ul>
 </div>
-
-
 <!--Sidebar-->
 
 <!--Content-->
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Thêm bài viết</h1>
+            <h1 class="page-header">Thêm sản phẩm</h1>
         </div>
     </div>
 
-    <div class="panel">
+    <div class="panel product">
         <div class="input-component">
             <label for="heading"></label>
-            <input type="text" id="heading" required="required" placeholder="Nhập tiêu đề">
+            <input type="text" id="heading" required="required" placeholder="Tên sản phẩm">
         </div>
     </div>
 
-    <div class="panel" style="resize: both">
+    <div class="panel product">
         <div class="input-component">
-            <label for="comment" class="required"></label>
-            <textarea name="comment" id="comment" rows="30" tabindex="4" required="required"
-                      placeholder="Nhập nội dung"></textarea>
+            <label for="product-price"></label>
+            <textarea name="comment" id="product-price" rows="3" tabindex="4"
+                      placeholder="Giá"></textarea>
+        </div>
+    </div>
+
+    <div class="panel product">
+        <div class="input-component">
+            <label for="short-description" class="required"></label>
+            <textarea name="comment" id="short-description" rows="7" tabindex="4" required="required"
+                      placeholder="Mô tả ngắn gọn"></textarea>
+        </div>
+    </div>
+
+    <div class="panel product">
+        <div class="input-component">
+            <label for="description" class="required"></label>
+            <textarea name="comment" id="description" rows="20" tabindex="4" required="required"
+                      placeholder="Mô tả chi tiết"></textarea>
+        </div>
+    </div>
+
+    <div class="panel product">
+        <div class="input-component">
+            <label for="pictures" class="required"></label>
+            <textarea name="comment" id="pictures" rows="10" tabindex="4" required="required"
+                      placeholder="Thêm ảnh"></textarea>
             <input type="file" id="image-upload" accept="image/*" style="display: none;">
             <label for="image-upload" class="upload-button"><i class="fa fa-picture-o"></i></label>
         </div>
     </div>
 
-    <div class="panel">
-        <button type="submit" class="post"><i class="fa fa-plus"> Đăng bài viết</i></button>
+    <div class="panel product">
+        <button type="submit" class="post"><i class="fa fa-plus"> Thêm sản phẩm</i></button>
     </div>
 </div>
+<!--Content-->
+
+<!--Script-->
+
+<!--Script-->
 </body>
 </html>
