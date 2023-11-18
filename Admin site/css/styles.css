@@ -1356,7 +1356,12 @@ p.back-link {
 
 .row .nav-bills .chosen {
     background-color: #30a5ff;
-    border-radius: 5px;
+    border: 1px solid #444444;
+    border-radius: 3px;
+}
+
+.row .nav-bills .chosen a {
+    color: white;
 }
 
 .panel-container.user {
@@ -1488,13 +1493,13 @@ p.back-link {
     max-width: 200px;
 }
 
-.product-table tr td a{
+.product-table tr td a {
     font-size: 20px;
     padding: 5px 10px;
     text-decoration: none;
 }
 
-.category .product-add{
+.category .product-add {
     background-color: #30a5ff;
     border: 1px solid #444444;
     border-radius: 3px;
@@ -1503,7 +1508,7 @@ p.back-link {
     padding: 5px;
 }
 
-.product textarea#product-price, #short-description, #description, #pictures{
+.product textarea#product-price, #short-description, #description, #pictures, #stock {
     width: 100%;
     margin-top: -20px;
     margin-bottom: -10px;
@@ -1512,12 +1517,98 @@ p.back-link {
     resize: vertical;
 }
 
-.product h4{
+.product h4 {
     font-size: 24px;
     margin-top: 8px;
     margin-left: 5px;
 }
 
-.product .col-lg-12{
+.product .col-lg-12 {
     margin-bottom: -15px;
+}
+
+.form-head h3, .form-head h4 {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+}
+
+.form-head textarea {
+    resize: none;
+    width: 72px;
+    margin-bottom: -5px;
+}
+
+.form-body p {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0 15%;
+    color: black;
+}
+
+.form-body table {
+    justify-content: center;
+    border-collapse: collapse;
+    margin: 20px 15%;
+    border: 1px black solid;
+    width: 70%;
+}
+
+.form-body table tr th {
+    font-size: 18px;
+    border: 1px solid black;
+    color: black;
+}
+
+.form-body table tr td {
+    font-size: 16px;
+    border: 1px solid black;
+    color: black;
+}
+
+.form-body table tr td textarea{
+    border: none;
+}
+
+.form-body textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: -10px;
+}
+
+/*.form-body table tr td a {*/
+/*    font-size: 16px;*/
+/*    text-decoration: none;*/
+/*    float: right;*/
+/*    color: #3c3c3c;*/
+/*    padding: 5px 10px;*/
+/*}*/
+
+.form-foot p {
+    color: black;
+    font-size: 16px;
+    text-align: right;
+    padding-right: 15%;
+}
+
+.form-foot textarea {
+    width: 30px;
+    resize: none;
+    margin-bottom: -10px;
+}
+
+.form-foot p.signature {
+    padding-right: 25%;
+
+}
+
+.print-button {
+    font-size: 16px;
+    float: right;
+    border: 1px solid #444444;
+    border-radius: 3px;
+    padding: 5px 15px;
+    background-color: #30a5ff;
+    color: white;
+    margin-bottom: 30px;
 }
