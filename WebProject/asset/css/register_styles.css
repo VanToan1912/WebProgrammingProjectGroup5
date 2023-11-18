@@ -1,5 +1,4 @@
 
-
 .clear{
     clear: both;
 }
@@ -40,21 +39,17 @@ header .col-head p{
     background-color: white;
 }
 
-
 #main-content  .sign-in-form {
-
     background: #fff;
     border-radius: 30px;
     padding: 10px;
 }
 
 #main-content   form {
-
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
 
 #main-content   h1 {
     font-size: 24px;
@@ -66,47 +61,37 @@ header .col-head p{
     align-items: flex-start;
 }
 
-
 #main-content  label {
-
     font-size: 14px;
     margin-top: 5px;
 }
 
-
 #main-content   .icon {
-
     text-align: left;
     margin-top: 5px;
 }
 
 #container   input[type="email"],
 #container input[type="password"] {
-
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
 
-
 #main-content  .input-remember-checkbox {
-
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-size: 14px;
 }
 
-
 #main-content   .btn {
-
     max-width: 100%;
     background: green;
     color: #fff;
     border: none;
     border-radius: 10px;
-
     padding: 12px;
     cursor: pointer;
    
@@ -119,7 +104,6 @@ header .col-head p{
     color: #000;
 }
 #container  .btn:hover {
-
     background: #ff4500;
     color: white;
 }
@@ -129,13 +113,10 @@ header .col-head p{
     margin-top: 10px;
 }
 
-
 #container  a {
-
     text-decoration: none;
     color: rgb(0,208,130);
 }
-
 
 #container  a:hover {
     color: #ff4500;
