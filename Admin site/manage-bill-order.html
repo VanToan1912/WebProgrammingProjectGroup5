@@ -17,10 +17,8 @@
 <body>
 <!--Top-Bar and Sidebar-->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#"><span>CGNL </span>Admin Site</a>
-        </div>
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#"><span>CGNL </span>Admin Site</a>
     </div>
 </nav>
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
@@ -53,7 +51,7 @@
             </a>
         </li>
         <li class="active">
-            <a class="" href="manage-bill-order.html">
+            <a class="" href="manage-bill-shipping.html">
                 <span class="fa fa-money"></span> Quản lý hóa đơn
             </a>
         </li>
@@ -73,79 +71,307 @@
     <div class="panel panel-container">
         <div class="row">
             <ul class="nav-bills">
-                <li class="chosen"><a href="manage-bill-order.html">Trạng thái đơn hàng</a></li>
-                <li><a href="manage-bill-profit.html">Tổng kết lợi nhuận trong tháng</a></li>
+                <li><a href="manage-bill-shipping.html">Trạng thái đơn hàng</a></li>
+                <li class="chosen"><a href="manage-bill-order.html">Tạo đơn đặt hàng</a></li>
             </ul>
         </div>
     </div>
 
     <div class="panel panel-container">
-        <table class="order-table">
-            <tr class="rows">
-                <th class="column">Mã đơn hàng</th>
-                <th class="column">Tên người dùng</th>
-                <th class="column">Ngày đặt</th>
-                <th class="column">Thanh Toán</th>
-                <th class="column">Trạng thái</th>
-            </tr>
-            <tr class="rows">
-                <td class="column">
-                    MD001
-                </td>
-                <td class="column">
-                    Trần Văn Toàn
-                </td>
-                <td class="column">
-                    1/11/2023
-                </td>
-                <td class="column">
-                    Trực tiếp
-                </td>
-                <td class="column">
-                    Đã giao hàng
-                </td>
-            </tr>
-            <tr class="rows">
-                <td class="column">
-                    MD002
-                </td>
-                <td class="column">
-                    Lê Thị Hạnh Duyên
-                </td>
-                <td class="column">
-                    12/11/2023
-                </td>
-                <td class="column">
-                    Chuyển Khoản
-                </td>
-                <td class="column">
-                    Đang giao hàng
-                </td>
-            </tr>
-            <tr class="rows">
-                <td class="column">
-                    MD003
-                </td>
-                <td class="column">
-                    Lê Quốc Trung
-                </td>
-                <td class="column">
-                    26/11/2023
-                </td>
-                <td class="column">
-                    Trực tiếp
-                </td>
-                <td class="column">
-                    Đang giao hàng
-                </td>
-            </tr>
-        </table>
+        <div class="form-head">
+            <h3>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</h3>
+            <h4><u>Độc Lập - Tự Do - Hạnh Phúc</u></h4>
+            <h4>ĐƠN ĐẶT HÀNG</h4>
+            <h4>
+                Số:&nbsp;
+                <label>
+                    <textarea rows="1"></textarea>
+                </label>
+            </h4>
+        </div>
+
+        <div class="form-body">
+            <p>Kính gửi: Công ty Cây Giống Đồng Thành Công</p>
+            <p>Công ty Cây Giống Sài Gòn có nhu cầu đặt hàng tại quý công ty theo mẫu</p>
+            <p>Nội dung đặt hàng như sau:</p>
+            <table class="table-order">
+                <tr>
+                    <th>&nbsp;STT</th>
+                    <th>&nbsp;Tên mặt hàng</th>
+                    <th>&nbsp;ĐVT</th>
+                    <th>&nbsp;Số lượng</th>
+                    <th>&nbsp;Đơn giá</th>
+                    <th>&nbsp;Thành tiền</th>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+                <tr>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                    <td><label>
+                        <textarea rows="1"></textarea>
+                    </label></td>
+                </tr>
+
+
+            </table>
+            <p><b>Tổng cộng:</b>
+                <label>
+                    <textarea rows="1"></textarea>
+                </label>
+            </p>
+            <p>Thời gian đặt hàng:
+                <label>
+                    <textarea rows="1"></textarea>
+                </label>
+            </p>
+            <p>Địa điểm giao hàng:
+                <label>
+                    <textarea rows="1"></textarea>
+                </label>
+            </p>
+            <p><b>Phương thức thanh toán:</b></p>
+            <p>- Thanh toán bằng tiền mặt hoặc chuyển khoản</p>
+            <p>- Thanh toán trước 50% giá trị hợp đồng, 50% còn lại thanh toán sau khi giao hàng</p>
+        </div>
+
+        <div class="form-foot">
+            <p>Thủ Đức, ngày
+                <label>
+                    <textarea rows="1"></textarea>
+                </label>
+                , tháng
+                <label>
+                    <textarea rows="1"></textarea>
+                </label>, năm
+                <label>
+                    <textarea rows="1"></textarea>
+                </label>
+            </p>
+            <p class="signature"><b>Giám Đốc</b></p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+            <p>&nbsp;</p>
+        </div>
     </div>
+
+    <button type="submit" class="print-button">In đơn</button>
 </div>
 <!--Content-->
 
 <!--Script-->
-
 <!--Script-->
 </body>
 </html>

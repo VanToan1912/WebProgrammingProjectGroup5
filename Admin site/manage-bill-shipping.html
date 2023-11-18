@@ -17,8 +17,10 @@
 <body>
 <!--Top-Bar and Sidebar-->
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#"><span>CGNL </span>Admin Site</a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><span>CGNL </span>Admin Site</a>
+        </div>
     </div>
 </nav>
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
@@ -40,7 +42,7 @@
                 <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
             </a>
         </li>
-        <li class="active">
+        <li>
             <a class="" href="manage-user.html">
                 <span class="fa fa-user"></span> Quản lý người dùng
             </a>
@@ -50,7 +52,7 @@
                 <span class="fa fa-stack-exchange"></span> Quản lý bài viết
             </a>
         </li>
-        <li>
+        <li class="active">
             <a class="" href="manage-bill-shipping.html">
                 <span class="fa fa-money"></span> Quản lý hóa đơn
             </a>
@@ -64,69 +66,77 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Quản lý người dùng</h1>
+            <h1 class="page-header">Quản lý hóa đơn</h1>
         </div>
     </div>
 
-    <div class="panel">
-        <table class="interface-table">
+    <div class="panel panel-container">
+        <div class="row">
+            <ul class="nav-bills">
+                <li class="chosen"><a href="manage-bill-shipping.html">Trạng thái đơn hàng</a></li>
+                <li><a href="manage-bill-order.html">Tạo đơn đặt hàng</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="panel panel-container">
+        <table class="order-table">
             <tr class="rows">
+                <th class="column">Mã đơn hàng</th>
                 <th class="column">Tên người dùng</th>
-                <th class="column">Mật khẩu</th>
-                <th class="column">Quyền hạn</th>
-                <th class="column">Chỉnh sửa</th>
+                <th class="column">Ngày đặt</th>
+                <th class="column">Thanh Toán</th>
+                <th class="column">Trạng thái</th>
             </tr>
             <tr class="rows">
                 <td class="column">
-                    Group-5
+                    MD001
                 </td>
                 <td class="column">
-                    123
+                    Trần Văn Toàn
                 </td>
                 <td class="column">
-                    Administrator
+                    1/11/2023
                 </td>
-                <td class="column"> <a class="fa fa-trash"></a></td>
+                <td class="column">
+                    Trực tiếp
+                </td>
+                <td class="column">
+                    Đã giao hàng
+                </td>
             </tr>
             <tr class="rows">
                 <td class="column">
-                    Jun
+                    MD002
                 </td>
                 <td class="column">
-                    21130572
+                    Lê Thị Hạnh Duyên
                 </td>
                 <td class="column">
-                    Mod
+                    12/11/2023
                 </td>
-                <td class="column"><a class="fa fa-trash"></a></td>
+                <td class="column">
+                    Chuyển Khoản
+                </td>
+                <td class="column">
+                    Đang giao hàng
+                </td>
             </tr>
             <tr class="rows">
                 <td class="column">
-                    Eliza
+                    MD003
                 </td>
                 <td class="column">
-                    21130335
+                    Lê Quốc Trung
                 </td>
                 <td class="column">
-                    Mod
-                </td>
-                <td class="column"> <a class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column">
-                    Chun
+                    26/11/2023
                 </td>
                 <td class="column">
-                    21130584
+                    Trực tiếp
                 </td>
                 <td class="column">
-                    Mod
-                </td>
-                <td class="column"> <a class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column" colspan="4">
-                    <a href="add-user.html"><i class="fa fa-plus"> Thêm tài khoản</i></a>
+                    Đang giao hàng
                 </td>
             </tr>
         </table>
