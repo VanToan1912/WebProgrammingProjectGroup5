@@ -1,0 +1,44 @@
+
+/*.row-main {*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.col {*/
+/*    padding: 20px;*/
+/*    text-align: center;*/
+/*}*/
+#content{
+    margin: 0 15%;
+    margin-top: 180px;
+   
+}
+.col-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    /* margin-left: 47%;
+    margin-right: ; */
+}
+
+.img-introduce {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0 20px 90px;
+}
+
+/* Paragraph Styles */
+
+
+/* Image Styles */
+img {
+    width: 80%;
+}
+#content .text-content{
+    margin: 10px 0 30px 0;
+    line-height: 1.7;
+    margin-left: 7%;
+    font-size: 16px
+    
+}

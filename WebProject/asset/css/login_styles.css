@@ -1,62 +1,87 @@
 
-body {
+.clear{
+    clear: both;
+}
+footer{
+    overflow: hidden;
+}
+header .col-head{
+    display: flex;
+    
+}
+header .col-head p{
+    margin-top: 40px;
+    font-size: 26px;
+    margin-left: 8px;
+    color: rgb(20, 130, 89);
+    font-weight: 600;
+
+}
+#main-content {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-
-    background: url('https://th.bing.com/th/id/R.ec1421d783c654da6fe9513b322f8294?rik=jVSvSuQUt3MD4Q&pid=ImgRaw&r=0');
+    height: 78vh;
+    margin-top: 16px;
+    /* background: url('https://th.bing.com/th/id/R.ec1421d783c654da6fe9513b322f8294?rik=jVSvSuQUt3MD4Q&pid=ImgRaw&r=0'); */
+    /* background-color: rgb(20, 130, 89); */
     background-position: center;
     background-size: cover;
 }
 
 
 #container {
+
+    /* background: url('https://th.bing.com/th/id/R.ec1421d783c654da6fe9513b322f8294?rik=jVSvSuQUt3MD4Q&pid=ImgRaw&r=0'); */
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     text-align: center;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    box-shadow: 0 0 10px #000;
     border-radius: 30px;
     background-color: white;
+    
 }
 #container::before {
 }
-.sign-in-form {
+#main-content   .sign-in-form {
     background: #fff;
     border-radius: 30px;
     padding: 10px;
 }
 
-form {
+
+#main-content   form {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-h1 {
+
+#main-content   h1 {
     font-size: 24px;
 }
 
-.input-box {
+#main-content   .input-box {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: 8px 0;
 }
 
-label {
+#main-content   label {
     font-size: 14px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
-.icon {
+#main-content   .icon {
     text-align: left;
     margin-top: 5px;
 }
 
-input[type="email"],
-input[type="password"] {
+
+#container input[type="email"],
+#container input[type="password"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -70,24 +95,26 @@ input[type="password"] {
     font-size: 14px;
 }
 
-.btn {
+
+#main-content   .btn {
     max-width: 100%;
     background: green;
     color: #fff;
     border: none;
     border-radius: 10px;
-    padding: 10px;
+
+    padding: 12px;
     cursor: pointer;
-    margin-left: 15px;
+   
     transition: background 0.3s, color 0.3s;
 }
-.btn a{
+#main-content  .btn a{
     color: white;
 }
-.btn a:hover{
+#main-content  .btn a:hover{
     color: #000;
 }
-.btn:hover {
+#main-content   .btn:hover {
     background: #ff4500;
     color: white;
 }
@@ -98,11 +125,23 @@ input[type="password"] {
     margin-top: 10px;
 }
 
-a {
+
+#main-content   a {
     text-decoration: none;
     color: rgb(0,208,130);
 }
 
-a:hover {
+
+#main-content   a:hover {
     color: #ff4500;
 }
+#main-content label{
+    margin: 6px 0 2px 5px;
+}
+input[type="checkbox"] {
+    margin-right: 6px;
+}
+#container strong {
+    margin-left: 6px;
+}
+
