@@ -1,5 +1,6 @@
 
 
+
 /*Body portion*/
 .card {
     margin: 20px 19%;
@@ -98,6 +99,7 @@
     padding: 5px;
     border: 1px solid lightgray;
     color: white;
+
 }
 .news .content{
     line-height: 1.7;
@@ -131,5 +133,3 @@ a.news-title {
     /* padding: 47px; */
     width: 100px;
 }
-
-

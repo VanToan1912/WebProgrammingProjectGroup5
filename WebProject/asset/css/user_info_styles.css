@@ -4,7 +4,6 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 .container {
     width: 100%;
     display: flex;
@@ -12,7 +11,9 @@ body {
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
+
     margin-top: 200px;
+
 }
 
 .card {
@@ -29,6 +30,7 @@ body {
     justify-content: center;
     margin: 10px;
 }
+
 
 .text2-page-user{
     margin: 6px 0;
@@ -81,8 +83,6 @@ input[type="text"] {
     padding: 0 84px;
 }
 
-
-
 .mt-1 {
     color: grey;
 }
@@ -99,8 +99,6 @@ input[type="text"] {
     max-width: 100%;
     max-height: 100%;
 }
-
-
 
 .btn-primary {
     padding: 10px 20px;
@@ -126,6 +124,7 @@ input[type="text"] {
 .tab-pane{
     margin-top: 10px;
 }
+
 .sex {
     display: block;
     position: relative;
@@ -246,4 +245,3 @@ input[type="text"] {
 .menu-user-page a:hover{
     color: #fa461e;
 }
-
