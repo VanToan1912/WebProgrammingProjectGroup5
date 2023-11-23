@@ -13,6 +13,12 @@
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
           rel="stylesheet">
+
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
 <!--Top-Bar and Sidebar-->
@@ -73,56 +79,72 @@
             <tr class="rows">
                 <th class="column">Tên người dùng</th>
                 <th class="column">Mật khẩu</th>
-                <th class="column">Quyền hạn</th>
                 <th class="column">Chỉnh sửa</th>
             </tr>
-            <tr class="rows">
+            <tr class="rows" id="row-1">
                 <td class="column">
                     Group-5
                 </td>
                 <td class="column">
-                    123
+                    <span id="hidden-password-1" class="hidden">------</span>
+                    <span id="password-1">123</span>
                 </td>
                 <td class="column">
-                    Mod
+                    <button class="show-password fa fa-eye"
+                            onmouseover="showPassword('password-1', 'hidden-password-1')"
+                            onmouseout="hidePassword('password-1', 'hidden-password-1')"
+                    >
+                    </button>
+                    <a class="fa fa-trash" onclick="deleteRow('row-1')"></a>
                 </td>
-                <td class="column"> <a class="fa fa-trash"></a></td>
             </tr>
-            <tr class="rows">
+            <tr class="rows" id="row-2">
                 <td class="column">
                     Jun
                 </td>
                 <td class="column">
-                    21130572
+                    <span id="hidden-password-2" class="hidden">------</span>
+                    <span id="password-2">21130572</span>
                 </td>
                 <td class="column">
-                    Mod
+                    <button class="show-password fa fa-eye"
+                            onmouseover="showPassword('password-2', 'hidden-password-2')"
+                            onmouseout="hidePassword('password-2', 'hidden-password-2')">
+                    </button>
+                    <a class="fa fa-trash" onclick="deleteRow('row-2')"></a>
                 </td>
-                <td class="column"><a class="fa fa-trash"></a></td>
             </tr>
-            <tr class="rows">
+            <tr class="rows" id="row-3">
                 <td class="column">
                     Eliza
                 </td>
                 <td class="column">
-                    21130335
+                    <span id="hidden-password-3" class="hidden">------</span>
+                    <span id="password-3">21130335</span>
                 </td>
                 <td class="column">
-                    Mod
+                    <button class="show-password fa fa-eye"
+                            onmouseover="showPassword('password-3', 'hidden-password-3')"
+                            onmouseout="hidePassword('password-3', 'hidden-password-3')">
+                    </button>
+                    <a class="fa fa-trash" onclick="deleteRow('row-3')"></a>
                 </td>
-                <td class="column"> <a class="fa fa-trash"></a></td>
             </tr>
-            <tr class="rows">
+            <tr class="rows" id="row-4">
                 <td class="column">
                     Chun
                 </td>
                 <td class="column">
-                    21130584
+                    <span id="hidden-password-4" class="hidden">------</span>
+                    <span id="password-4">21130584</span>
                 </td>
                 <td class="column">
-                    Mod
+                    <button class="show-password fa fa-eye"
+                            onmouseover="showPassword('password-4', 'hidden-password-4')"
+                            onmouseout="hidePassword('password-4', 'hidden-password-4')">
+                    </button>
+                    <a class="fa fa-trash" onclick="deleteRow('row-4')"></a>
                 </td>
-                <td class="column"> <a class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
                 <td class="column" colspan="4">
@@ -135,7 +157,37 @@
 <!--Content-->
 
 <!--Script-->
+<!--Toggle password-->
+<script>
+    // Hide the password initially
+    document.addEventListener("DOMContentLoaded", function () {
+        hidePassword('password-1', 'hidden-password-1');
+        hidePassword('password-2', 'hidden-password-2');
+        hidePassword('password-3', 'hidden-password-3');
+        hidePassword('password-4', 'hidden-password-4');
+    });
 
+    function showPassword(passwordId, hiddenPasswordId) {
+        let passwordElement = document.getElementById(passwordId);
+        let hiddenPasswordElement = document.getElementById(hiddenPasswordId);
+
+        passwordElement.style.display = "inline";
+        hiddenPasswordElement.style.display = "none";
+    }
+
+    function hidePassword(passwordId, hiddenPasswordId) {
+        let passwordElement = document.getElementById(passwordId);
+        let hiddenPasswordElement = document.getElementById(hiddenPasswordId);
+
+        passwordElement.style.display = "none";
+        hiddenPasswordElement.style.display = "inline";
+    }
+
+    function deleteRow(rowId) {
+        let row = document.getElementById(rowId);
+        row.parentNode.removeChild(row);
+    }
+</script>
 <!--Script-->
 </body>
 </html>

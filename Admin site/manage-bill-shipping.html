@@ -82,6 +82,7 @@
     <div class="panel panel-container">
         <table class="order-table">
             <tr class="rows">
+                <th class="column">Xóa</th>
                 <th class="column">Mã đơn hàng</th>
                 <th class="column">Tên người dùng</th>
                 <th class="column">Ngày đặt</th>
@@ -90,7 +91,8 @@
                 <th class="column">Sản phẩm</th>
                 <th class="column">Trạng thái</th>
             </tr>
-            <tr class="rows">
+            <tr class="rows" id="row-1">
+                <td><a class="fa fa-trash" onclick="deleteRow('row-1')"></a></td>
                 <td class="column">
                     MD001
                 </td>
@@ -107,7 +109,8 @@
                     Đã giao hàng
                 </td>
             </tr>
-            <tr class="rows">
+            <tr class="rows" id="row-2">
+                <td></td>
                 <td class="column">
                     MD002
                 </td>
@@ -124,7 +127,8 @@
                     Đang giao hàng
                 </td>
             </tr>
-            <tr class="rows">
+            <tr class="rows" id="row-3">
+                <td></td>
                 <td class="column">
                     MD003
                 </td>
@@ -147,7 +151,12 @@
 <!--Content-->
 
 <!--Script-->
-
+<script>
+    function deleteRow(rowId) {
+        let row = document.getElementById(rowId);
+        row.parentNode.removeChild(row);
+    }
+</script>
 <!--Script-->
 </body>
 </html>
