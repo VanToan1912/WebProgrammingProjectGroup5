@@ -1612,3 +1612,10 @@ p.back-link {
     color: white;
     margin-bottom: 30px;
 }
+
+.show-password{
+    color: #30a5ff;
+    background-color: white;
+    border: none;
+    margin-right: 10px;
+}
