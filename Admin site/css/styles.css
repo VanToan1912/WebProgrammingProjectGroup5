@@ -1566,7 +1566,7 @@ p.back-link {
     color: black;
 }
 
-.form-body table tr td textarea{
+.form-body table tr td textarea {
     border: none;
 }
 
@@ -1613,9 +1613,14 @@ p.back-link {
     margin-bottom: 30px;
 }
 
-.show-password{
+.show-password {
     color: #30a5ff;
     background-color: white;
     border: none;
     margin-right: 10px;
+}
+
+.custom-file-upload {
+    color: #30a5ff;
+    font-size: 24px
 }

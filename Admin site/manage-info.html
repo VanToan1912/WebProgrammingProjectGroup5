@@ -36,7 +36,7 @@
         <li>
             <a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a>
         </li>
-        <li>
+        <li class="active">
             <a href="manage-info.html"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
         </li>
         <li>
@@ -68,39 +68,57 @@
         <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
     </ul>
 </div>
-
-
 <!--Sidebar-->
 
 <!--Content-->
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Chỉnh sửa bài viết</h1>
+            <h1 class="page-header">Quản lý thông tin chung</h1>
         </div>
     </div>
 
-    <div class="panel">
-        <div class="input-component">
-            <label for="heading"></label>
-            <input type="text" id="heading" required="required" placeholder="Nhập tiêu đề">
-        </div>
-    </div>
-
-    <div class="panel" style="resize: both">
-        <div class="input-component">
-            <label for="comment" class="required"></label>
-            <textarea name="comment" id="comment" rows="30" tabindex="4" required="required"
-                      placeholder="Nhập nội dung"></textarea>
-            <input type="file" id="image-upload" accept="image/*" style="display: none;">
-            <label for="image-upload" class="upload-button"><i class="fa fa-picture-o"></i></label>
-        </div>
-    </div>
-
-    <div class="panel">
-        <button type="submit" class="post"><i class="fa fa-plus"> Lưu thay đổi</i></button>
-    </div>
+    <table class="interface-table">
+        <tr class="rows">
+            <th>Tên</th>
+            <th colspan="2">Nội dung</th>
+            <th>Chỉnh sửa</th>
+        </tr>
+        <tr class="rows">
+            <td>Email</td>
+            <td colspan="2">nls@hcmuaf.edu.vn</td>
+            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+        </tr>
+        <tr class="rows">
+            <td>Facebook</td>
+            <td colspan="2">https://www.facebook.com/NongLamUniversity</td>
+            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+        </tr>
+        <tr class="rows">
+            <td>Số điện thoại</td>
+            <td colspan="2">028-28974560</td>
+            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+        </tr>
+        <tr class="rows">
+            <td>Địa Chỉ</td>
+            <td colspan="2">Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</td>
+            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+        </tr>
+        <tr class="rows">
+            <td>Giới thiệu</td>
+            <td colspan="2">Điểm đến lý tưởng cho những người yêu đam mê và đang tìm kiếm cây giống nông nghiệp chất
+                lượng cao. Với mục tiêu hỗ trợ và nâng cao năng suất trong nông nghiệp.
+            </td>
+            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+        </tr>
+        <tr class="rows">
+            <td colspan="3">Ảnh Slideshow</td>
+            <td><a href="edit-slideshow.html" class="fa fa-pencil-square"></a></td>
+        </tr>
+    </table>
 </div>
+
+<!--Content-->
 
 <!--Script-->
 
