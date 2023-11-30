@@ -33,8 +33,18 @@
         <div class="clear"></div>
     </div>
     <ul class="nav menu">
-        <li><a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a></li>
-        <li class="active"><a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a></li>
+        <li>
+            <a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a>
+        </li>
+        <li>
+            <a href="manage-info.html"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
+        </li>
+        <li>
+            <a href="manage-comment.html"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
+        </li>
+        <li>
+            <a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
+        </li>
         <li>
             <a class="" href="manage-product.html">
                 <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
@@ -71,9 +81,11 @@
     <div class="panel">
         <table class="interface-table">
             <tr class="rows">
+                <th colspan="5">Quản lý danh mục chính</th>
+            </tr>
+            <tr class="rows">
                 <th class="column">Tên danh mục</th>
                 <th class="column">Trang chủ</th>
-                <th class="column">Danh mục</th>
                 <th class="column">Hiển thị</th>
                 <th class="column">Chỉnh sửa</th>
             </tr>
@@ -82,11 +94,6 @@
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
                     </label>
                 </td>
                 <td class="column">
@@ -106,11 +113,6 @@
                 </td>
                 <td class="column">
                     <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
                         <input type="checkbox" checked>
                     </label>
                 </td>
@@ -122,11 +124,6 @@
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
                     </label>
                 </td>
                 <td class="column">
@@ -146,11 +143,6 @@
                 </td>
                 <td class="column">
                     <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
                         <input type="checkbox" checked>
                     </label>
                 </td>
@@ -162,11 +154,6 @@
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
                     </label>
                 </td>
                 <td class="column">
@@ -186,124 +173,28 @@
                 </td>
                 <td class="column">
                     <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
                         <input type="checkbox" checked>
                     </label>
                 </td>
                 <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="panel">
+        <table class="interface-table">
+            <tr class="rows">
+                <th colspan="5">Quản lý danh mục sản phẩm</th>
+            </tr>
+            <tr class="rows">
+                <th class="column">Tên danh mục</th>
+                <th class="column">Danh mục</th>
+                <th class="column">Hiển thị</th>
+                <th class="column">Chỉnh sửa</th>
             </tr>
             <tr class="rows">
                 <td class="column name">CÂY ĂN TRÁI</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
-                        class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">CÂY CÓ HOA</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
-                        class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">CÂY DƯA LEO</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
-                        class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">CÂY CẢNH</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
-                        class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">CÂY LỚN</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
-                        class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">CÂY ĐỘC LẠ - HIẾM</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -321,9 +212,19 @@
                 <td class="column name">CÂY BONSAI</td>
                 <td class="column">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                     </label>
                 </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                        class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY CẢNH</td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -338,12 +239,7 @@
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
-                <td class="column name">CÂY GIỐNG</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
+                <td class="column name">CÂY CÓ HOA</td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -358,32 +254,7 @@
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
-                <td class="column name">HOA LAN</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
-                        class="fa fa-trash"></a></td>
-            </tr>
-            <tr class="rows">
-                <td class="column name">HOA LAN CÂY GIỐNG</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
+                <td class="column name">CÂY ĐỘC LẠ - HIẾM</td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -406,6 +277,61 @@
                 </td>
                 <td class="column">
                     <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                        class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY GIỐNG</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                        class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CÂY HOA LEO</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                        class="fa fa-trash"></a></td>
+            </tr>
+                       <tr class="rows">
+                <td class="column name">CÂY LỚN</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                        class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">CỦ GIỐNG</td>
+                <td class="column">
+                    <label>
                         <input type="checkbox">
                     </label>
                 </td>
@@ -418,12 +344,37 @@
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
-                <td class="column name">PHÂN BÓN - VẬT TƯ</td>
+                <td class="column name">HOA LAN</td>
                 <td class="column">
                     <label>
-                        <input type="checkbox">
+                        <input type="checkbox" checked>
                     </label>
                 </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                        class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">HOA LAN CÂY GIỐNG</td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column">
+                    <label>
+                        <input type="checkbox" checked>
+                    </label>
+                </td>
+                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                        class="fa fa-trash"></a></td>
+            </tr>
+            <tr class="rows">
+                <td class="column name">PHÂN BÓN - VẬT TƯ</td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -439,11 +390,6 @@
             </tr>
             <tr class="rows">
                 <td class="column name">SẢN PHẨM KHUYẾN MÃI</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>

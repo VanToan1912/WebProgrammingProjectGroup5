@@ -39,8 +39,18 @@
         <div class="clear"></div>
     </div>
     <ul class="nav menu">
-        <li><a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a></li>
-        <li><a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a></li>
+        <li>
+            <a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a>
+        </li>
+        <li>
+            <a href="manage-info.html"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
+        </li>
+        <li>
+            <a href="manage-comment.html"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
+        </li>
+        <li>
+            <a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
+        </li>
         <li>
             <a class="" href="manage-product.html">
                 <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
@@ -71,6 +81,19 @@
     <div class="row">
         <div class="col-lg-12">
             <h1 class="page-header">Quản lý người dùng</h1>
+        </div>
+    </div>
+
+    <div class="panel panel-container" style="padding-top: 0">
+        <div class="category">
+            <label for="product-category"></label>
+            <select id="product-category">
+                <option value="0">Quản Trị Viên</option>
+                <option value="1">Người Dùng</option>
+            </select>
+            <button type="submit" class="product-categorize">Lọc</button>
+            <a href="add-user.html" class="product-add" style="float: right"><i class="fa fa-plus"></i> Thêm người
+                dùng</a>
         </div>
     </div>
 
@@ -144,11 +167,6 @@
                             onmouseout="hidePassword('password-4', 'hidden-password-4')">
                     </button>
                     <a class="fa fa-trash" onclick="deleteRow('row-4')"></a>
-                </td>
-            </tr>
-            <tr class="rows">
-                <td class="column" colspan="4">
-                    <a href="add-user.html"><i class="fa fa-plus"> Thêm tài khoản</i></a>
                 </td>
             </tr>
         </table>
