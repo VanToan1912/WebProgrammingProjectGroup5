@@ -23,6 +23,7 @@
         </div>
     </div>
 </nav>
+
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <div class="profile-sidebar">
         <div class="profile-userpic">
@@ -89,7 +90,18 @@
         </div>
     </div>
 
-    <div class="panel panel-container">
+    <div class="panel panel-container" style="padding-top: 0">
+        <div class="category">
+            <label for="product-category"></label>
+            <select id="product-category">
+                <option value="0">Đơn hàng chưa duyệt</option>
+                <option value="1">Đơn hàng đã duyệt</option>
+            </select>
+            <button type="submit" class="product-categorize">Lọc</button>
+        </div>
+    </div>
+
+    <div class="panel chua-duyet-table">
         <table class="order-table">
             <tr class="rows">
                 <th colspan="7">Đơn hàng chưa duyệt</th>
@@ -169,10 +181,10 @@
         </table>
     </div>
 
-    <div class="panel panel-container">
+    <div class="panel panel-container da-duyet-table ">
         <table class="order-table">
             <tr class="rows">
-                <th colspan="8">Đơn hàng đang/đã giao</th>
+                <th colspan="8">Đơn hàng đã duyệt</th>
             </tr>
             <tr class="rows">
                 <th class="column">Xóa</th>
@@ -249,6 +261,50 @@
         let row = document.getElementById(rowId);
         row.parentNode.removeChild(row);
     }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log('DOMContentLoaded event fired.');
+
+        // Get references to elements
+        var categorySelect = document.getElementById('product-category');
+        var chuaDuyetTable = document.querySelector('.chua-duyet-table .order-table');
+        var daDuyetTable = document.querySelector('.da-duyet-table .order-table');
+
+        // Log the elements to the console
+        console.log('categorySelect:', categorySelect);
+        console.log('chuaDuyetTable:', chuaDuyetTable);
+        console.log('daDuyetTable:', daDuyetTable);
+
+        // Check if elements exist before accessing their properties
+        if (categorySelect && chuaDuyetTable && daDuyetTable) {
+            // Set initial display based on the selected category
+            var selectedCategory = categorySelect.value;
+            if (selectedCategory === '0') {
+                chuaDuyetTable.style.display = 'table';
+                daDuyetTable.style.display = 'none';
+            } else if (selectedCategory === '1') {
+                chuaDuyetTable.style.display = 'none';
+                daDuyetTable.style.display = 'table';
+            }
+
+            // Add event listener to the filter button
+            document.querySelector('.product-categorize').addEventListener('click', function () {
+                // Get the selected value from the category dropdown
+                var selectedCategory = categorySelect.value;
+
+                // Show/hide tables based on the selected category
+                if (selectedCategory === '0') {
+                    chuaDuyetTable.style.display = 'table';
+                    daDuyetTable.style.display = 'none';
+                } else if (selectedCategory === '1') {
+                    chuaDuyetTable.style.display = 'none';
+                    daDuyetTable.style.display = 'table';
+                }
+            });
+        } else {
+            console.error('One or more elements not found.');
+        }
+    });
 </script>
 <!--Script-->
 </body>
