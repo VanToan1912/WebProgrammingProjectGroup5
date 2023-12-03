@@ -374,11 +374,30 @@
         </div>
     </div>
 
-    <button type="submit" class="print-button">In đơn</button>
+    <button type="button" class="print-button" onclick="printDocument()">In đơn</button>
 </div>
 <!--Content-->
 
 <!--Script-->
+<script>
+    function printDocument() {
+        // Lấy nội dung của các textarea
+        var content = "";
+        var textareas = document.querySelectorAll('textarea');
+        textareas.forEach(function (textarea) {
+            content += textarea.value + '\n';
+        });
+
+        // Tạo một cửa sổ mới để hiển thị nội dung và in
+        var printWindow = window.open('', '_blank');
+        printWindow.document.open();
+        printWindow.document.write('<html><head><title>Đơn Đặt Hàng</title></head><body><pre>' + content + '</pre></body></html>');
+        printWindow.document.close();
+
+        // In trang
+        printWindow.print();
+    }
+</script>
 <!--Script-->
 </body>
 </html>
