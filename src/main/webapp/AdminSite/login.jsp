@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -28,7 +29,7 @@
 								<input name="remember" type="checkbox" value="Remember Me">Ghi nhớ thông tin
 							</label>
 						</div>
-						<a href="index.html" class="btn btn-primary">Đăng Nhập</a></fieldset>
+						<a href="index-admin.jsp" class="btn btn-primary">Đăng Nhập</a></fieldset>
 				</form>
 			</div>
 		</div>
