@@ -42,7 +42,7 @@
                             <span class="tooltiptext">Đóng góp ý kiến</span></a>
                     </li>
                     <li>
-                        <a href="register.html">
+                        <a href="register.jsp">
                             <button class="sign-up-button">
                                 Đăng Ký
                             </button>
@@ -54,7 +54,7 @@
                                 Đăng Nhập
                             </button>
                         </a>
-                        <a href="user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
+                        <a href="user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
                             <span class="tooltiptext">Tài khoản của tôi</span></a>
                     </li>
 
@@ -88,13 +88,13 @@
                     </div>
                     <div class="input-remember-checkbox">
                         <label><input type="checkbox">Ghi nhớ tài khoản</label>
-                        <a href="password_reset.html">Quên mật khẩu?</a>
+                        <a href="password_reset.jsp">Quên mật khẩu?</a>
                     </div>
                     <button type="submit" class="btn" id="agreeButton">
                         <a href="index.html"> Đồng ý</a>
                     </button>
                     <div class="login-register">
-                        <p>Chưa có tài khoản? <a href="register.html">Đăng ký</a></p>
+                        <p>Chưa có tài khoản? <a href="register.jsp">Đăng ký</a></p>
                     </div>
                 </form>
             </div>
@@ -122,7 +122,7 @@
                 <h3>Thông Tin</h3>
                 <ul>
                     <li><a href="index.html">Trang Chủ</a></li>
-                    <li><a href="introduce.html">Giới Thiệu</a></li>
+                    <li><a href="introduce.jsp">Giới Thiệu</a></li>
                     <li><a href="product.html">Sản Phẩm</a></li>
                     <li><a href="instruct.html">Hướng Dẫn Mua Hàng</a></li>
                     <li><a href="news.html">Tin Tức</a></li>
@@ -141,13 +141,10 @@
                 <nav class="socials">
                     <a href="#" class="tooltip ti-facebook">
                         <span class="tooltiptext">Theo Dõi Chúng Tôi</span></a>
-                    </a>
                     <a href="#" class="tooltip ti-mobile">
                         <span class="tooltiptext">0929729120</span></a>
-                    </a>
                     <a href="mailto:mail@mail.com" class="tooltip ti-email">
                         <span class="tooltiptext">Đóng Góp Ý Kiến</span></a>
-                    </a>
                 </nav>
             </div>
         </div>

@@ -42,19 +42,19 @@
                         <span class="tooltiptext">Đóng góp ý kiến</span></a>
                 </li>
                 <li>
-                    <a href="register.html">
+                    <a href="register.jsp">
                         <button class="sign-up-button">
                             Đăng Ký
                         </button>
                     </a>
 
                     /
-                    <a href="login.html">
+                    <a href="login.jsp">
                         <button class="login-button">
                             Đăng Nhập
                         </button>
                     </a>
-                    <a href="user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
+                    <a href="user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
                         <span class="tooltiptext">Tài khoản của tôi</span></a>
                 </li>
 
@@ -143,7 +143,7 @@
             </ul>
         </li>
         <li class=" nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
-        <li class="  nav-togethger"><a href="introduce.html" class="nav-togethger">GIỚI THIỆU</a></li>
+        <li class="  nav-togethger"><a href="introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
         <li class=" nav-togethger"><a href="product.html">SẢN PHẨM</a></li>
         <li class="nav-togethger"><a href="instruct.html">HƯỚNG DẪN MUA HÀNG</a></li>
         <li class="nav-togethger"><a href="news.html">TIN TỨC</a></li>
@@ -335,7 +335,7 @@
             <h3>Thông Tin</h3>
             <ul>
                 <li><a href="index.html">Trang Chủ</a></li>
-                <li><a href="introduce.html">Giới Thiệu</a></li>
+                <li><a href="introduce.jsp">Giới Thiệu</a></li>
                 <li><a href="product.html">Sản Phẩm</a></li>
                 <li><a href="instruct.html">Hướng Dẫn Mua Hàng</a></li>
                 <li><a href="news.html">Tin Tức</a></li>

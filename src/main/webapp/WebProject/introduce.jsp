@@ -45,19 +45,19 @@
                         <span class="tooltiptext">Đóng góp ý kiến</span></a>
                 </li>
                 <li>
-                    <a href="register.html">
+                    <a href="register.jsp">
                         <button class="sign-up-button">
                             Đăng Ký
                         </button>
                     </a>
 
                     /
-                    <a href="login.html">
+                    <a href="login.jsp">
                         <button class="login-button">
                             Đăng Nhập
                         </button>
                     </a>
-                    <a href="user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
+                    <a href="user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
                         <span class="tooltiptext">Tài khoản của tôi</span></a>
                 </li>
 
@@ -78,7 +78,7 @@
                 <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
             </form>
         </div>
-        <a href="purchase.html">
+        <a href="purchase.jsp">
             <div class="col-head">
                 <button class="cart-button">
                     <i class="ti-shopping-cart">0.000đ</i>
