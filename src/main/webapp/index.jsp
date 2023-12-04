@@ -46,19 +46,19 @@
                             <span class="tooltiptext">Đóng góp ý kiến</span></a>
                     </li>
                     <li>
-                        <a href="WebProject/register.html">
+                        <a href="WebProject/register.jsp">
                             <button class="sign-up-button">
                                 Đăng Ký
                             </button>
                         </a>
 
                         /
-                        <a href="WebProject/login.html">
+                        <a href="WebProject/login.jsp">
                             <button class="login-button">
                                 Đăng Nhập
                             </button>
                         </a>
-                        <a href="WebProject/user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
+                        <a href="WebProject/user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
                             <span class="tooltiptext">Tài khoản của tôi</span></a>
                     </li>
 
@@ -78,7 +78,7 @@
                     <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
                 </form>
             </div>
-            <a href="WebProject/purchase.html">
+            <a href="WebProject/purchase.jsp">
                 <div class="col-head">
                     <button class="cart-button">
                         <i class="ti-shopping-cart">0.000đ</i>
@@ -147,7 +147,7 @@
                 </ul>
             </li>
             <li class="nav-text-product nav-togethger"><a href="WebProject/index.html">TRANG CHỦ</a></li>
-            <li class="nav-togethger"><a href="WebProject/introduce.html" class="nav-togethger">GIỚI THIỆU</a></li>
+            <li class="nav-togethger"><a href="WebProject/introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
             <li class=" nav-togethger"><a href="WebProject/product.html">SẢN PHẨM</a></li>
             <li class="nav-togethger"><a href="WebProject/instruct.html">HƯỚNG DẪN MUA HÀNG</a></li>
             <li class="nav-togethger"><a href="WebProject/news.html">TIN TỨC</a></li>
@@ -1043,7 +1043,7 @@
                 <h3>Thông Tin</h3>
                 <ul>
                     <li><a href="WebProject/index.html">Trang Chủ</a></li>
-                    <li><a href="WebProject/introduce.html">Giới Thiệu</a></li>
+                    <li><a href="WebProject/introduce.jsp">Giới Thiệu</a></li>
                     <li><a href="WebProject/product.html">Sản Phẩm</a></li>
                     <li><a href="WebProject/instruct.html">Hướng Dẫn Mua Hàng</a></li>
                     <li><a href="WebProject/news.html">Tin Tức</a></li>
