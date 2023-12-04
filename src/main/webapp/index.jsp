@@ -51,7 +51,6 @@
                                 Đăng Ký
                             </button>
                         </a>
-
                         /
                         <a href="WebProject/login.html">
                             <button class="login-button">
@@ -61,6 +60,7 @@
                         <a href="WebProject/user_page.html" class="tooltip ti-user" id="userIcon"
                            style="display: none;">
                             <span class="tooltiptext">Tài khoản của tôi</span></a>
+                        <a href="./AdminSite/index-admin.jsp">Trang Admin</a>
                     </li>
 
                 </ul>
