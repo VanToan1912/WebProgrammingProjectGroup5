@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 
@@ -58,7 +58,8 @@
                                 Đăng Nhập
                             </button>
                         </a>
-                        <a href="WebProject/user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
+                        <a href="WebProject/user_page.html" class="tooltip ti-user" id="userIcon"
+                           style="display: none;">
                             <span class="tooltiptext">Tài khoản của tôi</span></a>
                     </li>
 
@@ -68,7 +69,8 @@
 
         <div class="nav-bar middle-bar row-head ">
             <div class="col-head mg-left">
-                <a href="WebProject/index.html"><img src="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
+                <a href="WebProject/index.html"><img src="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg"
+                                                     alt="logo" class="logo "></a>
             </div>
             <div class="col-head">
                 <form>
@@ -290,7 +292,8 @@
 
 
                 <div class=" col col-fifth container-product">
-                    <img class="size-img" src="WebProject/asset/img/san-pham-khuyen-mai/combo-3-hop-chuyen-Lan.jpg" alt="">
+                    <img class="size-img" src="WebProject/asset/img/san-pham-khuyen-mai/combo-3-hop-chuyen-Lan.jpg"
+                         alt="">
                     <p class="text-sale back-orange">Giảm giá!</p>
                     <p class="text-review review">XEM NHANH</p>
 
@@ -416,7 +419,8 @@
 
         <div class="list-procduct row">
             <div class="  col col-fifth container-product">
-                <img class="size-img" src="WebProject/asset/img/cay-co-hoa/lan hoang duong/1.jpg" alt="Full Screen Image">
+                <img class="size-img" src="WebProject/asset/img/cay-co-hoa/lan hoang duong/1.jpg"
+                     alt="Full Screen Image">
                 <p class="text-sale back-orange">Giảm giá!</p>
                 <p class="text-review review">XEM NHANH</p>
 
@@ -431,7 +435,8 @@
             </div>
 
             <div class=" col col-fifth container-product">
-                <img class="size-img" src="WebProject/asset/img/cay-co-hoa/phuong tim/hfgdfgjdshfgdjsf-510x383.jpg" alt="">
+                <img class="size-img" src="WebProject/asset/img/cay-co-hoa/phuong tim/hfgdfgjdshfgdjsf-510x383.jpg"
+                     alt="">
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
                 <p class="text-review review">XEM NHANH</p>
 
@@ -463,7 +468,8 @@
             </div>
 
             <div class="  col col-fifth container-product">
-                <img class="size-img" src="WebProject/asset/img/cay-co-hoa/moc-huong-cao-80cm/cay-moc-huong-2-510x501.jpg"
+                <img class="size-img"
+                     src="WebProject/asset/img/cay-co-hoa/moc-huong-cao-80cm/cay-moc-huong-2-510x501.jpg"
                      alt="">
                 <p class="text-sale back-orange">Giảm giá!</p>
                 <p class="text-review review">XEM NHANH</p>
@@ -544,7 +550,8 @@
             </div>
 
             <div class="  col col-fifth container-product">
-                <img class="size-img" src="WebProject/asset/img/hoa-lan/lan-ngoc-diem(cay- ho)/IMG20190610092525-510x510.jpg"
+                <img class="size-img"
+                     src="WebProject/asset/img/hoa-lan/lan-ngoc-diem(cay- ho)/IMG20190610092525-510x510.jpg"
                      alt="Full Screen Image">
 
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
@@ -657,7 +664,8 @@
             </div>
 
             <div class="  col col-fifth container-product"><img class="size-img"
-                                                                src="WebProject/asset/img/cay-an-qua/chanh-leo/1.jpg" alt="">
+                                                                src="WebProject/asset/img/cay-an-qua/chanh-leo/1.jpg"
+                                                                alt="">
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
                 <p class="text-review review">XEM NHANH</p>
 
@@ -690,7 +698,8 @@
 
         <div class="list-procduct row">
             <div class="  col col-fifth container-product">
-                <img class="size-img" src="WebProject/asset/img/cay-an-qua/cherry -70-80cm/1.jpg" alt="Full Screen Image">
+                <img class="size-img" src="WebProject/asset/img/cay-an-qua/cherry -70-80cm/1.jpg"
+                     alt="Full Screen Image">
                 <p class="text-sale back-orange">Giảm giá!</p>
                 <p class="text-review review">XEM NHANH</p>
 
@@ -720,7 +729,8 @@
             </div>
 
             <div class="  col col-fifth container-product">
-                <img class="size-img" src="WebProject/asset/img/cay-an-qua/oi-nu-hoang/hjdsgfjdhsgfdhjgfdhsgf-510x383.jpg"
+                <img class="size-img"
+                     src="WebProject/asset/img/cay-an-qua/oi-nu-hoang/hjdsgfjdhsgfdhjgfdhsgf-510x383.jpg"
                      alt="">
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
                 <p class="text-review review">XEM NHANH</p>
@@ -750,7 +760,8 @@
                 <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
             </div>
             <div class=" col col-fifth container-product"><img class="size-img"
-                                                               src="WebProject/asset/img/cay-an-qua/oi se la ri/1.jpg" alt="">
+                                                               src="WebProject/asset/img/cay-an-qua/oi se la ri/1.jpg"
+                                                               alt="">
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
                 <p class="text-review review">XEM NHANH</p>
 
@@ -813,7 +824,8 @@
             </div>
 
             <div class="  col col-fifth container-product">
-                <img class="size-img" src="WebProject/asset/img/phan-bon-vat-tu/hung-nguyen.jpg" alt="Full Screen Image">
+                <img class="size-img" src="WebProject/asset/img/phan-bon-vat-tu/hung-nguyen.jpg"
+                     alt="Full Screen Image">
 
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
                 <p class="text-review review">XEM NHANH</p>
@@ -829,7 +841,8 @@
             </div>
 
             <div class="  col col-fifth container-product"><img class="size-img"
-                                                                src="WebProject/asset/img/phan-bon-vat-tu/trau-hun.jpg" alt="">
+                                                                src="WebProject/asset/img/phan-bon-vat-tu/trau-hun.jpg"
+                                                                alt="">
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
                 <p class="text-review review">XEM NHANH</p>
 
@@ -922,7 +935,8 @@
                 <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
             </div>
             <div class=" col col-fifth container-product"><img class="size-img"
-                                                               src="WebProject/asset/img/phan-bon-vat-tu/chau-cay.jpg" alt="">
+                                                               src="WebProject/asset/img/phan-bon-vat-tu/chau-cay.jpg"
+                                                               alt="">
                 <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
                 <p class="text-review review">XEM NHANH</p>
 
@@ -982,7 +996,8 @@
 
             <a href="#">
                 <div class="col col-four container-news">
-                    <img class="size-img" src="WebProject/asset/img/anh-tin-cay-giong/kham-pha-chuoi-tai-loc.jpg" alt="">
+                    <img class="size-img" src="WebProject/asset/img/anh-tin-cay-giong/kham-pha-chuoi-tai-loc.jpg"
+                         alt="">
                     <p class="title-news">
                         Khám phá bất ngờ cây chuối tài lộc hình dáng độc lạ</p>
                     <div class="line-news"></div>
@@ -1025,7 +1040,8 @@
     <footer>
         <div class="row-footer">
             <div class="col-footer">
-                <img src="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="" class="logo-footer" width="75%">
+                <img src="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="" class="logo-footer"
+                     width="75%">
             </div>
             <div class="col-footer">
                 <h3>Giới Thiệu</h3>
