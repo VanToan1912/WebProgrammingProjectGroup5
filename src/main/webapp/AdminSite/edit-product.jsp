@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -34,38 +35,38 @@
     </div>
     <ul class="nav menu">
         <li>
-            <a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a>
+            <a href="index-admin.jsp"><em class="fa fa-dashboard"></em> Thông Tin</a>
         </li>
         <li>
-            <a href="manage-info.html"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
+            <a href="manage-info.jsp"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
         </li>
         <li>
-            <a href="manage-comment.html"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
+            <a href="manage-comment.jsp"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
         </li>
         <li>
-            <a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
+            <a href="manage-interface.jsp"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
         </li>
         <li>
-            <a class="" href="manage-product.html">
+            <a class="" href="manage-product.jsp">
                 <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
             </a>
         </li>
         <li>
-            <a class="" href="manage-user.html">
+            <a class="" href="manage-user.jsp">
                 <span class="fa fa-user"></span> Quản lý người dùng
             </a>
         </li>
         <li>
-            <a class="" href="manage-posts.html">
+            <a class="" href="manage-posts.jsp">
                 <span class="fa fa-stack-exchange"></span> Quản lý bài viết
             </a>
         </li>
         <li>
-            <a class="" href="manage-bill-shipping.html">
+            <a class="" href="manage-bill-shipping.jsp">
                 <span class="fa fa-money"></span> Quản lý hóa đơn
             </a>
         </li>
-        <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
+        <li><a href="login.jsp"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
     </ul>
 </div>
 <!--Sidebar-->
@@ -74,11 +75,16 @@
 <div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
     <div class="row">
         <div class="col-lg-12">
-            <h1 class="page-header">Thêm sản phẩm</h1>
+            <h1 class="page-header">Chỉnh sửa sản phẩm</h1>
         </div>
     </div>
 
     <div class="panel product">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header">Tên sản phẩm</h4>
+            </div>
+        </div>
         <div class="input-component">
             <label for="heading"></label>
             <input type="text" id="heading" required="required" placeholder="Tên sản phẩm">
@@ -86,13 +92,11 @@
     </div>
 
     <div class="panel product">
-        <div class="input-component">
-            <label for="stock"></label>
-            <input type="text" id="stock" required="required" placeholder="Số lượng">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header">Giá</h4>
+            </div>
         </div>
-    </div>
-
-    <div class="panel product">
         <div class="input-component">
             <label for="product-price"></label>
             <textarea name="comment" id="product-price" rows="3" tabindex="4"
@@ -101,14 +105,24 @@
     </div>
 
     <div class="panel product">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header">Mô tả ngắn</h4>
+            </div>
+        </div>
         <div class="input-component">
             <label for="short-description" class="required"></label>
             <textarea name="comment" id="short-description" rows="7" tabindex="4" required="required"
-                      placeholder="Mô tả ngắn gọn"></textarea>
+                      placeholder="Mô tả ngắn"></textarea>
         </div>
     </div>
 
     <div class="panel product">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header">Mô tả chi tiết</h4>
+            </div>
+        </div>
         <div class="input-component">
             <label for="description" class="required"></label>
             <textarea name="comment" id="description" rows="20" tabindex="4" required="required"
@@ -117,17 +131,22 @@
     </div>
 
     <div class="panel product">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4 class="page-header">Ảnh</h4>
+            </div>
+        </div>
         <div class="input-component">
             <label for="pictures" class="required"></label>
             <textarea name="comment" id="pictures" rows="10" tabindex="4" required="required"
-                      placeholder="Thêm ảnh"></textarea>
+                      placeholder="Ảnh"></textarea>
             <input type="file" id="image-upload" accept="image/*" style="display: none;">
             <label for="image-upload" class="upload-button"><i class="fa fa-picture-o"></i></label>
         </div>
     </div>
 
     <div class="panel product">
-        <button type="submit" class="post"><i class="fa fa-plus"> Thêm sản phẩm</i></button>
+        <button type="submit" class="post"><i class="fa fa-plus"> Lưu chỉnh sửa</i></button>
     </div>
 </div>
 <!--Content-->

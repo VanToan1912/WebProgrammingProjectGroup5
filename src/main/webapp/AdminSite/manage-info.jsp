@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -34,38 +35,38 @@
     </div>
     <ul class="nav menu">
         <li>
-            <a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a>
+            <a href="index-admin.jsp"><em class="fa fa-dashboard"></em> Thông Tin</a>
         </li>
         <li class="active">
-            <a href="manage-info.html"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
+            <a href="manage-info.jsp"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
         </li>
         <li>
-            <a href="manage-comment.html"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
+            <a href="manage-comment.jsp"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
         </li>
         <li>
-            <a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
+            <a href="manage-interface.jsp"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
         </li>
         <li>
-            <a class="" href="manage-product.html">
+            <a class="" href="manage-product.jsp">
                 <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
             </a>
         </li>
         <li>
-            <a class="" href="manage-user.html">
+            <a class="" href="manage-user.jsp">
                 <span class="fa fa-user"></span> Quản lý người dùng
             </a>
         </li>
         <li>
-            <a class="" href="manage-posts.html">
+            <a class="" href="manage-posts.jsp">
                 <span class="fa fa-stack-exchange"></span> Quản lý bài viết
             </a>
         </li>
         <li>
-            <a class="" href="manage-bill-shipping.html">
+            <a class="" href="manage-bill-shipping.jsp">
                 <span class="fa fa-money"></span> Quản lý hóa đơn
             </a>
         </li>
-        <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
+        <li><a href="login.jsp"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
     </ul>
 </div>
 <!--Sidebar-->
@@ -87,33 +88,33 @@
         <tr class="rows">
             <td>Email</td>
             <td colspan="2">nls@hcmuaf.edu.vn</td>
-            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+            <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
         </tr>
         <tr class="rows">
             <td>Facebook</td>
             <td colspan="2">https://www.facebook.com/NongLamUniversity</td>
-            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+            <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
         </tr>
         <tr class="rows">
             <td>Số điện thoại</td>
             <td colspan="2">028-28974560</td>
-            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+            <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
         </tr>
         <tr class="rows">
             <td>Địa Chỉ</td>
             <td colspan="2">Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</td>
-            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+            <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
         </tr>
         <tr class="rows">
             <td>Giới thiệu</td>
             <td colspan="2">Điểm đến lý tưởng cho những người yêu đam mê và đang tìm kiếm cây giống nông nghiệp chất
                 lượng cao. Với mục tiêu hỗ trợ và nâng cao năng suất trong nông nghiệp.
             </td>
-            <td><a href="edit-info.html" class="fa fa-pencil-square"></a></td>
+            <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
         </tr>
         <tr class="rows">
             <td colspan="3">Ảnh Slideshow</td>
-            <td><a href="edit-slideshow.html" class="fa fa-pencil-square"></a></td>
+            <td><a href="edit-slideshow.jsp" class="fa fa-pencil-square"></a></td>
         </tr>
     </table>
 </div>

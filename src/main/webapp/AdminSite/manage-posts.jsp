@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -34,38 +35,38 @@
     </div>
     <ul class="nav menu">
         <li>
-            <a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a>
+            <a href="index-admin.jsp"><em class="fa fa-dashboard"></em> Thông Tin</a>
         </li>
         <li>
-            <a href="manage-info.html"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
+            <a href="manage-info.jsp"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
         </li>
         <li>
-            <a href="manage-comment.html"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
+            <a href="manage-comment.jsp"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
         </li>
         <li>
-            <a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
+            <a href="manage-interface.jsp"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
         </li>
         <li>
-            <a class="" href="manage-product.html">
+            <a class="" href="manage-product.jsp">
                 <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
             </a>
         </li>
         <li>
-            <a class="" href="manage-user.html">
+            <a class="" href="manage-user.jsp">
                 <span class="fa fa-user"></span> Quản lý người dùng
             </a>
         </li>
         <li class="active">
-            <a class="" href="manage-posts.html">
+            <a class="" href="manage-posts.jsp">
                 <span class="fa fa-stack-exchange"></span> Quản lý bài viết
             </a>
         </li>
         <li>
-            <a class="" href="manage-bill-shipping.html">
+            <a class="" href="manage-bill-shipping.jsp">
                 <span class="fa fa-money"></span> Quản lý hóa đơn
             </a>
         </li>
-        <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
+        <li><a href="login.jsp"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
     </ul>
 </div>
 <!--Sidebar-->
@@ -93,7 +94,7 @@
                     </label>
                 </td>
                 <td class="column">
-                    <a href="edit-post.html" class="fa fa-pencil-square"></a>
+                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
                     <a class="fa fa-trash" onclick="deleteRow('row-1')"></a>
                 </td>
             </tr>
@@ -105,7 +106,7 @@
                     </label>
                 </td>
                 <td class="column">
-                    <a href="edit-post.html" class="fa fa-pencil-square"></a>
+                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
                     <a class="fa fa-trash" onclick="deleteRow('row-2')"></a>
                 </td>
             </tr>
@@ -117,7 +118,7 @@
                     </label>
                 </td>
                 <td class="column">
-                    <a href="edit-post.html" class="fa fa-pencil-square"></a>
+                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
                     <a class="fa fa-trash" onclick="deleteRow('row-3')"></a>
                 </td>
             </tr>
@@ -129,13 +130,13 @@
                     </label>
                 </td>
                 <td class="column">
-                    <a href="edit-post.html" class="fa fa-pencil-square"></a>
+                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
                     <a class="fa fa-trash" onclick="deleteRow('row-4')"></a>
                 </td>
             </tr>
             <tr class="rows">
                 <td class="column" colspan="3">
-                    <a href="add-post.html"><i class="fa fa-plus"> Thêm bài viết</i></a>
+                    <a href="add-post.jsp"><i class="fa fa-plus"> Thêm bài viết</i></a>
                 </td>
             </tr>
         </table>

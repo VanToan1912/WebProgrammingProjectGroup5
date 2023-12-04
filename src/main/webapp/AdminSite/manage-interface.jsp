@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -34,38 +35,38 @@
     </div>
     <ul class="nav menu">
         <li>
-            <a href="index.html"><em class="fa fa-dashboard"></em> Thông Tin</a>
+            <a href="index-admin.jsp"><em class="fa fa-dashboard"></em> Thông Tin</a>
         </li>
         <li>
-            <a href="manage-info.html"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
+            <a href="manage-info.jsp"><em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
         </li>
         <li>
-            <a href="manage-comment.html"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
+            <a href="manage-comment.jsp"><em class="fa fa-comment"></em> Quản lý đánh giá</a>
         </li>
         <li>
-            <a href="manage-interface.html"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
+            <a href="manage-interface.jsp"><em class="fa fa-toggle-off"></em> Quản lý giao diện</a>
         </li>
         <li>
-            <a class="" href="manage-product.html">
+            <a class="" href="manage-product.jsp">
                 <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
             </a>
         </li>
         <li>
-            <a class="" href="manage-user.html">
+            <a class="" href="manage-user.jsp">
                 <span class="fa fa-user"></span> Quản lý người dùng
             </a>
         </li>
         <li>
-            <a class="" href="manage-posts.html">
+            <a class="" href="manage-posts.jsp">
                 <span class="fa fa-stack-exchange"></span> Quản lý bài viết
             </a>
         </li>
         <li>
-            <a class="" href="manage-bill-shipping.html">
+            <a class="" href="manage-bill-shipping.jsp">
                 <span class="fa fa-money"></span> Quản lý hóa đơn
             </a>
         </li>
-        <li><a href="login.html"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
+        <li><a href="login.jsp"><em class="fa fa-power-off"></em> Đăng xuất</a></li>
     </ul>
 </div>
 <!--Sidebar-->
@@ -112,7 +113,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -127,7 +128,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -142,7 +143,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -157,7 +158,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -172,7 +173,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -187,7 +188,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
         </table>
@@ -216,7 +217,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -231,7 +232,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -246,7 +247,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -261,7 +262,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -276,7 +277,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -291,7 +292,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -306,7 +307,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -321,7 +322,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
                        <tr class="rows">
@@ -336,7 +337,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -351,7 +352,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -366,7 +367,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -381,7 +382,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -396,7 +397,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
@@ -411,7 +412,7 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column"><a href="edit-interface.html" class="fa fa-pencil-square"></a> <a
+                <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
         </table>
@@ -425,9 +426,9 @@
         console.log('DOMContentLoaded event fired.');
 
         // Get references to elements
-        var categorySelect = document.getElementById('product-category');
-        var mainInterfaceTable = document.querySelector('.main-interface .interface-table');
-        var productInterfaceTable = document.querySelector('.product-interface .interface-table');
+        let categorySelect = document.getElementById('product-category');
+        let mainInterfaceTable = document.querySelector('.main-interface .interface-table');
+        let productInterfaceTable = document.querySelector('.product-interface .interface-table');
 
         // Log the elements to the console
         console.log('categorySelect:', categorySelect);
@@ -437,7 +438,7 @@
         // Check if elements exist before accessing their properties
         if (categorySelect && mainInterfaceTable && productInterfaceTable) {
             // Set initial display based on the selected category
-            var selectedCategory = categorySelect.value;
+            let selectedCategory = categorySelect.value;
             if (selectedCategory === '0') {
                 mainInterfaceTable.style.display = 'table';
                 productInterfaceTable.style.display = 'none';
@@ -449,7 +450,7 @@
             // Add event listener to the filter button
             document.querySelector('.product-categorize').addEventListener('click', function () {
                 // Get the selected value from the category dropdown
-                var selectedCategory = categorySelect.value;
+                let selectedCategory = categorySelect.value;
 
                 // Show/hide tables based on the selected category
                 if (selectedCategory === '0') {
