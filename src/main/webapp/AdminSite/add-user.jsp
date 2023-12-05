@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Site</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/datepicker3.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="./asset/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./asset/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./asset/css/datepicker3.css" rel="stylesheet">
+    <link href="./asset/css/styles.css" rel="stylesheet">
 
     <!--Custom Font-->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -90,10 +89,12 @@
             <label for="role">Quyền Hạn</label><br>
             <select id="role">
                 <option value="0">Quản Trị Viên</option>
-                <option value="1">Người Dùng</option>
+                <option value="1">Quản Lí</option>
+                <option value="2">Người Dùng</option>
             </select>
             <br>
-            <button type="submit"><a href="manage-user.jsp" style="text-decoration: none; color: white">Thêm người dùng</a></button>
+            <button type="submit"><a href="manage-user.jsp" style="text-decoration: none; color: white">Thêm người
+                dùng</a></button>
         </div>
     </div>
 </div>
