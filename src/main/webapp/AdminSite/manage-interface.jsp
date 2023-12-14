@@ -96,17 +96,11 @@
             </tr>
             <tr class="rows">
                 <th class="column">Tên danh mục</th>
-                <th class="column">Trang chủ</th>
                 <th class="column">Hiển thị</th>
                 <th class="column">Chỉnh sửa</th>
             </tr>
             <tr class="rows">
                 <td class="column name">DANH MỤC SẢN PHẨM</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -122,21 +116,11 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
                 <td class="column name">GIỚI THIỆU</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -152,11 +136,6 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
@@ -167,21 +146,11 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
                 <td class="column name">TIN TỨC</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -200,17 +169,11 @@
             </tr>
             <tr class="rows">
                 <th class="column">Tên danh mục</th>
-                <th class="column">Danh mục</th>
                 <th class="column">Hiển thị</th>
                 <th class="column">Chỉnh sửa</th>
             </tr>
             <tr class="rows">
                 <td class="column name">CÂY ĂN TRÁI</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -226,21 +189,11 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
                 <td class="column name">CÂY CẢNH</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -256,11 +209,6 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
@@ -271,21 +219,11 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
                 <td class="column name">CÂY GIA VỊ</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -301,11 +239,6 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
@@ -316,21 +249,11 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
-                       <tr class="rows">
+            <tr class="rows">
                 <td class="column name">CÂY LỚN</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -341,11 +264,6 @@
             </tr>
             <tr class="rows">
                 <td class="column name">CỦ GIỐNG</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox">
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -361,21 +279,11 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
                 <td class="column name">HOA LAN CÂY GIỐNG</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>
@@ -391,21 +299,11 @@
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
             </tr>
             <tr class="rows">
                 <td class="column name">SẢN PHẨM KHUYẾN MÃI</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
                 <td class="column">
                     <label>
                         <input type="checkbox" checked>

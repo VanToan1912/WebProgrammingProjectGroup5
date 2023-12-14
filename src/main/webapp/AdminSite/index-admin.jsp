@@ -124,7 +124,7 @@
                 <div class="panel-body timeline-container">
                     <ul class="timeline">
                         <li>
-                            <div class="timeline-badge"><em class="glyphicon glyphicon-pushpin"></em></div>
+                            <div class="timeline-badge"><em class="fa fa-thumb-tack"></em></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4 class="timeline-title">Cải thiện thời gian giao hàng</h4>
@@ -132,7 +132,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-badge primary"><em class="glyphicon glyphicon-link"></em></div>
+                            <div class="timeline-badge primary"><em class="fa fa-link"></em></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4 class="timeline-title">Quảng bá trang web</h4>
@@ -140,7 +140,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="timeline-badge"><em class="glyphicon glyphicon-camera"></em></div>
+                            <div class="timeline-badge"><em class="fa fa-camera"></em></div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
                                     <h4 class="timeline-title">Thêm sản phẩm</h4>

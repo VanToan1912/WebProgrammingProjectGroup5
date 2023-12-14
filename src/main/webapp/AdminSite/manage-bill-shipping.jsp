@@ -104,7 +104,7 @@
     <div class="panel chua-duyet-table" style="padding-top: 0">
         <table class="order-table">
             <tr class="rows">
-                <th colspan="7">Đơn hàng chưa duyệt</th>
+                <th colspan="8">Đơn hàng chưa duyệt</th>
             </tr>
             <tr class="rows">
                 <th class="column">Mã đơn hàng</th>
@@ -113,6 +113,7 @@
                 <th class="column">Địa chỉ đặt</th>
                 <th class="column">Số điện thoại</th>
                 <th class="column">Sản phẩm</th>
+                <th class="column">Tổng Giá</th>
                 <th class="column">Trạng thái</th>
             </tr>
             <tr class="rows">
@@ -122,7 +123,8 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
-                <td></td>
+                <td>1.000.000đ</td>
+                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
             </tr>
             <tr class="rows">
                 <td>MD005</td>
@@ -131,7 +133,8 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
-                <td></td>
+                <td>1.000.000đ</td>
+                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
             </tr>
             <tr class="rows">
                 <td>MD006</td>
@@ -140,7 +143,8 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
-                <td></td>
+                <td>1.000.000đ</td>
+                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
             </tr>
             <tr class="rows">
                 <td>MD007</td>
@@ -149,7 +153,8 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
-                <td></td>
+                <td>1.000.000đ</td>
+                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
             </tr>
             <tr class="rows">
                 <td>MD008</td>
@@ -158,7 +163,8 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
-                <td></td>
+                <td>1.000.000đ</td>
+                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
             </tr>
             <tr class="rows">
                 <td>MD009</td>
@@ -167,7 +173,8 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
-                <td></td>
+                <td>1.000.000đ</td>
+                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
             </tr>
             <tr class="rows">
                 <td>MD010</td>
@@ -176,7 +183,8 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
-                <td></td>
+                <td>1.000.000đ</td>
+                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
             </tr>
         </table>
     </div>
@@ -184,7 +192,7 @@
     <div class="panel panel-container da-duyet-table " style="padding-top: 0">
         <table class="order-table">
             <tr class="rows">
-                <th colspan="8">Đơn hàng đã duyệt</th>
+                <th colspan="9">Đơn hàng đã duyệt</th>
             </tr>
             <tr class="rows">
                 <th class="column">Xóa</th>
@@ -194,6 +202,7 @@
                 <th class="column">Địa chỉ đặt</th>
                 <th class="column">Số điện thoại</th>
                 <th class="column">Sản phẩm</th>
+                <th class="column">Tổng Giá</th>
                 <th class="column">Trạng thái</th>
             </tr>
             <tr class="rows" id="row-1">
@@ -210,6 +219,7 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
+                <td>1.000.000đ</td>
                 <td class="column">
                     Đã giao hàng
                 </td>
@@ -228,6 +238,7 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
+                <td>1.000.000đ</td>
                 <td class="column">
                     Đang giao hàng
                 </td>
@@ -246,6 +257,7 @@
                 <td>Khu phố 6, Phường Linh Trung, Thành Phố Thủ Đức</td>
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
+                <td>1.000.000đ</td>
                 <td class="column">
                     Đang giao hàng
                 </td>
