@@ -115,7 +115,7 @@
             </tr>
             <tr class="rows" id="row-2">
                 <td class="column">
-                    jun@st.hcmuaf.edu.vn
+                    21130572@st.hcmuaf.edu.vn
                 </td>
                 <td class="column">
                     <a class="fa fa-repeat"></a>
@@ -126,7 +126,7 @@
             </tr>
             <tr class="rows" id="row-3">
                 <td class="column">
-                    eliza@st.hcmuaf.edu.vn
+                    21130335@st.hcmuaf.edu.vn
                 </td>
                 <td class="column">
                     <a class="fa fa-repeat"></a>
@@ -137,7 +137,7 @@
             </tr>
             <tr class="rows" id="row-4">
                 <td class="column">
-                    chunlee@st.hcmuaf.edu.vn
+                    21130584@st.hcmuaf.edu.vn
                 </td>
                 <td class="column">
                     <a class="fa fa-repeat"></a>

@@ -1624,3 +1624,12 @@ p.back-link {
     color: #30a5ff;
     font-size: 24px
 }
+
+.approve-button {
+    text-decoration: none;
+}
+
+.approve-button:hover {
+    text-decoration: none;
+    font-weight: bold;
+}

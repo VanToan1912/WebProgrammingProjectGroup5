@@ -117,7 +117,7 @@
                     <td>CÂY CHÀ LÀ</td>
                     <td>CÂY ĂN TRÁI, CÂY GIỐNG</td>
                     <td>64</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -125,7 +125,7 @@
                     <td>CÂY HỒNG NGỌC MAI BONSAI</td>
                     <td>CÂY ĂN TRÁI, CÂY BONSAI, CÂY CẢNH, CÂY CÓ HOA</td>
                     <td>115</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -133,7 +133,7 @@
                     <td>CÂY MAI XANH THÁI</td>
                     <td>CÂY BONSAI, CÂY CÓ HOA, CÂY GIỐNG, CÂY HOA LEO</td>
                     <td>49</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -141,7 +141,7 @@
                     <td>BỤI TRÚC ĐEN</td>
                     <td>CÂY CẢNH, CÂY ĐỘC LẠ - HIẾM</td>
                     <td>178</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -149,7 +149,7 @@
                     <td>CÂY BƯỚM ĐÊM (CÂY ME ĐẤT LÁ TÍM)</td>
                     <td>CÂY CẢNH, CÂY CÓ HOA</td>
                     <td>93</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -157,7 +157,7 @@
                     <td>CÂY CHANH LEO (CHANH DÂY)</td>
                     <td>CÂY ĂN TRÁI, CÂY HOA LEO</td>
                     <td>121</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -165,7 +165,7 @@
                     <td>CÂY CHANH NGÓN TAY</td>
                     <td>CÂY ĂN TRÁI</td>
                     <td>56</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -173,7 +173,7 @@
                     <td>CÂY CÓC THÁI</td>
                     <td>CÂY ĂN TRÁI,</td>
                     <td>167</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -181,7 +181,7 @@
                     <td>CÂY HOA ĐIỆP LÀO</td>
                     <td>CÂY BONSAI, CÂY CẢNH, CÂY CÓ HOA</td>
                     <td>75</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -189,7 +189,7 @@
                     <td>CÂY HOA LAN TỎI TÍM</td>
                     <td>CÂY CÓ HOA, CÂY HOA LEO</td>
                     <td>189</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -197,7 +197,7 @@
                     <td>CÂY HOA HẠNH PHÚC</td>
                     <td>CÂY CẢNH, CÂY CÓ HOA, CÂY LỚN</td>
                     <td>37</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -205,7 +205,7 @@
                     <td>CÂY HOA LEO ĐINH HƯƠNG NHẬT</td>
                     <td>CÂY CẢNH, CÂY CÓ HOA, CÂY ĐỘC LẠ - HIẾM, CÂY HOA LEO</td>
                     <td>104</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -213,7 +213,7 @@
                     <td>CÂY HOA LỘC VỪNG</td>
                     <td>CÂY BONSAI, CÂY CẢNH, CÂY CÓ HOA, CÂY LỚN</td>
                     <td>160</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -221,7 +221,7 @@
                     <td>CÂY HOA MỘC LAN SIÊU NỤ</td>
                     <td>CÂY CẢNH, CÂY CÓ HOA</td>
                     <td>82</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -229,7 +229,7 @@
                     <td>CÂY HOA MÓNG CỌP ĐỎ</td>
                     <td>CÂY CÓ HOA, CÂY ĐỘC LẠ - HIẾM, CÂY HOA LEO</td>
                     <td>133</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -237,7 +237,7 @@
                     <td>CÂY HOA RẠNG ĐÔNG (CHÙM ỚT) 1,2m</td>
                     <td>CÂY CÓ HOA, CÂY HOA LEO</td>
                     <td>43</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -245,7 +245,7 @@
                     <td>CÂY HOA SON MÔI</td>
                     <td>CÂY CÓ HOA, CÂY HOA LEO</td>
                     <td>198</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -253,7 +253,7 @@
                     <td>CÂY HỒNG NGỌC MAI BONSAI</td>
                     <td>CÂY ĂN TRÁI, CÂY BONSAI, CÂY CẢNH, CÂY CÓ HOA</td>
                     <td>68</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -261,7 +261,7 @@
                     <td>50 CHẬU NHỰA ĐEN TRỒNG LAN NUÔI CẤY MÔ</td>
                     <td>PHÂN BÓN- VẬT TƯ</td>
                     <td>75</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -269,7 +269,7 @@
                     <td>BẢ TRỪ KIẾN TẬN TỔ BTK - GÓI 5G</td>
                     <td>PHÂN BÓN- VẬT TƯ</td>
                     <td>56</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
@@ -277,7 +277,7 @@
                     <td>CHẬU TRỒNG LAN GỖ NHÃN</td>
                     <td>PHÂN BÓN- VẬT TƯ</td>
                     <td>37</td>
-                    <th>0%</th>
+                    <td>0%</td>
                     <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
                             class="fa fa-trash"></a></td>
                 </tr>
