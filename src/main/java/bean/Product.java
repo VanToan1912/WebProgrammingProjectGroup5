@@ -1,20 +1,21 @@
-package model;
+package bean;
 
 import org.jdbi.v3.core.mapper.reflect.ColumnName;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Product {
     @ColumnName("pdId")
-    private int id;
+    private int pdid;
 
     @ColumnName("pdName")
-    private String name;
+    private String pdname;
 
     @ColumnName("categories")
     private String categories;
 
     @ColumnName("quanity")
-    private int quantity;
-
     private int quanity;
 
     @ColumnName("price")
@@ -22,33 +23,35 @@ public class Product {
 
     @ColumnName("description")
     private String description;
+    private List<String> imageUrls;
 
-    public Product(int id, String name, String categories, int quantity, double price, String description) {
-        this.id = id;
-        this.name = name;
+    public Product(int pdid, String pdname, String categories, int quanity, double price, String description, List<String> imageUrls) {
+        this.pdid = pdid;
+        this.pdname = pdname;
         this.categories = categories;
-        this.quanity = quantity;
+        this.quanity = quanity;
         this.price = price;
         this.description = description;
+        this.imageUrls = imageUrls;
     }
 
     public Product() {
     }
 
-    public int getId() {
-        return id;
+    public int getPdid() {
+        return pdid;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setPdid(int pdid) {
+        this.pdid = pdid;
     }
 
-    public String getName() {
-        return name;
+    public String getPdname() {
+        return pdname;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPdname(String pdname) {
+        this.pdname = pdname;
     }
 
     public String getCategories() {
@@ -59,12 +62,12 @@ public class Product {
         this.categories = categories;
     }
 
-    public int getQuantity() {
+    public int getQuanity() {
         return quanity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quanity = quantity;
+    public void setQuanity(int quanity) {
+        this.quanity = quanity;
     }
 
     public double getPrice() {
@@ -83,17 +86,17 @@ public class Product {
         this.description = description;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", categories='" + categories + '\'' +
-                ", quanity=" + quanity +
-                ", price=" + price +
-                ", description='" + description + '\'' +
-                '}';
+    public List<String> getImageUrls() {
+        return imageUrls;
     }
-// Constructors, getters, setters, and toString method...
 
+    public void setImageUrls(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
+    }
+
+
+    public static void main(String[] args) {
+
+
+    }
 }
