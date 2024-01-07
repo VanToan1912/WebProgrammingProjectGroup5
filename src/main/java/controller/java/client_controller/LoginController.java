@@ -1,4 +1,4 @@
-package controller.java;
+package controller.java.client_controller;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
