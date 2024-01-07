@@ -16,7 +16,7 @@ public class Account {
     private String Address;
 
 
-    public Account(int ID, String Username, String Password, boolean Role, boolean Status, String Name, String Phone, String Email, String address) {
+    public Account(int ID, String Username, String Password, boolean Role, String Name, String Phone, String Email, String address) {
         this.ID = ID;
         this.Username = Username;
         this.Password = Password;
@@ -115,7 +115,6 @@ public class Account {
         sb.append(", Username=").append(Username);
         sb.append(", Password=").append(Password);
         sb.append(", Role=").append(Role);
-//        sb.append(", Status=").append(Status);
         sb.append(", Address=").append(Address);
         sb.append(", Name=").append(Name);
         sb.append(", Phone=").append(Phone);
