@@ -98,13 +98,13 @@ public class Account {
         this.Email = Email;
     }
 
-    public double getTotalPriceInCart(List<Cart_Item> list) {
-        double totalPriceInCart = 0;
-        for (Cart_Item cart_Item : list) {
-            totalPriceInCart += cart_Item.getPrice();
-        }
-        return totalPriceInCart;
-    }
+//    public double getTotalPriceInCart(List<Cart_Item> list) {
+//        double totalPriceInCart = 0;
+//        for (Cart_Item cart_Item : list) {
+//            totalPriceInCart += cart_Item.getPrice();
+//        }
+//        return totalPriceInCart;
+//    }
 
     @Override
     public String toString() {
