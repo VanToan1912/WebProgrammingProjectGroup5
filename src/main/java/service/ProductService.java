@@ -4,6 +4,7 @@ import bean.Product;
 import controller.ProductController;
 import dao.ProductDAO;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ProductService {
@@ -62,7 +63,8 @@ public class ProductService {
         } catch (Exception e) {
             // Xử lý ngoại lệ nếu có
             System.err.println("Lỗi khi phân trang sản phẩm từ ProductService: " + e.getMessage());
-            throw e; // hoặc xử lý lỗi tùy theo yêu cầu của bạn
+            // Trả về danh sách rỗng thay vì null
+            return Collections.emptyList();
         }
     }
 
