@@ -51,7 +51,7 @@
                         </a>
                        
                         /
-                        <a href="login.jsp">
+                        <a href="login.html">
                             <button class="login-button">
                                 Đăng Nhập
                             </button>
@@ -110,7 +110,7 @@
                     <a href="#"> Đăng ký</a>
                 </button>
                 <div class="login-register">
-                    <p>Đã có tài khoản? <a href="login.jsp">Đăng nhập</a></p>
+                    <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
                 </div>
             </form>
         </div>

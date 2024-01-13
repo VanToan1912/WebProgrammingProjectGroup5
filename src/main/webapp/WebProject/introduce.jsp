@@ -53,7 +53,7 @@
                     </a>
 
                     /
-                    <a href="login.jsp">
+                    <a href="login.html">
                         <button class="login-button">
                             Đăng Nhập
                         </button>
