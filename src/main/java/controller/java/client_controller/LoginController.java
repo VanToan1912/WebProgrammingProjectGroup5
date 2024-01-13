@@ -70,7 +70,7 @@ public class LoginController extends HttpServlet {
             // Adding User Attribute to ServletContext
             servletCtx.setAttribute("User", username);
 
-            response.sendRedirect("LoginSuccess.jsp");
+            response.sendRedirect("LoginSucces.jsp");
 
         } else {
             System.out.println("Đăng nhập không thành công: " + username);
