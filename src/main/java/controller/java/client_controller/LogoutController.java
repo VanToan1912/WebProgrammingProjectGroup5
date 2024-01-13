@@ -54,8 +54,8 @@ public class LogoutController extends HttpServlet {
         assert userCookie != null;
         userCookie.setMaxAge(0);
 
-        System.out.println("deleting session cookie");
-        System.out.println("deleting user cookie");
+        System.out.println("xóa session cookie");
+        System.out.println("xóa user cookie");
 
         response.addCookie(JSESSIONID);
         response.addCookie(userCookie);
