@@ -48,10 +48,12 @@ public class ProductController extends HttpServlet {
             // Đặt các thuộc tính cho request để sử dụng trong JSP
             req.setAttribute("productList", productList);
             req.setAttribute("currentPage", index);
-            req.setAttribute("totalPages", totalPages);
+            req.setAttribute("totalPages", totalPages); // Replace totalPages with the actual value
 
             // Forward request đến trang JSP để hiển thị danh sách sản phẩm và phân trang
-            req.getRequestDispatcher("WebProject/product.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WebProject/product.jsp").forward(req, resp);
+
+
         } catch (Exception e) {
             // Xử lý ngoại lệ nếu có
             System.err.println("Lỗi khi xử lý request: " + e.getMessage());
