@@ -59,6 +59,6 @@ public class LogoutController extends HttpServlet {
 
         response.addCookie(JSESSIONID);
         response.addCookie(userCookie);
-        response.sendRedirect("login.html");
+        response.sendRedirect("login.jsp");
     }
 }

@@ -74,7 +74,7 @@ public class LoginController extends HttpServlet {
 
         } else {
             System.out.println("Đăng nhập không thành công: " + username);
-            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.html");
+            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
             response.getWriter().print("<font color=red>Tên đăng nhập không tồn tại hoặc mật khẩu chưa khớp.</font>");
             rd.include(request, response);
         }

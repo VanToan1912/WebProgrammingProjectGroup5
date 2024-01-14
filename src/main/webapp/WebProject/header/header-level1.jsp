@@ -44,14 +44,15 @@
             <span class="tooltiptext">Đóng góp ý kiến</span></a>
         </li>
         <li>
-          <a href="register.html">
+          <a href="${pageContext.request.contextPath}/WebProject/register.jsp">
+
             <button class="sign-up-button">
               Đăng Ký
             </button>
           </a>
 
           /
-          <a href="login.html">
+          <a href="${pageContext.request.contextPath}/WebProject/login.jsp">
             <button class="login-button">
               Đăng Nhập
             </button>

@@ -62,7 +62,7 @@
                         </a>
 
                         /
-                        <a href="login.html">
+                        <a href="login.jsp">
                             <button class="login-button">
                                 Đăng Nhập
                             </button>
@@ -487,7 +487,7 @@
             <i class="ti-comment-alt"></i>
             <p>Bình luận(2)</p>
         </div>
-        <a href="login.html">
+        <a href="login.jsp">
             <button class="login-to-comment">
                 Đăng nhập để bình luận
             </button>

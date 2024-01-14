@@ -49,7 +49,7 @@
                         </a>
                        
                         /
-                        <a href="login.html">
+                        <a href="login.jsp">
                             <button class="login-button">
                                 Đăng Nhập
                             </button>
@@ -85,7 +85,7 @@
         <div class="h" ><p>Gửi email khôi phục mật khẩu hoặc quay lại đăng nhập</p></div>
         <div class="button-container">
           <button type="submit" class="btn">Gửi đến Email</button>
-          <button type="button" class="btn" onclick="window.location.href='login.html'">Quay lại đăng nhập</button>
+          <button type="button" class="btn" onclick="window.location.href='login.jsp'">Quay lại đăng nhập</button>
         </div>
       </form>
     </div>
