@@ -33,7 +33,7 @@
                         <a href="password_reset.jsp">Quên mật khẩu?</a>
                     </div>
                     <button type="submit" class="btn" id="agreeButton">
-                        <a href="index.html"> Đồng ý</a>
+                        <a href="index.jsp"> Đồng ý</a>
                     </button>
                     <div class="login-register">
                         <p>Chưa có tài khoản? <a href="register.jsp">Đăng ký</a></p>
@@ -63,11 +63,11 @@
             <div class="col-footer">
                 <h3>Thông Tin</h3>
                 <ul>
-                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="index.jsp">Trang Chủ</a></li>
                     <li><a href="introduce.jsp">Giới Thiệu</a></li>
-                    <li><a href="product.html">Sản Phẩm</a></li>
-                    <li><a href="instruct.html">Hướng Dẫn Mua Hàng</a></li>
-                    <li><a href="news.html">Tin Tức</a></li>
+                    <li><a href="product.jsp">Sản Phẩm</a></li>
+                    <li><a href="instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
+                    <li><a href="news.jsp">Tin Tức</a></li>
     
                 </ul>
             </div>

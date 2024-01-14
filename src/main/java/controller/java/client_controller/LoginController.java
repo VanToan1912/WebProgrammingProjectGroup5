@@ -43,37 +43,37 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         ServletContext servletCtx = request.getServletContext();
 
-        String username = request.getParameter("username");
+        String email = request.getParameter("email");
         String password = request.getParameter("password");
         String attributePassword = (String) request.getServletContext().getAttribute("password");
 
         // Check username trong database co trung khop voi password khong
         if (password.equals("password")) {
 
-            response.getWriter().write(username + password);
-            System.out.println("User LOGGED IN {username:" + username);
+            response.getWriter().write(email + password);
+            System.out.println("Email LOGGED IN {username:" + email);
 
             // Getting session object created
             HttpSession session = request.getSession();
 
             // adding user to session as session attribute
-            session.setAttribute("user", username);
+            session.setAttribute("user", email);
 
             // setting session to expire in 30min
             session.setMaxInactiveInterval(30 * 60);
 
             // Create Cookie
-            Cookie userCookie = new Cookie("user", username);
+            Cookie userCookie = new Cookie("user", email);
             userCookie.setMaxAge(30 * 60);
             response.addCookie(userCookie);
 
             // Adding User Attribute to ServletContext
-            servletCtx.setAttribute("User", username);
+            servletCtx.setAttribute("User", email);
 
             response.sendRedirect("LoginSucces.jsp");
 
         } else {
-            System.out.println("Đăng nhập không thành công: " + username);
+            System.out.println("Đăng nhập không thành công: " + email);
             RequestDispatcher rd = getServletContext().getRequestDispatcher("/login.jsp");
             response.getWriter().print("<font color=red>Tên đăng nhập không tồn tại hoặc mật khẩu chưa khớp.</font>");
             rd.include(request, response);
