@@ -81,7 +81,7 @@
                 <li><a href="index.html">Trang Chủ</a></li>
                 <li><a href="introduce.jsp">Giới Thiệu</a></li>
                 <li><a href="product.html">Sản Phẩm</a></li>
-                <li><a href="instruct.html">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
                 <li><a href="news.html">Tin Tức</a></li>
 
             </ul>

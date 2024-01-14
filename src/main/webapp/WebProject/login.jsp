@@ -18,7 +18,7 @@
     <div id="main-content">
         <div class="container" id="container">
             <div class="sign-in-form">
-                <form action="LoginController">
+                <form action="Login">
                     <h1>ĐĂNG NHẬP</h1>
                     <div class="input-box">
                         <label><span class="icon"><i class="far fa-envelope"></i></span> <strong>Email</strong></label>
