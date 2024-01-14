@@ -18,7 +18,7 @@
     <div id="main-content">
         <div class="container" id="container">
             <div class="sign-in-form">
-                <form action="Login">
+                <form action="Login" method="POST">
                     <h1>ĐĂNG NHẬP</h1>
                     <div class="input-box">
                         <label><span class="icon"><i class="far fa-envelope"></i></span> <strong>Email</strong></label>
@@ -33,7 +33,7 @@
                         <a href="password_reset.jsp">Quên mật khẩu?</a>
                     </div>
                     <button type="submit" class="btn" id="agreeButton">
-                        <a href="index.jsp"> Đồng ý</a>
+                        <a href=""> Đồng ý</a>
                     </button>
                     <div class="login-register">
                         <p>Chưa có tài khoản? <a href="register.jsp">Đăng ký</a></p>

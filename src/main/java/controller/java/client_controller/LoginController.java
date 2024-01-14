@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 /**
  * SERVLET implementation class LoginServlet
  */
-@WebServlet("/Login")
+@WebServlet(name = "LoginController", urlPatterns = "/login")
 public class LoginController extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
