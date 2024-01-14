@@ -147,11 +147,11 @@
         </a></li>
       </ul>
     </li>
-    <li class="nav-text-product nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
-    <li class="nav-togethger"><a href="introduce.html" class="nav-togethger">GIỚI THIỆU</a></li>
-    <li class=" nav-togethger"><a href="products">SẢN PHẨM</a></li>
-    <li class="nav-togethger"><a href="instruct.html">HƯỚNG DẪN MUA HÀNG</a></li>
-    <li class="nav-togethger"><a href="news.html">TIN TỨC</a></li>
+    <li class="nav-text-product nav-togethger"><a href="index.jsp">TRANG CHỦ</a></li>
+    <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
+    <li class=" nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/product.jsp">SẢN PHẨM</a></li>
+    <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
+    <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/news.jsp">TIN TỨC</a></li>
   </ul>
   <!-- END NAV -->
   <div class="clear"></div>
