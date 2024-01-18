@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,14 +45,14 @@
                         <span class="tooltiptext">Đóng góp ý kiến</span></a>
                 </li>
                 <li>
-                    <a href="register.jsp">
+                    <a href="../register.jsp">
                         <button class="sign-up-button">
                             Đăng Ký
                         </button>
                     </a>
 
                     /
-                    <a href="login.jsp">
+                    <a href="../login.jsp">
                         <button class="login-button">
                             Đăng Nhập
                         </button>
