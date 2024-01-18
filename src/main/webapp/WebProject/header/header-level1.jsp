@@ -44,7 +44,7 @@
             <span class="tooltiptext">Đóng góp ý kiến</span></a>
         </li>
         <li>
-          <a href="${pageContext.request.contextPath}/WebProject/register.jsp">
+          <a href="${pageContext.request.contextPath}/register.jsp">
 
             <button class="sign-up-button">
               Đăng Ký
@@ -52,7 +52,7 @@
           </a>
 
           /
-          <a href="${pageContext.request.contextPath}/WebProject/login.jsp">
+          <a href="${pageContext.request.contextPath}/login.jsp">
             <button class="login-button">
               Đăng Nhập
             </button>

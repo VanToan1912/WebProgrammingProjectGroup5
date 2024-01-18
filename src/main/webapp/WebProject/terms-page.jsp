@@ -24,7 +24,7 @@
             <li>Trách nhiệm pháp lý: Điều khoản này xác định trách nhiệm pháp lý của cả hai bên trong trường hợp có xung đột hoặc tranh chấp phát sinh.</li>
             <li>Thay đổi điều khoản và điều kiện: Một điều khoản quan trọng khác là khả năng trang web hoặc ứng dụng thay đổi điều khoản và điều kiện, và cách thông báo về những thay đổi này.</li>
         </ol>
-        <a href="register.jsp"><button class="btn">Quay lại</button></a>
+        <a href="../register.jsp"><button class="btn">Quay lại</button></a>
     </div>
 </div>
 </body>

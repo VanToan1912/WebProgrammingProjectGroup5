@@ -43,17 +43,17 @@
                         <span class="tooltiptext">Đóng góp ý kiến</span></a>
                 </li>
                 <li>
-                    <a href="${pageContext.request.contextPath}/WebProject/register.jsp">
+                    <a href="${pageContext.request.contextPath}/register.jsp">
                         <button class="sign-up-button">
                             Đăng Ký
                         </button>
                     </a>
 
                     /
-                    <a href="${pageContext.request.contextPath}/WebProject/login.jsp"">
-                    <button class="login-button">
-                        Đăng Nhập
-                    </button>
+                    <a href="${pageContext.request.contextPath}/login.jsp">
+                        <button class="login-button">
+                            Đăng Nhập
+                        </button>
                     </a>
                     <a href="user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
                         <span class="tooltiptext">Tài khoản của tôi</span></a>
@@ -65,7 +65,7 @@
 
     <div class="nav-bar middle-bar row-head ">
         <div class="col-head mg-left">
-            <a href="index.html"><img src="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
+            <a href="index.jsp"><img src="${pageContext.request.contextPath}/WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
         </div>
 
 
