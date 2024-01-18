@@ -1,6 +1,7 @@
 <%@ page import="java.util.List" %>
 <%@ page import="bean.Product" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="bean.ProductDetail" %>
 
 
 <%--
@@ -17,45 +18,29 @@
 <%
   List<Product> productList = (List<Product>) request.getAttribute("productList");
   if (productList == null) {
-    productList = new ArrayList<>(); // Or handle the null case based on your requirements
+    productList = new ArrayList<>();
   }
-
   String category = (String) request.getAttribute("category");
 
-  // Check if "currentPage" attribute is not null before converting it to int
-  Integer currentPageAttribute = (Integer) request.getAttribute("currentPage");
-  int currentPage = (currentPageAttribute != null) ? currentPageAttribute.intValue() : 1;
+  // Kiểm tra xem currentPage có tồn tại hay không trước khi sử dụng
+  Integer currentPageObj = (Integer) request.getAttribute("currentPage");
+  int currentPage = (currentPageObj != null) ? currentPageObj.intValue() : 1;
 
   int totalPages;
 
   if (category != null && !category.equals("null")) {
-    // Check if "totalPagesByCategory" attribute is not null before using it
-    Integer totalPagesByCategoryAttribute = (Integer) request.getAttribute("totalPagesByCategory");
-    if (totalPagesByCategoryAttribute != null) {
-      totalPages = totalPagesByCategoryAttribute.intValue();
-    } else {
-      // Check if "totalPages" attribute is not null before using it
-      Integer totalPagesAttribute = (Integer) request.getAttribute("totalPages");
-      totalPages = (totalPagesAttribute != null) ? totalPagesAttribute.intValue() : 1;
-    }
+    totalPages = (request.getAttribute("totalPagesByCategory") != null) ?
+            ((Integer) request.getAttribute("totalPagesByCategory")).intValue() :
+            ((Integer) request.getAttribute("totalPages")).intValue();
   } else {
-    // Check if "totalPages" attribute is not null before using it
-    Integer totalPagesAttribute = (Integer) request.getAttribute("totalPages");
-    totalPages = (totalPagesAttribute != null) ? totalPagesAttribute.intValue() : 1;
+    totalPages = ((Integer) request.getAttribute("totalPages")).intValue();
   }
 %>
 
-
-
-
-
-
-
-
-
+<%-- In ra giá trị của productList --%>
+<!-- <%= productList %> -->
 
 <%@ page isELIgnored="false" %>
-
 
 <!DOCTYPE html>
 <html>
@@ -63,33 +48,19 @@
 <head>
   <meta charset="UTF-8">
   <title>Cây giống Sài Gòn</title>
-
-
-  <link rel="icon" href="./WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon"/>
-  <%--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"--%>
-  <%--          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">--%>
-  <%--    <link rel="stylesheet" href="./Bootstrap/css/bootstrap.min.css">--%>
-  <link rel="stylesheet" href="asset/css/product.css">
-  <link rel="stylesheet" href="asset/css/head-foot.css">
-  <link rel="stylesheet" href="asset/fonts/themify-icons/themify-icons.css">
-
-
-
-
-
-
-
+  <link rel="icon" href="../asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon"/>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/head-foot.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/product.css">
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/fonts/themify-icons/themify-icons.css">
 </head>
 
 <body>
 
-
 <div id="product" style="">
-  <%--    header--%>
   <header>
     <jsp:include page="header/header-level1.jsp"></jsp:include>
   </header>
-  <%--    end header--%>
+
   <div id="main">
     <h3 class="text-product text-blue mg-left">CÂY ĂN TRÁI</h3>
     <div class="order-by">
@@ -104,7 +75,6 @@
         </select>
       </div>
     </div>
-
     <div class="addr-current mg-left">
       <a href="index.html" class="link-index text-gray fs-18">
         <p>TRANG CHỦ</p>
@@ -150,7 +120,10 @@
 
               <% List<String> imageUrls = product.getImageUrls(); %>
               <% if (imageUrls != null && !imageUrls.isEmpty()) { %>
-              <img class="size-img img-product" src="<%= imageUrls.get(0) %>" alt="">
+              <a href="<%= request.getContextPath() %>/product-detail?id=<%= product.getPdid()%>">
+                <img class="size-img img-product" src="<%= imageUrls.get(0) %>" alt="">
+              </a>
+
               <% } else { %>
               <%-- Nếu không có hình ảnh, có thể hiển thị một hình ảnh mặc định hoặc thông báo thiếu hình ảnh --%>
               <img class="size-img img-product" src="path_to_default_image.jpg" alt="No Image">
@@ -162,6 +135,7 @@
               <div class="price">
                 <p class="price-initial text-gray"><%= product.getPrice() %>đ</p>
               </div>
+
               <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
             </div>
             <% count++; %>
@@ -207,8 +181,8 @@
 
     </div>
 
-  </div>
 
+  </div>
 
   <footer>
     <jsp:include page="footer/footer-level1.jsp"></jsp:include>

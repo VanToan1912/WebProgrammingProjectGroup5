@@ -21,17 +21,15 @@ public class Product {
     @ColumnName("price")
     private double price;
 
-    @ColumnName("description")
-    private String description;
     private List<String> imageUrls;
 
-    public Product(int pdid, String pdname, String categories, int quanity, double price, String description, List<String> imageUrls) {
+    public Product(int pdid, String pdname, String categories, int quanity, double price, List<String> imageUrls) {
         this.pdid = pdid;
         this.pdname = pdname;
         this.categories = categories;
         this.quanity = quanity;
         this.price = price;
-        this.description = description;
+
         this.imageUrls = imageUrls;
     }
 
@@ -78,13 +76,7 @@ public class Product {
         this.price = price;
     }
 
-    public String getDescription() {
-        return description;
-    }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     public List<String> getImageUrls() {
         return imageUrls;
@@ -95,8 +87,15 @@ public class Product {
     }
 
 
-    public static void main(String[] args) {
-
-
+    @Override
+    public String toString() {
+        return "Product{" +
+                "pdid=" + pdid +
+                ", pdname='" + pdname + '\'' +
+                ", categories='" + categories + '\'' +
+                ", quanity=" + quanity +
+                ", price=" + price +
+                ", imageUrls=" + imageUrls +
+                '}';
     }
 }
