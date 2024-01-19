@@ -1,0 +1,711 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: trung
+  Date: 1/13/2024
+  Time: 1:50 AM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Cây giống Sài Gòn - Chi tiết sản phẩm</title>
+    <link rel="icon" href="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon"/>
+
+    <!-- <link rel="stylesheet" href="./asset/css/product.css"> -->
+    <link rel="stylesheet" href="asset/css/product.css">
+    <link rel="stylesheet" href="asset/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="asset/js/script.js">
+    <link rel="stylesheet" href="asset/css/head-foot.css">
+</head>
+
+<body>
+<div id="product" class=" more-infor-product">
+    <header id="header">
+        <div class="nav-bar top-bar ">
+            <div class="web-name mg-left" style="font-weight: bold"> Trung Tâm Cây Giống Sài Gòn</div>
+            <nav class="list-contact-infor ">
+                <ul>
+                    <li>
+                        <div class="contact-infor">
+                            <i class="ti-help"></i>
+                            <p class="tooltip">Hỗ trợ
+                                <span class="tooltiptext">Hỗ trợ</span>
+                            </p>
+
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" class="tooltip ti-time"> 8:00 - 17:00
+                            <span class="tooltiptext">8:00 - 17:00</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="tooltip ti-mobile"> 0929729120
+                            <span class="tooltiptext">0929729120</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="tooltip ti-facebook">
+                            <span class="tooltiptext">Theo dõi chúng tôi</span></a>
+                    </li>
+                    <li>
+                        <a href="mailto:mail@mail.com" class="tooltip ti-email">
+                            <span class="tooltiptext">Đóng góp ý kiến</span></a>
+                    </li>
+                    <li>
+                        <a href="../register.jsp">
+                            <button class="sign-up-button">
+                                Đăng Ký
+                            </button>
+                        </a>
+
+                        /
+                        <a href="../login.jsp">
+                            <button class="login-button">
+                                Đăng Nhập
+                            </button>
+                        </a>
+                        <a href="user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
+                            <span class="tooltiptext">Tài khoản của tôi</span></a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="nav-bar middle-bar row-head ">
+            <div class="col-head mg-left">
+                <a href="index.html"><img src="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
+            </div>
+            <div class="col-head">
+                <form>
+                    <label>
+                        <input placeholder="Tìm kiếm...">
+                    </label>
+                    <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
+                </form>
+            </div>
+            <a href="purchase.jsp">
+                <div class="col-head">
+                    <button class="cart-button">
+                        <i class="ti-shopping-cart">0.000đ</i>
+                    </button>
+                </div>
+            </a>
+        </div>
+        <!-- BEGIN NAV -->
+        <ul id="nav" class="back-dark-green">
+            <li>
+                <a href="#" id="toggle-products">
+                    <i class="nav-menu ti-menu"></i>
+                    DANH MỤC SẢN PHẨM
+
+                </a>
+                <ul class="sub-nav">
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY ĂN TRÁI
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY CÓ HOA
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY HOA LEO
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY CÂY CẢNH
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY LỚN
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY ĐỘC LẠ - HIẾM
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY BONSAI
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        CÂY GIỐNG
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        HOA LAN
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        HOA LAN CÂY GIỐNG
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        PHÂN BÓN-VẬT TƯ
+                    </a></li>
+                    <li><a href="#">
+                        <i class="ti-control-play"></i>
+                        SẢN PHẨM KHUYẾN MÃI
+                    </a></li>
+                </ul>
+            </li>
+            <li class=" nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
+            <li class="nav-togethger"><a href="introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
+            <li class="nav-text-product nav-togethger"><a href="product.html">SẢN PHẨM</a></li>
+            <li class="nav-togethger"><a href="instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
+            <li class="nav-togethger"><a href="news.html">TIN TỨC</a></li>
+        </ul>
+        <!-- END NAV -->
+        <div class="clear"></div>
+    </header>
+
+    <div id="list-product-description">
+        <div id="cay-cha-la" class="more-product">
+
+            <div class="row1 container-infor">
+                <div class=" col col-half">
+
+                    <img id="main-image" src="asset/img/cay-an-qua/cha-la/015920d03adfc7819ece-510x680.jpg"
+                         alt="Main Image">
+
+
+                    <div id="image-list">
+                        <button id="prev-btn"><i class="ti-angle-left"></i></button>
+                        <img class="slider-image" src="asset/img/cay-an-qua/cha-la/015920d03adfc7819ece-510x680.jpg"
+                             alt="Image 1">
+                        <img class="slider-image"
+                             src="asset/img/cay-an-qua/cha-la/1c27df352b5a3314b8f920af27710c1b-510x510.jpg"
+                             alt="Image 2">
+                        <img class="slider-image" src="asset/img/cay-an-qua/cha-la/df8eca09d0062d587417-510x680.jpg"
+                             alt="Image 3">
+                        <img class="slider-image" src="asset/img/cay-an-qua/cha-la/f0ca678760889dd6c499-510x680.jpg"
+                             alt="Image 4">
+                        <button id="next-btn"><i class="ti-angle-right"></i></button>
+                        <!-- Add more images here -->
+                    </div>
+
+
+                    <div class="modal" id="image-modal">
+                        <img class="modal-image" src="image1.jpg" alt="Modal Image">
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+                <div class=" col col-half infor-product ">
+                    <div class="addr-current ">
+                        <a href="index.html" class="link-index text-gray fs-18">
+                            <p>TRANG CHỦ</p>
+                        </a>
+                        <div class="product text-gray fs-18"> / <a href="product.html">SẢN PHẨM </a> /</div>
+                        <p class="addr-current-product"><a href="product.html">CÂY ĂN TRÁI</a></p>
+                    </div>
+                    <p class="name-product">CÂY CHÀ LÀ</p>
+                    <div class="line"></div>
+                    <p class="text-infor-product">Cây chà là được người dân trồng để lấy quả mang giá trị kinh tế cao.
+                        Cây mang ý nghĩa tượng trưng cho tình bạn nên thường được mua để làm cây trang trí, trồng làm
+                        cảnh.</p>
+                    <div class="line-high"></div>
+                    <p class="category">Danh mục: <a href="product.html">CÂY ĂN TRÁI</a>, <a
+                            href="#"> CÂY GIỐNG</a></p>
+                    <div class="feature-share">
+                        <p>Share on:</p><span>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://caygiongsaigon.com/san-pham/cay-giong-cha-la/"
+                               target="_blank" rel="noopener">
+                                <i class="ti-facebook"></i>
+                            </a>
+                            <a
+                                    href="mailto:?subject=Tiêu đề email&body=http://caygiongsaigon.com/san-pham/cay-giong-cha-la/">
+                                <i class="ti-email"></i>
+                            </a>
+                    </span>
+                    </div>
+                </div>
+
+
+                <div class="clear"></div>
+            </div>
+
+
+            <div class="content-describe-product">
+                <div class="row1">
+                    <div class="line-describe">
+                    </div>
+                    <p class="text-describe"><b>MÔ TẢ</b></p>
+                    <p>Chà là là loại cây bụi thân gỗ họ Cau.</p>
+                    <p>Nó có khả năng chịu hạn tốt và thường được trồng ngoài trời làm cây cảnh tạo cảnh quan đẹp hoặc
+                        lấy quả ăn.</p>
+                    <p>Đây là loại cây có giá trị kinh tế và giá trị dinh dưỡng cao, được trồng nhiều ở các địa phương.
+                    </p>
+                    <div class="content-1">
+                        <p><b>I/ Đặc điểm hình thái của cây</b></p>
+                        <p>– Chà là là cây thân gỗ có hình dạng giống cây dưa, nhưng mập hơn và có vỏ thân xù xì. Thân
+                            cây đơn hoặc có chồi rễ mút và phát triển thành bụi, có chiều cao dao động từ 1–30 m.</p>
+                        <p>– Là lá kép lông chim dài từ 1–6 m, nhọn ở đầu, dài trung bình khoảng 50 cm. Các loài trong
+                            chi này có hoa đực và hoa cái trên các cây khác nhau và chúng thụ phấn nhờ gió.</p>
+                        <p>– Là lá kép lông chim dài từ 1–6 m, nhọn ở đầu, dài trung bình khoảng 50 cm. Các loài trong
+                            chi này có hoa đực và hoa cái trên các cây khác nhau và chúng thụ phấn nhờ gió.</p>
+                        <p>– Quả là loại quả hạch, kích thước nhở, dài từ 1–7 cm, có màu vàng hay nâu đỏ hoặc tía sẫm
+                            khi chín, bên trong có một hạt</p>
+                        <p>– Hạt được sử dụng để làm mứt ăn rất ngon.</p>
+                        <p>– Chà là ra hoa vào khoảng tháng 2-3 và trái có thể được thu hoạch vào tháng 8-12 hàng năm.
+                            Vì nó có hoa đơn tình nên thụ phấn nhờ ong và gió.</p>
+                        <p>– Đây là cây ưa sáng toàn phần, thích hợp sống tại nơi có nhiều ánh sáng</p>
+                        <p>– Cây rất dễ ươm trồng và chăm sóc, nhu cầu nước không cao</p>
+                        <p>– Cây thích hợp trồng trên nhiều loại đất khác nhau và có thể chịu đựng được nơi có độ mặn
+                            cao.</p>
+                    </div>
+                    <div class="content-2">
+                        <p><b>II/ Tác dụng cây chà là:</b></p>
+                        <p>– Cây chà là loại cây đẹp nên được trồng nhiều làm cây công trình, cây xanh cho văn phòng hay
+                            cây cảnh trong các sân vườn. Nó còn được trồng trong chậu để trang trí nội thất hoặc trồng
+                            thành từng bụi cây trong sân vườn trang trí vườn, sân…</p>
+                        <p>– Theo ý nghĩa thì đây là cây được tượng trưng cho tình bạn nên có giá trị kinh tế cao,
+                            thường được mọi người mua để làm quà tặng</p>
+                        <p>– Theo phong thủy cây chà là có thể loại bỏ được tất cả các độc tố có trong không khí, mang
+                            lại sự trong lành cho không khí, giúp cho gia chủ luôn khỏe mạnh</p>
+                        <p>– Quả chà là có giá trị thương mại cao. Nó là loại quả cho lớp cùi thịt dày, chứa nhiều đường
+                            rất ngọt và có giá trị dinh dưỡng cao. Loại quả này được bán rộng rãi trên thị trường và rất
+                            được ưa chuộng bởi nó cung cấp giá trị dinh dưỡng cao, làm giảm nguy cơ mắc nhiều bệnh như
+                            táo bón, thiếu máu…</p>
+                    </div>
+                    <div class="content-3">
+                        <p><b>III/ Cách trồng và chăm sóc:</b></p>
+                        <p>– Thời vụ trồng thích hợp nhất vào đầu vụ mưa, lúc này sẽ giảm thiểu công tưới và tăng tỉ lệ
+                            sống cho cây hơn</p>
+                        <p>– Tùy thuộc vào địa hình và loại đất của từng vùng mà có thể trồng tập trung hoặc trồng theo
+                            hàng sao cho phù hợp và khi trưởng thành dễ thụ phấn tự nhiên hơn</p>
+                        <p>– Ðào hố với quy cách 40cm x 30cm x 30cm để trồng cây con</p>
+                        <p>– Mật độ cây trồng khoảng 500 cây/ha, hàng cách hàng, cây cách cây là từ 4 đến 6 m</p>
+                        <p>– Trước khi trồng thì tiến hành bón lót phân vi sinh để cây dễ bén rễ</p>
+                        <p>– Trồng xong cần tưới nước cho cây để cây nhanh phục hồi</p>
+                        <p>– Tưới nước thường xuyên cho cây nhất là vào 6 tháng mùa khô, một ngày tưới 2 lần</p>
+                        <p>– Mỗi tháng cần bón một lần phân với khối lượng là 0.01 kg cho mỗi hố</p>
+                        <p>– Kiểm tra thường xuyên khi mới trồng cây để đề phòng côn trùng cắn rễ và chuột phá hại rễ
+                        </p>
+                        <p>– Khi cây mới trồng còn nhỏ và yếu nên cần dọn sạch cỏ xung quanh gốc để cỏ không cạnh tranh
+                            chất dinh dưỡng của cây</p>
+                        <p>– Cắt tỉa lá già và khô mỗi năm 1 lần vào tháng 12 đếm tháng 1</p>
+                        <p>– Lưu ý: cần phủ gốc bằng rơm rạ, hoặc cỏ khô vào mùa khô để chống lại sự thoát hơi nước của
+                            đất</p>
+                    </div>
+                    <div class="line-describe"></div>
+                </div>
+            </div>
+            <div class="row1">
+
+                <div class="title-similar-product text-blue"> SẢN PHẨM TƯƠNG TỰ</div>
+                <div class="container-slider">
+
+
+                    <div class="container-same-product">
+
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/chanh chuc/1.jpg" alt="Image 1"> -->
+                            <div class="  container-product">
+                                <img class="size-img img-product" src="asset/img/cay-an-qua/luu-an-do/1.jpg" alt="">
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review  review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">lựu ấn độ</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-gray">89.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">230.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/chanh leo/1.jpg" alt="Image 2"> -->
+                            <div class="   container-product">
+                                <img class="size-img  img-product "
+                                     src="asset/img/cay-an-qua/oi-duoi-phung/z2499183555897_28239e396aa259213d761e0aebce9dbf-510x680.jpg"
+                                     alt="Full Screen Image">
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review  review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">
+
+                                    CÂY ỔI ĐUÔI PHỤNG</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-black">42.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">290.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+
+                            </div>
+
+                        </div>
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/chanh vàng/z2836377350326_92bb672e0eaa5f753c6e36529f06c21f-510x680.jpg" alt="Image 3"> -->
+                            <div class="    container-product">
+                                <img class="size-img  img-product"
+                                     src="asset/img/cay-an-qua/oi-nu-hoang/1.jpg"
+                                     alt="Full Screen Image">
+                                <!-- <img class="size-img size-img1" src="./asset/img/cay co hoa/lieu dang tieu/unnamed-1-510x510.jpg" alt=""> -->
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">CÂY ỔI NỮ HOÀNG</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-black">60.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">190.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+                            </div>
+
+                        </div>
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/cherry 1m-1.2/119213104_1185111781889730_3443560138059122151_n-510x680.jpg" alt="Image 4"> -->
+                            <div class=" container-product">
+                                <img class="size-img img-product" src="asset/img/cay-an-qua/oi%20se%20la%20ri/1.jpg" alt="">
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review  review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">CÂY ỔI SẺ LÁ RÍ</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-gray">89.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">170.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/chanh vàng/z2836377350326_92bb672e0eaa5f753c6e36529f06c21f-510x680.jpg" alt="Image 3"> -->
+                            <div class=" container-product">
+                                <img class="size-img img-product"
+                                     src="asset/img/cay-an-qua/oi-cam-thach/130829531_2926789680883313_3382313326195861344_n-510x733.jpg"
+                                     alt="">
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review  review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">CÂY ỔI CẨM THẠCH</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-gray">89.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">230.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+                            </div>
+
+                        </div>
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/chanh leo/1.jpg" alt="Image 2"> -->
+                            <div class=" container-product">
+                                <img class="size-img  img-product "
+                                     src="asset/img/cay-an-qua/si-ro-80cm/5240fc861bc6f298abd7-510x381.jpg"
+                                     alt="Full Screen Image">
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review  review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">
+
+                                    CÂY SI RÔ 80cm</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-black">42.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">290.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/cherry 1m-1.2/119213104_1185111781889730_3443560138059122151_n-510x680.jpg" alt="Image 4"> -->
+                            <div class=" container-product">
+                                <img class="size-img  img-product " src="asset/img/cay-an-qua/dua-tay/gv56435434.jpg"
+                                     alt="Full Screen Image">
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review  review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">
+
+                                    CÂY DƯA TÂY, Trái to, vỏ bóng, thịt quả thơm ngọt</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-black">42.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">180.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+                        <div class="same-product">
+                            <!-- <img src="asset/img/cay an qua/chanh chuc/1.jpg" alt="Image 1"> -->
+                            <div class="  container-product">
+                                <img class="size-img  img-product" src="asset/img/cay-an-qua/tao%20thai/1.jpg"
+                                     alt="Full Screen Image">
+                                <!-- <img class="size-img size-img1" src="./asset/img/cay co hoa/lieu dang tieu/unnamed-1-510x510.jpg" alt=""> -->
+                                <!-- <p class="text-sale back-orange">Giảm giá!</p> -->
+                                <p class="text-review review text-review-more">XEM NHANH</p>
+
+                                <p class="name-product">CÂY TÁO THÁI</p>
+                                <div class="price">
+                                    <!-- <p class="price-initial text-black">60.000đ</p> -->
+                                    <span>
+                                            <p class="price-sale text-black">120.000đ</p>
+                                        </span>
+                                </div>
+                                <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="clear"></div>
+                    <button class="prev-button" onclick="prevSlide()">&#8249;</button>
+                    <button class="next-button" onclick="nextSlide()">&#8250;</button>
+
+                    <div class="clear"></div>
+
+
+                </div>
+
+
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+    </div>
+
+    <div id="comment" class="row1">
+        <div class="number-comment">
+            <i class="ti-comment-alt"></i>
+            <p>Bình luận(2)</p>
+        </div>
+        <a href="../login.jsp">
+            <button class="login-to-comment">
+                Đăng nhập để bình luận
+            </button>
+        </a>
+
+        <div class="main-comment">
+            <div class="container-comment">
+                <div class="col-img">
+                    <img src="asset/img/avt.png" alt="" class="img-user">
+                </div>
+                <div class="col-content-commment">
+                    <div class="text-name">
+                        <p>Lê Quốc Trung</p>
+                    </div>
+                    <div class="comment-contennt">
+                        <p>Sản phẩm chất lượng</p>
+                    </div>
+                    <div class="date-comment">
+                        <p>2023-16-11</p>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container-comment">
+                <div class="col-img">
+                    <img src="asset/img/avt.png" alt="" class="img-user">
+                </div>
+                <div class="col-content-commment">
+                    <div class="text-name">
+                        <p>Lê Quốc Trung</p>
+                    </div>
+                    <div class="comment-content">
+                        <p>Sản phẩm chất lượng</p>
+                    </div>
+                    <div class="date-comment">
+                        <p>2023-16-11</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="row-footer">
+            <div class="col-footer">
+                <img src="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="" class="logo-footer" width="75%">
+            </div>
+            <div class="col-footer">
+                <h3>Giới Thiệu</h3>
+                <p>Điểm đến lý tưởng cho những người yêu đam mê và đang tìm kiếm cây giống nông nghiệp chất lượng
+                    cao. Với
+                    mục tiêu hỗ trợ và nâng cao năng suất trong nông nghiệp.</p>
+            </div>
+            <div class="col-footer">
+                <h3>Văn phòng</h3>
+                <p>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</p>
+                <p class="email-id">nls@hcmuaf.edu.vn</p>
+                <p>028-38974560</p>
+            </div>
+            <div class="col-footer">
+                <h3>Thông Tin</h3>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="introduce.jsp">Giới Thiệu</a></li>
+                    <li><a href="product.html">Sản Phẩm</a></li>
+                    <li><a href="instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
+                    <li><a href="news.html">Tin Tức</a></li>
+
+                </ul>
+            </div>
+            <div class="col-footer">
+                <h3>Nhận Email Thông Báo</h3>
+                <form>
+                    <i class="ti ti-email"></i>
+                    <label>
+                        <input type="email" placeholder="Nhập email của bạn..." required>
+                    </label>
+                    <button type="submit"><i class="ti ti-arrow-right"></i></button>
+                </form>
+                <nav class="socials">
+                    <a href="#" class="tooltip ti-facebook">
+                        <span class="tooltiptext">Theo Dõi Chúng Tôi</span></a>
+                    </a>
+                    <a href="#" class="tooltip ti-mobile">
+                        <span class="tooltiptext">0929729120</span></a>
+                    </a>
+                    <a href="mailto:mail@mail.com" class="tooltip ti-email">
+                        <span class="tooltiptext">Đóng Góp Ý Kiến</span></a>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="script.js"></script>
+<!-- ẨN HIỆN LIST-MENU -->
+<script>
+
+    // Lấy phần tử nút kích hoạt
+    const toggleButton = document.getElementById("toggle-products");
+    // Lấy danh sách sản phẩm
+    const productList = document.querySelector(".sub-nav");
+
+    // Thêm sự kiện click cho nút kích hoạt
+    toggleButton.addEventListener("click", function (e) {
+        e.preventDefault(); // Ngăn chặn chuyển hướng đến "#"
+
+        // Kiểm tra nếu danh sách sản phẩm đã ẩn, thì hiển thị, ngược lại, ẩn đi
+        if (productList.style.display === "none" || productList.style.display === "") {
+            productList.style.display = "block";
+        } else {
+            productList.style.display = "none";
+        }
+    });
+
+</script>
+<!-- END ẨN HIỆN LIST-MENU -->
+
+<script>
+    const mainImage = document.getElementById('main-image');
+    const sliderImages = document.querySelectorAll('.slider-image');
+    const modal = document.getElementById('image-modal');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    let currentImageIndex = 0;
+
+    function showImage(index) {
+        mainImage.src = sliderImages[index].src;
+        currentImageIndex = index;
+    }
+
+    function nextImage() {
+        currentImageIndex++;
+        if (currentImageIndex >= sliderImages.length) {
+            currentImageIndex = 0;
+        }
+        showImage(currentImageIndex);
+    }
+
+    function previousImage() {
+        currentImageIndex--;
+        if (currentImageIndex < 0) {
+            currentImageIndex = sliderImages.length - 1;
+        }
+        showImage(currentImageIndex);
+    }
+
+    mainImage.addEventListener('click', () => {
+        modal.classList.add('active');
+        modal.querySelector('.modal-image').src = mainImage.src;
+    });
+
+    sliderImages.forEach((image, index) => {
+        image.addEventListener('click', () => {
+            showImage(index);
+            if (modal.classList.contains('active')) {
+                modal.classList.remove('active');
+            }
+        });
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove('active');
+        }
+    });
+
+    prevBtn.addEventListener('click', previousImage);
+    nextBtn.addEventListener('click', nextImage);
+</script>
+
+<!-- SLIDER-SAME-PRODUCT -->
+<script>
+    const slider = document.querySelector(".container-same-product");
+    const prevButton = document.querySelector(".prev-button");
+    const nextButton = document.querySelector(".next-button");
+    let slideIndex = 0;
+
+    function showSlide(index) {
+        slider.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function prevSlide() {
+        if (slideIndex > 0) {
+            slideIndex--;
+            showSlide(slideIndex);
+        }
+    }
+
+    function nextSlide() {
+        if (slideIndex < 1) {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+    }
+
+    showSlide(slideIndex);
+
+
+</script>
+
+<!-- ẨN HIỆN SUB-NAV KHI CUỘN -->
+<script>
+    // Lấy các chi tiết sản phẩm
+    // Lấy các chi tiết sản phẩm
+    var product1 = document.getElementById("cay-cha-la");
+
+
+    // Hiển thị nội dung của sản phẩm được chọn
+    var urlParams = new URLSearchParams(window.location.search);
+    var selectedProduct = urlParams.get("id");
+
+    if (selectedProduct === "cay-cha-la") {
+        product1.style.display = "block";
+    }
+</script>
+<!-- END ẨN HIỆN SUB-NAV KHI CUỘN -->
+</body>

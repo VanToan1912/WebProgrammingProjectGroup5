@@ -1,0 +1,130 @@
+
+.clear{
+    clear: both;
+}
+footer{
+    overflow: hidden;
+}
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
+    margin-top: 16px;
+    /* background: url('https://th.bing.com/th/id/R.ec1421d783c654da6fe9513b322f8294?rik=jVSvSuQUt3MD4Q&pid=ImgRaw&r=0'); */
+ 
+    background-position: center;
+    background-size: cover;
+    /* margin: 200px 0 40px 0; */
+}
+header .col-head{
+    display: flex;
+    
+}
+header .col-head p{
+    margin-top: 40px;
+    font-size: 26px;
+    margin-left: 8px;
+    color: rgb(20, 130, 89);
+    font-weight: 600;
+}
+#container {
+    /* background: url('https://th.bing.com/th/id/R.ec1421d783c654da6fe9513b322f8294?rik=jVSvSuQUt3MD4Q&pid=ImgRaw&r=0'); */
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    padding: 40px;
+    box-shadow: 0 0 10px #000;
+    border-radius: 30px;
+    background-color: white;
+}
+
+#main-content  .sign-in-form {
+    background: #fff;
+    border-radius: 30px;
+    padding: 10px;
+    margin-top: 80px;
+}
+
+#main-content   form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#main-content   h1 {
+    font-size: 24px;
+}
+
+#main-content  .input-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#main-content  label {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#main-content   .icon {
+    text-align: left;
+    margin-top: 5px;
+}
+
+#container   input[type="email"],
+#container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#main-content  .input-remember-checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+#main-content   .btn {
+    max-width: 100%;
+    background: green;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    cursor: pointer;
+   
+    transition: background 0.3s, color 0.3s;
+}
+#container .btn a{
+    color: white;
+}
+#container  .btn a:hover{
+    color: #000;
+}
+#container  .btn:hover {
+    background: #ff4500;
+    color: white;
+}
+.login-register {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#container  a {
+    text-decoration: none;
+    color: rgb(0,208,130);
+}
+
+#container  a:hover {
+    color: #ff4500;
+}
+#main-content label{
+    margin: 6px 0 6px 5px;
+}
+input#accept-terms {
+    margin-right: 4px;
+}
