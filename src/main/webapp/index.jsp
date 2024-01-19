@@ -6,11 +6,11 @@
     <meta charset="UTF-8">
     <title>Cây giống Sài Gòn</title>
 
-    <link rel="icon" href="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon"/>
-    <link rel="stylesheet" href="WebProject/asset/css/product.css">
-    <link rel="stylesheet" href="WebProject/asset/fonts/themify-icons/themify-icons.css">
+    <link rel="icon" href="${pageContext.request.contextPath}/WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon"/>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/product.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/fonts/themify-icons/themify-icons.css">
 
-    <link rel="stylesheet" href="./WebProject/asset/css/head-foot.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/head-foot.css">
 
 
 
@@ -18,6 +18,7 @@
 
 <body>
 <div id="main">
+
     <%--    header--%>
     <header>
         <jsp:include page="WebProject/header/header-level1.jsp"></jsp:include>

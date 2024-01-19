@@ -3,7 +3,6 @@
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="bean.ProductDetail" %>
 
-
 <%--
   Created by IntelliJ IDEA.
   User: trung
@@ -18,27 +17,21 @@
 <%
   List<Product> productList = (List<Product>) request.getAttribute("productList");
   if (productList == null) {
-    productList = new ArrayList<>();
+    productList = new ArrayList<>(); // Hoặc xử lý trường hợp null tùy theo yêu cầu của bạn
   }
   String category = (String) request.getAttribute("category");
-
-  // Kiểm tra xem currentPage có tồn tại hay không trước khi sử dụng
-  Integer currentPageObj = (Integer) request.getAttribute("currentPage");
-  int currentPage = (currentPageObj != null) ? currentPageObj.intValue() : 1;
-
+  int currentPage = (int) request.getAttribute("currentPage");
   int totalPages;
 
   if (category != null && !category.equals("null")) {
     totalPages = (request.getAttribute("totalPagesByCategory") != null) ?
-            ((Integer) request.getAttribute("totalPagesByCategory")).intValue() :
-            ((Integer) request.getAttribute("totalPages")).intValue();
+            (int) request.getAttribute("totalPagesByCategory") :
+            (int) request.getAttribute("totalPages");
   } else {
-    totalPages = ((Integer) request.getAttribute("totalPages")).intValue();
+    totalPages = (int) request.getAttribute("totalPages");
   }
-%>
 
-<%-- In ra giá trị của productList --%>
-<!-- <%= productList %> -->
+%>
 
 <%@ page isELIgnored="false" %>
 
@@ -58,7 +51,7 @@
 
 <div id="product" style="">
   <header>
-    <jsp:include page="header/header-level1.jsp"></jsp:include>
+    <jsp:include page="../header/header-level1.jsp"></jsp:include>
   </header>
 
   <div id="main">
@@ -88,16 +81,16 @@
         <div class="line mg-left"></div>
         <div class="list-menu-product mg-left">
           <div class="menu-product">
-            <a href="products?category=CAY_AN_TRAI" id="category_antrai" class="<%= (category == null || category.equals("CAY_AN_TRAI")) ? "active" : "" %>">
+            <a href="products?category=CAY-AN-TRAI" id="category_antrai" class="<%= (category == null || category.equals("CAY_AN_TRAI")) ? "active" : "" %>">
               <b>CÂY ĂN TRÁI</b>
             </a>
           </div>
           <div class="menu-product">
-            <a href="products?category=CAY-B0NSAI" id="category_bonsai" class="<%= (category != null && category.equals("CAY-B0NSAI")) ? "active" : "" %>">
+            <a href="products?category=CAY-BONSAI" id="category_bonsai" class="<%= (category != null && category.equals("CAY-B0NSAI")) ? "active" : "" %>">
               CÂY BONSAI
             </a>
           </div>                    <div class="menu-product"><a href="#" id="category-canh">CÂY CẢNH</a></div>
-          <div class="menu-product"><a href="products?category=CAY_CO_HOA">CÂY CÓ HOA</a></div>
+          <div class="menu-product"><a href="products?category=CAY-CO-HOA">CÂY CÓ HOA</a></div>
           <div class="menu-product"><a href="#">CÂY ĐỘC LẠ-HIẾM</a></div>
           <div class="menu-product"><a href="#">CÂY GIA VỊ</a></div>
           <div class="menu-product"><a href="#">CÂY GIỐNG</a></div>
@@ -181,11 +174,10 @@
 
     </div>
 
-
   </div>
 
   <footer>
-    <jsp:include page="footer/footer-level1.jsp"></jsp:include>
+    <jsp:include page="../footer/footer-level1.jsp"></jsp:include>
   </footer>
 </div>
 
