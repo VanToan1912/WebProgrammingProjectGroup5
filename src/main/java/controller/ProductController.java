@@ -51,7 +51,7 @@ public class ProductController extends HttpServlet {
             req.setAttribute("totalPages", totalPages); // Replace totalPages with the actual value
 
             // Forward request đến trang JSP để hiển thị danh sách sản phẩm và phân trang
-            req.getRequestDispatcher("/WebProject/product.jsp").forward(req, resp);
+            req.getRequestDispatcher("/WebProject/View/product.jsp").forward(req, resp);
 
 
         } catch (Exception e) {

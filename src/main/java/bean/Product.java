@@ -21,9 +21,10 @@ public class Product {
     @ColumnName("price")
     private double price;
 
+
     private List<String> imageUrls;
 
-    public Product(int pdid, String pdname, String categories, int quanity, double price, List<String> imageUrls) {
+    public Product(int pdid, String pdname, String categories, int quanity, double price,  List<String> imageUrls) {
         this.pdid = pdid;
         this.pdname = pdname;
         this.categories = categories;
@@ -86,7 +87,6 @@ public class Product {
         this.imageUrls = imageUrls;
     }
 
-
     @Override
     public String toString() {
         return "Product{" +
@@ -97,5 +97,10 @@ public class Product {
                 ", price=" + price +
                 ", imageUrls=" + imageUrls +
                 '}';
+    }
+
+    public static void main(String[] args) {
+
+
     }
 }
