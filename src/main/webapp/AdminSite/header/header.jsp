@@ -24,7 +24,8 @@
 <div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
     <div class="profile-sidebar">
         <div class="profile-userpic">
-            <img src="${pageContext.request.contextPath}/AdminSite/asset/images/avatar.png" class="img-responsive" alt="avatar">
+            <img src="${pageContext.request.contextPath}/AdminSite/asset/images/avatar.png" class="img-responsive"
+                 alt="avatar">
         </div>
         <div class="profile-usertitle">
             <div class="profile-usertitle-name">Jun</div>
@@ -34,11 +35,12 @@
     </div>
     <ul class="nav menu">
         <li>
-            <a href="${pageContext.request.contextPath}/index.jsp"><em class="fa fa-tree"></em> Cây Giống Sài Gòn</a>
+            <a href="${pageContext.request.contextPath}/index.jsp">
+                <em class="fa fa-tree"></em> Cây Giống Sài Gòn</a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp"><em class="fa fa-dashboard"></em>
-                Thông Tin</a>
+            <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp">
+                <em class="fa fa-dashboard"></em> Thông Tin</a>
         </li>
         <li>
             <a href="${pageContext.request.contextPath}/AdminSite/info/manage-info.jsp"><em
@@ -53,27 +55,28 @@
                     class="fa fa-toggle-off"></em> Quản lý giao diện</a>
         </li>
         <li>
-            <a class="" href="${pageContext.request.contextPath}/AdminSite/product/manage-product.jsp">
-                <span class="fa fa-shopping-cart"> </span> Quản lý sản phẩm
+            <a class="" href="${pageContext.request.contextPath}/ADProducts">
+                <em class="fa fa-shopping-cart"> </em> Quản lý sản phẩm
             </a>
         </li>
         <li>
             <a class="" href="${pageContext.request.contextPath}/AdminSite/user/manage-user.jsp">
-                <span class="fa fa-user"></span> Quản lý người dùng
+                <em class="fa fa-user"></em> Quản lý người dùng
             </a>
         </li>
         <li>
             <a class="" href="${pageContext.request.contextPath}/AdminSite/post/manage-posts.jsp">
-                <span class="fa fa-stack-exchange"></span> Quản lý bài viết
+                <em class="fa fa-stack-exchange"></em> Quản lý bài viết
             </a>
         </li>
         <li>
             <a class="" href="${pageContext.request.contextPath}/AdminSite/bill/manage-bill-shipping.jsp">
-                <span class="fa fa-money"></span> Quản lý hóa đơn
+                <em class="fa fa-money"></em> Quản lý hóa đơn
             </a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/WebProject/login.jsp"><em class="fa fa-power-off"></em> Đăng xuất</a>
+            <a href="${pageContext.request.contextPath}/#"><em class="fa fa-power-off"></em> Đăng
+                xuất</a>
         </li>
     </ul>
 </div>
