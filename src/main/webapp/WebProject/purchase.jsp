@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,14 +43,14 @@
                         <span class="tooltiptext">Đóng góp ý kiến</span></a>
                 </li>
                 <li>
-                    <a href="register.jsp">
+                    <a href="../register.jsp">
                         <button class="sign-up-button">
                             Đăng Ký
                         </button>
                     </a>
 
                     /
-                    <a href="login.jsp">
+                    <a href="../login.jsp">
                         <button class="login-button">
                             Đăng Nhập
                         </button>
@@ -145,7 +146,7 @@
         <li class=" nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
         <li class="  nav-togethger"><a href="introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
         <li class=" nav-togethger"><a href="product.html">SẢN PHẨM</a></li>
-        <li class="nav-togethger"><a href="instruct.html">HƯỚNG DẪN MUA HÀNG</a></li>
+        <li class="nav-togethger"><a href="instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
         <li class="nav-togethger"><a href="news.html">TIN TỨC</a></li>
     </ul>
 
@@ -337,7 +338,7 @@
                 <li><a href="index.html">Trang Chủ</a></li>
                 <li><a href="introduce.jsp">Giới Thiệu</a></li>
                 <li><a href="product.html">Sản Phẩm</a></li>
-                <li><a href="instruct.html">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
                 <li><a href="news.html">Tin Tức</a></li>
 
             </ul>
