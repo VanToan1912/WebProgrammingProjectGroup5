@@ -1,15 +1,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: duyen
-  Date: 1/14/2024
-  Time: 9:57 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <meta charset="UTF-8">
+
     <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/logged-in-header-style.css">
 </head>
 <body>
@@ -81,14 +75,96 @@
         </nav>
     </div>
 
+
     <div class="nav-bar middle-bar row-head ">
         <div class="col-head mg-left">
             <a href="index.jsp"><img src="${pageContext.request.contextPath}/WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
         </div>
+        <div class="col-head">
+            <form>
+                <label>
+                    <input placeholder="Tìm kiếm...">
+                </label>
+                <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
+            </form>
+        </div>
+        <a href="purchase.html">
+            <div class="col-head">
+                <button class="cart-button">
+                    <i class="ti-shopping-cart">0.000đ</i>
+                </button>
+            </div>
+        </a>
 
 
     </div>
+    <!-- BEGIN NAV -->
+    <ul id="nav" class="back-dark-green">
+        <li>
+            <a href="#" id="toggle-products">
+                <i class="nav-menu ti-menu"></i>
+                DANH MỤC SẢN PHẨM
 
+            </a>
+            <ul class="sub-nav">
+                <li><a href="product.html">
+                    <i class="ti-control-play"></i>
+                    CÂY ĂN TRÁI
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    CÂY CÓ HOA
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    CÂY HOA LEO
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    CÂY CÂY CẢNH
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    CÂY LỚN
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    CÂY ĐỘC LẠ - HIẾM
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    CÂY BONSAI
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    CÂY GIỐNG
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    HOA LAN
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    HOA LAN CÂY GIỐNG
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    PHÂN BÓN-VẬT TƯ
+                </a></li>
+                <li><a href="#">
+                    <i class="ti-control-play"></i>
+                    SẢN PHẨM KHUYẾN MÃI
+                </a></li>
+            </ul>
+        </li>
+        <li class="nav-text-product nav-togethger"><a href="./index.jsp">TRANG CHỦ</a></li>
+        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
+        <li class=" nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/product.jsp">SẢN PHẨM</a></li>
+        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
+        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/news.jsp">TIN TỨC</a></li>
+    </ul>
+    <!-- END NAV -->
+    <div class="clear"></div>
 </header>
 
 </body>
