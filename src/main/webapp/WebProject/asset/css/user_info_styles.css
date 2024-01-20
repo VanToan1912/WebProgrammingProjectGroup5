@@ -1,264 +1,72 @@
 body {
-    background-color: #f7f7f7;
-    margin: 0;
     font-family: Arial, sans-serif;
-}
-
-.container {
-    width: 100%;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+form {
+    background-color: #fff;
     padding: 20px;
-    box-sizing: border-box;
-
-    margin-top: 200px;
-
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 10px;
-    padding: 40px;
-    width: 1000px;
-}
-
-.card-body {
-    justify-content: center;
-    margin: 10px;
-}
-
-
-.text2-page-user{
-    margin: 6px 0;
-}
-.line{
-    width: 800px;
-    height: 1px;
-    background-color: #ccc;
-    margin: 10px 0;
-}
-.col-left{
-    display: inline-block;
-    line-height: 2.6;
-    text-align: left;
-}
-.col-left button{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-.col{
-    float: left;
-    padding-left:10px;
-    padding-right: 10px;
-   
-}
-.col-title{
-    width: 130px;
-    text-align: left;
-}
-.col-left{
-    width: 100%;
-}
-.row{
-    margin-left: 30px;
-    display: inline-block;
-   
-}
-.clear{
-    clear: both;
-}
-.content-user-page{
-    display: flex;
-}
-.line-vertical {
-    width: 1px;
-    height: 169px;
-    background-color: #ccc;
-    margin: 0 66px;
-}
-input[type="text"] {
-    height: 33px;
-    width: 281px;
-    padding: 0 84px;
-}
-
-.mt-1 {
-    color: grey;
-}
-
-.ui-w-80 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80px;
-    height: 80px;
-}
-
-.ui-w-80 img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.btn-primary {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #008000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-.btn-default {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #008000;
-    border: 1px solid #008000;
-    cursor: pointer;
-}
-
-.btn:hover {
-    opacity: 0.8;
-}
-.tab-pane{
-    margin-top: 10px;
-}
-
-.sex {
+label {
     display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-size: 16px;
-  }
-  
-  /* Hide the browser's default radio button */
-  .sex input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-  }
-  
-  /* Create a custom radio button */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 16px;
-    width: 16px;
-    background-color: #eee;
-    border-radius: 50%;
-    margin-top: 12px;
-  }
-  .sub-col p{
-    margin-left: -10px;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .sex:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the radio button is checked, add a blue background */
-  .sex input:checked ~ .checkmark {
-    background-color: green;
-  }
-  
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the indicator (dot/circle) when checked */
-  .sex input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the indicator (dot/circle) */
-  /* .sex .checkmark:after {
-       top: 9px;
-      left: 9px;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: white;
-  } */
-  select {
-    width: 70px;
-    height: 33px;
-}
-.confim {
-    margin-left: 177px;
-    margin-top: 30px;
-}
-.avai-change{
-    margin-left: 6px;
-    /* text-decoration: none; */
-   
-}
- .menu-user-page{
-    display:inline-block;
-    margin-top: -280px;
-    /* line-height: 1.8; */
-    margin-left: 3%;
-   
-}
-.menu-user-page .row{
-    margin: 10px 0;
-}
-.line-user-page{
-    width: 180px;
-    height: 1px;
-    background-color: #ccc;
-}
-.container .list-infor{
-    line-height: 1.3;
-    margin-left: 22px;
-}
-.container .content-infor{
-    margin-left: -10px;
-    margin-top: 0px;
-
-}
-
-.container .content-user{
-    margin-top: 25px;
-    margin-left: -10px;
     margin-bottom: 8px;
 }
-.container .text-cart{
-    margin-left: -5px;
-}
-.menu-user-page a{
-    text-decoration: none;
-    color: #000;
-}
-.menu-user-page a:hover{
-    color: #fa461e;
-}
-.btn-cpw {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #008000;
-    border: 1px solid #008000;
-    cursor: pointer;
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
 }
 
-.btn-cpw:hover {
-    opacity: 0.5;
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* ... (Các quy tắc CSS đã cung cấp trước đó) ... */
+
+select {
+    appearance: none; /* Loại bỏ giao diện mặc định trình duyệt */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff; /* Màu nền */
+    border: 1px solid #ccc; /* Viền */
+    padding: 8px; /* Kích thước padding */
+    cursor: pointer; /* Con trỏ khi hover */
+}
+
+select:hover {
+    border-color: #007bff; /* Viền khi hover */
+}
+
+/* Tùy chỉnh mũi tên dropdown */
+select:after {
+    content: "\25BC"; /* Dấu mũi tên */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Không chấp nhận sự kiện click */
+}
+
+select:hover:after {
+    color: #007bff; /* Màu mũi tên khi hover */
 }
