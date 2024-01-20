@@ -284,42 +284,42 @@ public class ProductDAO {
             // Lấy danh sách tất cả sản phẩm
             List<Product> allProducts = getAllProduct();
 
-            System.out.println("Danh sách tất cả sản phẩm và hình ảnh:");
+            System.out.println("Danh sach tat ca hinh anh va san pham:");
             printProductList(allProducts);
 
             // Lấy danh sách sản phẩm theo danh mục
-            String category = "CAY_AN_TRAI";
+            String category = "CAY-AN-TRAI";
             List<Product> productsByCategory = getAllProductByCategory(category);
 
-            System.out.println("Danh sách sản phẩm theo danh mục '" + category + "' và hình ảnh:");
+            System.out.println("Danh sach san pham theo danh muc '" + category + "' và hinh anh:");
             printProductList(productsByCategory);
 
             // Lấy tổng số sản phẩm
             int totalProducts = getTotalProduct();
-            System.out.println("Tổng số sản phẩm: " + totalProducts);
+            System.out.println("Tong san pham: " + totalProducts);
 
             // Phân trang sản phẩm
             int pageIndex = 1;
             List<Product> paginatedProducts = pagingProduct(pageIndex);
 
-            System.out.println("Danh sách sản phẩm trang " + pageIndex + " và hình ảnh:");
+            System.out.println("Danh sach san pham trang" + pageIndex + " và hinh anh:");
             printProductList(paginatedProducts);
 
             // Phân trang sản phẩm theo danh mục
             List<Product> paginatedProductsByCategory = pagingProductByCategory(pageIndex, category);
 
-            System.out.println("Danh sách sản phẩm trang " + pageIndex + " theo danh mục '" + category + "' và hình ảnh:");
+            System.out.println("Danh sach san pham trang" + pageIndex + " theo danh muc '" + category + "' và hình ảnh:");
             printProductList(paginatedProductsByCategory);
 
             // Lấy tổng số sản phẩm theo danh mục
             int totalProductsByCategory = getTotalProductByCategory(category);
-            System.out.println("Tổng số sản phẩm theo danh mục '" + category + "': " + totalProductsByCategory);
+            System.out.println("Tong san pham theo danh muc '" + category + "': " + totalProductsByCategory);
 
             int productIdToRetrieve = 1; // Đổi pdId sản phẩm cần lấy thông tin
             Product productByPdId = getAllProductByPdID(productIdToRetrieve);
 
             // In ra thông tin sản phẩm theo pdId để kiểm tra
-            System.out.println("Thông tin sản phẩm theo pdId '" + productIdToRetrieve + "':");
+            System.out.println("Thong tin san pham theo pdID'" + productIdToRetrieve + "':");
             System.out.println(productByPdId);
 
         } catch (Exception e) {
@@ -331,20 +331,20 @@ public class ProductDAO {
     private static void printProductList(List<Product> productList) {
         for (Product product : productList) {
             System.out.println("ID: " + product.getPdid());
-            System.out.println("Thông tin sản phẩm:");
-            System.out.println("Tên: " + product.getPdname());
-            System.out.println("Danh mục: " + product.getCategories());
-            System.out.println("Số lượng: " + product.getQuanity());
-            System.out.println("Giá: " + product.getPrice());
+            System.out.println("Thong tin san pham:");
+            System.out.println("Ten: " + product.getPdname());
+            System.out.println("Danh muc: " + product.getCategories());
+            System.out.println("So luong: " + product.getQuanity());
+            System.out.println("Gia: " + product.getPrice());
 
             List<String> imageUrls = product.getImageUrls();
             if (imageUrls != null && !imageUrls.isEmpty()) {
-                System.out.println("Hình ảnh:");
+                System.out.println("Hinh anh:");
                 for (String imgUrl : imageUrls) {
                     System.out.println(imgUrl);
                 }
             } else {
-                System.out.println("Sản phẩm không có hình ảnh.");
+                System.out.println("San pham khong co hinh anh.");
             }
 
             System.out.println("------------------------");
