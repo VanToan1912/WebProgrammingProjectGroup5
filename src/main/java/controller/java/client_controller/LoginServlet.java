@@ -13,7 +13,7 @@ public class LoginServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // JDBC URL, username, and password of MySQL server
-    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/test";
+    private static final String JDBC_URL = "jdbc:mysql://localhost:3306/caytrongnonglam";
     private static final String JDBC_USER = "root";
     private static final String JDBC_PASSWORD = "123456";
 
