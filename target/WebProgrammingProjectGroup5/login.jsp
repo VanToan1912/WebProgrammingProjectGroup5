@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="WebProject/asset/css/login_styles.css">
     <link rel="stylesheet" href="WebProject/asset/css/head-foot.css">
     <link rel="stylesheet" href="WebProject/asset/fonts/themify-icons/themify-icons.css">
-    <title>Đăng nhập</title>
+    <title>Đăng nhập test</title>
 </head>
 <body>
 <header>
