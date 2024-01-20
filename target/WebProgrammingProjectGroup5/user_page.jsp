@@ -1,38 +1,35 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 
 <head>
     <meta charset="UTF-8">
     <title>Cây giống Sài Gòn - Hồ sơ</title>
-    <link rel="icon" href="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon"/>
-    <link rel="stylesheet" href="asset/css/user_info_styles.css">
-    <link rel="stylesheet" href="asset/fonts/themify-icons/themify-icons.css">
-    <link rel="stylesheet" href="asset/css/head-foot.css">
+    <link rel="icon" href="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="WebProject/asset/css/user_info_styles.css">
+    <link rel="stylesheet" href="WebProject/asset/fonts/themify-icons/themify-icons.css">
+    <link rel="stylesheet" href="WebProject/asset/css/head-foot.css">
 
     <title>Thông tin người dùng</title>
 </head>
 
 <body>
 <header>
-    <jsp:include page="./header/header-signup-signin.jsp"></jsp:include>
+    <jsp:include page="WebProject/header/header-signup-signin.jsp"></jsp:include>
 </header>
 <!--body section-->
 <div class="container">
     <div class="menu-user-page">
         <div class="row">
             <div class="col">
-                <img src="asset/img/avt.png" alt="" height="750" width="600" alt="avt" class="d-block ui-w-80">
+                <img src="WebProject/asset/img/avt.png" alt="" height="750" width="600" alt="avt" class="d-block ui-w-80">
             </div>
             <div class="col">
-                <p> lequoc_trung</p>
-                <a href="user_page.html">
-                    <i class="ti-pencil">Sửa hồ sơ</i>
+                <a href="user_page.jsp">
                 </a>
             </div>
         </div>
         <div class="line-user-page"></div>
-
         <div class="clear"></div>
         <div class="row content-user">
             <div class="col">
@@ -54,7 +51,6 @@
                         <p>Hồ sơ</p>
                     </div>
                 </a>
-
             </div>
             <div class="clear"></div>
             <div class="row content-infor">
@@ -66,24 +62,11 @@
                         <p>Địa chỉ</p>
                     </div>
                 </a>
-
             </div>
             <div class="clear"></div>
-            <div class="row content-infor">
-                <a href="#">
-                    <div class="col">
-                        <i class="ti-key"></i>
-                    </div>
-                    <div class="col text-cart">
-                        <p>Đổi mật khẩu</p>
-                    </div>
-                </a>
-
-            </div>
-
             <div class="clear"></div>
             <div class="row content-infor">
-                <a href="purchase.jsp">
+                <a href="WebProject/purchase.jsp">
                     <div class="col">
                         <i class="ti-shopping-cart"></i>
                     </div>
@@ -91,10 +74,8 @@
                         <p>Hóa đơn</p>
                     </div>
                 </a>
-
             </div>
         </div>
-
 
     </div>
     <div class="card overflow-hidden">
@@ -105,7 +86,7 @@
             <div class="col-left">
                 <div class="row">
                     <div class="col col-title">
-                        <p class="text-user-name">Tên đăng nhập</p>
+                        <p class="text-user-name">Email</p>
                     </div>
                     <div class="col">
                         <p class="user-name">nhom5_laptrinhweb</p>
@@ -115,10 +96,10 @@
 
                 <div class="row">
                     <div class="col col-title">
-                        <p class="text-name">Tên</p>
+                        <p class="text-name">Họ và tên</p>
                     </div>
                     <div class="col input-name">
-                        <input type="text" placeholder="Nhom 5">
+                        <input type="text" placeholder="Họ tên đầy đủ...">
                     </div>
                 </div>
                 <div class="clear"></div>
@@ -268,21 +249,21 @@
                         </div>
                     </div>
                 </div>
+
+                <a href="./WebProject/change_password.jsp"><button type="submit" class="btn btn-cpw" id="passwordChangeButton" name="ChangePassword">Đổi mật khẩu</button>
+                </a>
             </div>
-
-
+            /////ben phai
             <div class="line-vertical"></div>
             <div class="col-right">
                 <div class="card-body">
-                    <img src="asset/img/avt.png" height="750" width="600" alt="avt" class="d-block ui-w-80">
+                    <img src="WebProject/asset/img/avt.png" height="750" width="600" alt="avt" class="d-block ui-w-80">
                     <br>
                     <div class="media-body ml-4">
                         <label class="btn btn-outline-primary">
                             Tải lên ảnh mới
                             <input type="file" class="account-settings-fileinput">
                         </label> &nbsp;
-                        <div class="text-light small mt-1">Chọn ảnh có định dạng JPG, GIF or PNG. Lớn nhất là 800
-                        </div>
                     </div>
                 </div>
             </div>
@@ -290,8 +271,8 @@
         </div>
         <div class="confim">
             <button type="button" class="btn btn-primary">Lưu thay đổi</button>&nbsp;
-            <a href="index.html">
-                <button type="button" class="btn btn-default">Quay lại</button>
+            <a href="index.jsp">
+                <button type="button" class="btn btn-default">Hủy</button>
             </a>
         </div>
     </div>
@@ -299,55 +280,8 @@
 </div>
 
 
-
 <footer>
-    <div class="row-footer">
-        <div class="col-footer">
-            <img src="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="" class="logo-footer" width="75%">
-        </div>
-        <div class="col-footer">
-            <h3>Giới Thiệu</h3>
-            <p>Điểm đến lý tưởng cho những người yêu đam mê và đang tìm kiếm cây giống nông nghiệp chất lượng
-                cao. Với
-                mục tiêu hỗ trợ và nâng cao năng suất trong nông nghiệp.</p>
-        </div>
-        <div class="col-footer">
-            <h3>Văn phòng</h3>
-            <p>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</p>
-            <p class="email-id">nls@hcmuaf.edu.vn</p>
-            <p>028-38974560</p>
-        </div>
-        <div class="col-footer">
-            <h3>Thông Tin</h3>
-            <ul>
-                <li><a href="index.html">Trang Chủ</a></li>
-                <li><a href="introduce.jsp">Giới Thiệu</a></li>
-                <li><a href="product.html">Sản Phẩm</a></li>
-                <li><a href="instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
-                <li><a href="news.html">Tin Tức</a></li>
-
-            </ul>
-        </div>
-        <div class="col-footer">
-            <h3>Nhận Email Thông Báo</h3>
-            <form>
-                <i class="ti ti-email"></i>
-                <label>
-
-                    <input type="email" placeholder="Nhập email của bạn..." required>
-                </label>
-                <button type="submit"><i class="ti ti-arrow-right"></i></button>
-            </form>
-            <nav class="socials">
-                <a href="#" class="tooltip ti-facebook">
-                    <span class="tooltiptext">Theo Dõi Chúng Tôi</span></a>
-                <a href="#" class="tooltip ti-mobile">
-                    <span class="tooltiptext">0929729120</span></a>
-                <a href="mailto:mail@mail.com" class="tooltip ti-email">
-                    <span class="tooltiptext">Đóng Góp Ý Kiến</span></a>
-            </nav>
-        </div>
-    </div>
+    <jsp:include page="WebProject/footer/footer-level1.jsp"></jsp:include>
 </footer>
 
 <script>
@@ -366,6 +300,19 @@
             productList.style.display = "block";
         } else {
             productList.style.display = "none";
+        }
+    });
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var passwordChangeButton = document.getElementById('passwordChangeButton');
+
+        if (passwordChangeButton) {
+            passwordChangeButton.addEventListener('click', function () {
+                // Add your logic for password change here
+                alert('Password change logic goes here!');
+            });
         }
     });
 

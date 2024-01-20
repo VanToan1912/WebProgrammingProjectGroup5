@@ -67,7 +67,7 @@
                                 Đăng Nhập
                             </button>
                         </a>
-                        <a href="user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
+                        <a href="../user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
                             <span class="tooltiptext">Tài khoản của tôi</span></a>
                     </li>
 
