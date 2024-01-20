@@ -55,7 +55,7 @@ public class RegisterServlet extends HttpServlet {
 
         // Example using JDBC and MySQL
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/caytrongnonglam", "root", "123456");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "123456");
             String query = "SELECT COUNT(*) FROM users WHERE email = ?";
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
                 preparedStatement.setString(1, email);
