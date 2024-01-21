@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,15 +19,19 @@
 <div id="main-content">
     <div class="container" id="container">
         <div class="sign-in-form">
-            <form action=loginServlet method="POST">
+            <form action=loginServlet method="POST" autocomplete="off">
                 <h1>ĐĂNG NHẬP</h1>
+                <% String errorMessage = (String)request.getAttribute("error"); %>
+                <% if (errorMessage != null) { %>
+                <div style="color: red;"> <%= errorMessage %> </div>
+                <% } %>
                 <div class="input-box">
                     <label><span class="icon"><i class="far fa-envelope"></i></span> <strong>Email</strong></label>
-                    <label for="email"></label><input type="email" name="email" placeholder="Nhập email..." id="email" required>
+                    <label for="email"></label><input type="email" name="email" placeholder="Nhập email..." id="email" required autocomplete="new-email">
                 </div>
                 <div class="input-box">
                     <label><span class="icon"><i class="fas fa-key"></i></span><strong>Mật khẩu</strong></label>
-                    <label for="password"></label><input type="password" name="password" placeholder="Nhập mật khẩu..." id="password" required>
+                    <label for="password"></label><input type="password" name="password" placeholder="Nhập mật khẩu..." id="password" required autocomplete="new-password">
                 </div>
                 <div class="input-remember-checkbox">
                     <label><input type="checkbox">Ghi nhớ tài khoản</label>
@@ -37,7 +42,13 @@
                     <p>Chưa có tài khoản?</p> <a href="register.jsp">Đăng ký</a>
                 </div>
             </form>
-
+            <script>
+                window.addEventListener('DOMContentLoaded', function() {
+                    setTimeout(function() {
+                        document.getElementById('password').value = '';
+                    }, 10000);
+                });
+            </script>
             <%--                <script>--%>
             <%--                    document.getElementById('loginForm').addEventListener('submit', function (event) {--%>
             <%--                        event.preventDefault(); // Prevent the default form submission--%>
@@ -125,4 +136,3 @@
 </footer>
 </body>
 </html>
-
