@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="WebProject/asset/css/login_styles.css">
-<%--    <link rel="stylesheet" href="WebProject/asset/css/user_info_styles.css">--%>
+    <link rel="stylesheet" href="WebProject/asset/css/user_info_styles.css">
     <link rel="stylesheet" href="WebProject/asset/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="WebProject/asset/css/head-foot.css">
     <title>User Information Form</title>
@@ -23,7 +23,7 @@
                 <input type="text" id="fullName" name="fullName" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required value="${sessionScope.email}" disabled>
 
                 <label for="phone">Số điện thoại:</label>
                 <input type="tel" id="phone" name="phone" required>

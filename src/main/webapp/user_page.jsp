@@ -23,7 +23,7 @@
                 <input type="text" id="fullName" name="fullName" required>
 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" required value="${sessionScope.email}" disabled>
 
                 <label for="phone">Số điện thoại:</label>
                 <input type="tel" id="phone" name="phone" required>
