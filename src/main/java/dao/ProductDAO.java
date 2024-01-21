@@ -11,9 +11,8 @@ public class ProductDAO {
 
 
     public static List<Product> getAllProduct() {
-        String query = "SELECT p.pdId AS pdId, p.pdName AS pdName, p.categories AS categories, " +
-                "p.quanity AS quanity, p.price AS price, " +
-                "i.imgUrl AS imgUrl FROM products p LEFT JOIN images i ON p.pdId = i.pdId";
+        String query = "SELECT p.productId, p.productName, p.categories, p.quanity, p.price, i.imgUrl " +
+                "FROM products p LEFT JOIN images i ON p.productId = i.productId";
 
         List<Product> productList = new ArrayList<>();
         Map<Integer, Product> productMap = new HashMap<>();
@@ -22,17 +21,15 @@ public class ProductDAO {
             JDBIConnector.me().withHandle(handle ->
                     handle.createQuery(query)
                             .map((rs, ctx) -> {
-                                int productId = rs.getInt("pdId");
+                                int productId = rs.getInt("productId");
 
                                 Product product;
                                 if (productMap.containsKey(productId)) {
-                                    // Nếu sản phẩm đã tồn tại trong map, lấy nó ra
                                     product = productMap.get(productId);
                                 } else {
-                                    // Nếu sản phẩm chưa tồn tại trong map, tạo mới và thêm vào map
                                     product = new Product();
-                                    product.setPdid(productId);
-                                    product.setPdname(rs.getString("pdName"));
+                                    product.setProductId(productId);
+                                    product.setProductName(rs.getString("productName"));
                                     product.setCategories(rs.getString("categories"));
                                     product.setQuanity(rs.getInt("quanity"));
                                     product.setPrice(rs.getDouble("price"));
@@ -42,7 +39,7 @@ public class ProductDAO {
                                     productList.add(product);
                                 }
 
-                                // Thêm ảnh vào danh sách
+                                // Điều chỉnh cho phù hợp với cột imgUrl trong bảng images
                                 String imgUrl = rs.getString("imgUrl");
                                 if (imgUrl != null) {
                                     product.getImageUrls().add(imgUrl);
@@ -62,21 +59,22 @@ public class ProductDAO {
 
 
 
+
     public static List<Product> getAllProductByCategory(String category) {
-        String query = "SELECT p.pdId AS pdId, p.pdName AS pdName, p.categories AS categories, " +
-                "p.quanity AS quanity, p.price AS price,  " +
-                "i.imgUrl AS imgUrl FROM products p LEFT JOIN images i ON p.pdId = i.pdId " +
+        String query = "SELECT p.productId, p.productName, p.categories, p.quanity, p.price, i.imgUrl " +
+                "FROM products p LEFT JOIN images i ON p.productId = i.productId " +
                 "WHERE p.categories = :category";
 
-        List<Product> list;
+
+        List<Product> productList;
         try {
-            list = JDBIConnector.me().withHandle(handle ->
+            productList = JDBIConnector.me().withHandle(handle ->
                     handle.createQuery(query)
                             .bind("category", category)
                             .map((rs, ctx) -> {
                                 Product product = new Product();
-                                product.setPdid(rs.getInt("pdId"));
-                                product.setPdname(rs.getString("pdName"));
+                                product.setProductId(rs.getInt("productId"));
+                                product.setProductName(rs.getString("productName"));
                                 product.setCategories(rs.getString("categories"));
                                 product.setQuanity(rs.getInt("quanity"));
                                 product.setPrice(rs.getDouble("price"));
@@ -98,12 +96,14 @@ public class ProductDAO {
             System.err.println("Lỗi khi lấy danh sách sản phẩm theo danh mục: " + e.getMessage());
             throw e;
         }
-        return list;
+        return productList;
     }
 
 
 
-    // đêm số lượng sản phẩm trong db
+
+
+
     public static int getTotalProduct() {
         String query = "SELECT COUNT(*) FROM products";
         int total = 0;
@@ -120,37 +120,36 @@ public class ProductDAO {
     }
 
     public static List<Product> pagingProduct(int pageIndex) {
-        List<Product> list = new ArrayList<>();
+        List<Product> productList = new ArrayList<>();
         int pageSize = 12; // Số lượng sản phẩm trên mỗi trang
         int pageOffset = (pageIndex - 1) * pageSize; // Tính vị trí bắt đầu cho trang hiện tại
 
-        String query = "SELECT p.pdId AS pdId, p.pdName AS pdName, p.categories AS categories, " +
-                "p.quanity AS quanity, p.price AS price, " +
-                "i.imgUrl AS imgUrl FROM products p LEFT JOIN images i ON p.pdId = i.pdId " +
-                "ORDER BY p.pdid LIMIT :pageSize OFFSET :pageOffset";
+        String productQuery = "SELECT p.productId, p.productName, p.categories, " +
+                "p.quanity AS quanity, p.price AS price FROM products p " +
+                "ORDER BY p.productId LIMIT :pageSize OFFSET :pageOffset";
 
         try {
-            return JDBIConnector.me().withHandle(handle ->
-                    handle.createQuery(query)
+            productList = JDBIConnector.me().withHandle(handle ->
+                    handle.createQuery(productQuery)
                             .bind("pageSize", pageSize)
                             .bind("pageOffset", pageOffset)
                             .map((rs, ctx) -> {
+                                int productId = rs.getInt("productId");
                                 Product product = new Product();
-                                product.setPdid(rs.getInt("pdId"));
-                                product.setPdname(rs.getString("pdName"));
+                                product.setProductId(productId);
+                                product.setProductName(rs.getString("productName"));
                                 product.setCategories(rs.getString("categories"));
                                 product.setQuanity(rs.getInt("quanity"));
                                 product.setPrice(rs.getDouble("price"));
 
+                                // Lấy danh sách hình ảnh cho sản phẩm
+                                List<String> imageUrls = handle.createQuery("SELECT imgUrl FROM images WHERE productId = :productId")
+                                        .bind("productId", productId)
+                                        .mapTo(String.class)
+                                        .list();
 
-                                // Thêm ảnh vào danh sách
-                                String imgUrl = rs.getString("imgUrl");
-                                if (product.getImageUrls() == null) {
-                                    product.setImageUrls(new ArrayList<>());
-                                }
-                                if (imgUrl != null) {
-                                    product.getImageUrls().add(imgUrl);
-                                }
+                                // Gán danh sách hình ảnh vào sản phẩm
+                                product.setImageUrls(imageUrls);
 
                                 return product;
                             })
@@ -161,17 +160,23 @@ public class ProductDAO {
             System.err.println("Lỗi khi phân trang sản phẩm: " + e.getMessage());
             throw e;
         }
+
+        System.out.println("Số lượng sản phẩm thực tế: " + productList.size());
+        return productList;
     }
+
+
+
 
     public static List<Product> pagingProductByCategory(int pageIndex, String category) {
         int pageSize = 12;
         int pageOffset = (pageIndex - 1) * pageSize;
 
-        String query = "SELECT p.pdId AS pdId, p.pdName AS pdName, p.categories AS categories, " +
+        String query = "SELECT p.productId, p.productName, p.categories, " +
                 "p.quanity AS quanity, p.price AS price, " +
-                "i.imgUrl AS imgUrl FROM products p LEFT JOIN images i ON p.pdId = i.pdId " +
+                "i.imgUrl AS imgUrl FROM products p LEFT JOIN images i ON p.productId = i.productId " +
                 "WHERE p.categories = :category " +
-                "ORDER BY p.pdid LIMIT :pageSize OFFSET :pageOffset";
+                "ORDER BY p.productId LIMIT :pageSize OFFSET :pageOffset";
 
         try {
             return JDBIConnector.me().withHandle(handle ->
@@ -180,13 +185,13 @@ public class ProductDAO {
                             .bind("pageSize", pageSize)
                             .bind("pageOffset", pageOffset)
                             .map((rs, ctx) -> {
+                                int productId = rs.getInt("productId");
                                 Product product = new Product();
-                                product.setPdid(rs.getInt("pdId"));
-                                product.setPdname(rs.getString("pdName"));
+                                product.setProductId(productId);
+                                product.setProductName(rs.getString("productName"));
                                 product.setCategories(rs.getString("categories"));
                                 product.setQuanity(rs.getInt("quanity"));
                                 product.setPrice(rs.getDouble("price"));
-
 
                                 // Thêm ảnh vào danh sách
                                 String imgUrl = rs.getString("imgUrl");
@@ -208,6 +213,7 @@ public class ProductDAO {
     }
 
 
+
     public static int getTotalProductByCategory(String category) {
         String query = "SELECT COUNT(*) FROM products WHERE categories = :category";
         int total = 0;
@@ -225,11 +231,12 @@ public class ProductDAO {
         return total;
     }
 
+
     public static Product getAllProductByPdID(int pdId) {
-        String query = "SELECT p.pdId AS pdId, p.pdName AS pdName, p.categories AS categories, " +
+        String query = "SELECT p.productId, p.productName, p.categories, " +
                 "p.quanity AS quanity, p.price AS price, " +
-                "i.imgUrl AS imgUrl FROM products p LEFT JOIN images i ON p.pdId = i.pdId " +
-                "WHERE p.pdId = :pdId";
+                "i.imgUrl FROM products p LEFT JOIN images i ON p.productId = i.productId " +
+                "WHERE p.productId = :pdId";
 
         try {
             Map<Integer, Product> productMap = new HashMap<>();
@@ -238,13 +245,13 @@ public class ProductDAO {
                     handle.createQuery(query)
                             .bind("pdId", pdId)
                             .map((rs, ctx) -> {
-                                int productId = rs.getInt("pdId");
+                                int productId = rs.getInt("productId");
 
                                 // Nếu sản phẩm chưa được thêm vào map, thêm nó vào
                                 if (!productMap.containsKey(productId)) {
                                     Product product = new Product();
-                                    product.setPdid(productId);
-                                    product.setPdname(rs.getString("pdName"));
+                                    product.setProductId(productId);
+                                    product.setProductName(rs.getString("productName")); // Đã cập nhật thành setProductName
                                     product.setCategories(rs.getString("categories"));
                                     product.setQuanity(rs.getInt("quanity"));
                                     product.setPrice(rs.getDouble("price"));
@@ -278,46 +285,44 @@ public class ProductDAO {
 
 
 
-
     public static void main(String[] args) {
         try {
-            // Lấy danh sách tất cả sản phẩm
-            List<Product> allProducts = getAllProduct();
-
-            System.out.println("Danh sách tất cả sản phẩm và hình ảnh:");
-            printProductList(allProducts);
+//            // Lấy danh sách tất cả sản phẩm
+//            List<Product> allProducts = getAllProduct();
+//
+//            System.out.println("Danh sach tat ca san pham va hinh anh:");
+//            printProductList(allProducts);
 
             // Lấy danh sách sản phẩm theo danh mục
-            String category = "CAY_AN_TRAI";
-            List<Product> productsByCategory = getAllProductByCategory(category);
-
-            System.out.println("Danh sách sản phẩm theo danh mục '" + category + "' và hình ảnh:");
-            printProductList(productsByCategory);
-
+            String category = "CAY-BONSAI";
+//            List<Product> productsByCategory = getAllProductByCategory(category);
+//
+//            System.out.println("Danh sách sản phẩm theo danh mục '" + category + "' và hình ảnh:");
+//           printProductList(productsByCategory);
             // Lấy tổng số sản phẩm
-            int totalProducts = getTotalProduct();
-            System.out.println("Tổng số sản phẩm: " + totalProducts);
+//            int totalProducts = getTotalProduct();
+//            System.out.println("Tong san pham: " + totalProducts);
 
             // Phân trang sản phẩm
             int pageIndex = 1;
-            List<Product> paginatedProducts = pagingProduct(pageIndex);
-
-            System.out.println("Danh sách sản phẩm trang " + pageIndex + " và hình ảnh:");
-            printProductList(paginatedProducts);
-
+//            List<Product> paginatedProducts = pagingProduct(pageIndex);
+//
+//            System.out.println("Danh sách sản phẩm trang " + pageIndex + " và hình ảnh:");
+//            printProductList(paginatedProducts);
+//
             // Phân trang sản phẩm theo danh mục
-            List<Product> paginatedProductsByCategory = pagingProductByCategory(pageIndex, category);
-
-            System.out.println("Danh sách sản phẩm trang " + pageIndex + " theo danh mục '" + category + "' và hình ảnh:");
-            printProductList(paginatedProductsByCategory);
-
+//            List<Product> paginatedProductsByCategory = pagingProductByCategory(pageIndex, category);
+//
+//            System.out.println("Danh sách sản phẩm trang " + pageIndex + " theo danh mục '" + category + "' và hình ảnh:");
+//            printProductList(paginatedProductsByCategory);
+//
             // Lấy tổng số sản phẩm theo danh mục
-            int totalProductsByCategory = getTotalProductByCategory(category);
-            System.out.println("Tổng số sản phẩm theo danh mục '" + category + "': " + totalProductsByCategory);
-
+//            int totalProductsByCategory = getTotalProductByCategory(category);
+//            System.out.println("Tổng số sản phẩm theo danh mục '" + category + "': " + totalProductsByCategory);
+//
             int productIdToRetrieve = 1; // Đổi pdId sản phẩm cần lấy thông tin
             Product productByPdId = getAllProductByPdID(productIdToRetrieve);
-
+//
             // In ra thông tin sản phẩm theo pdId để kiểm tra
             System.out.println("Thông tin sản phẩm theo pdId '" + productIdToRetrieve + "':");
             System.out.println(productByPdId);
@@ -330,26 +335,27 @@ public class ProductDAO {
 
     private static void printProductList(List<Product> productList) {
         for (Product product : productList) {
-            System.out.println("ID: " + product.getPdid());
-            System.out.println("Thông tin sản phẩm:");
-            System.out.println("Tên: " + product.getPdname());
-            System.out.println("Danh mục: " + product.getCategories());
-            System.out.println("Số lượng: " + product.getQuanity());
-            System.out.println("Giá: " + product.getPrice());
+            System.out.println("ID: " + product.getProductId());
+            System.out.println("Thong tin san pham:");
+            System.out.println("Ten: " + product.getProductName());
+            System.out.println("Danh muc: " + product.getCategories());
+            System.out.println("So luong: " + product.getQuanity());
+            System.out.println("Gia: " + product.getPrice());
 
             List<String> imageUrls = product.getImageUrls();
             if (imageUrls != null && !imageUrls.isEmpty()) {
-                System.out.println("Hình ảnh:");
+                System.out.println("Hinh anh:");
                 for (String imgUrl : imageUrls) {
                     System.out.println(imgUrl);
                 }
             } else {
-                System.out.println("Sản phẩm không có hình ảnh.");
+                System.out.println("San pham khong co hinh anh.");
             }
 
             System.out.println("------------------------");
         }
     }
+
 
 
 
