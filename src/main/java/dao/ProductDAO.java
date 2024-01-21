@@ -289,10 +289,10 @@ public class ProductDAO {
     public static void main(String[] args) {
         try {
 //            // Lấy danh sách tất cả sản phẩm
-//            List<Product> allProducts = getAllProduct();
-//
-//            System.out.println("Danh sach tat ca san pham va hinh anh:");
-//            printProductList(allProducts);
+            List<Product> allProducts = getAllProduct();
+
+            System.out.println("Danh sach tat ca san pham va hinh anh:");
+            printProductList(allProducts);
 
             // Lấy danh sách sản phẩm theo danh mục
             String category = "CAY-BONSAI";

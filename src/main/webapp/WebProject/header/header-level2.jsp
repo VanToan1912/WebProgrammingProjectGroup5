@@ -56,6 +56,7 @@
                     </a>
                     <a href="user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
                         <span class="tooltiptext">Tài khoản của tôi</span></a>
+                    <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp"> Admin</a>
                 </li>
 
             </ul>

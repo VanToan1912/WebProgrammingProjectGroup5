@@ -10,14 +10,16 @@
         <servlet-name>ProductController</servlet-name>
         <url-pattern>/products</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ADProdController</servlet-name>
+        <servlet-class>controller.ADProdController</servlet-class>
+    </servlet>
     <servlet-mapping>
-        <servlet-name>AdProdController</servlet-name>
+        <servlet-name>ADProdController</servlet-name>
         <url-pattern>/ADProducts</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>AdProdController</servlet-name>
-        <servlet-class>controller.AdProdController</servlet-class>
-    </servlet>
+
     <servlet>
         <servlet-name>jsp</servlet-name>
         <servlet-class>org.apache.jasper.servlet.JspServlet</servlet-class>
