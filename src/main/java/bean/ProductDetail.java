@@ -4,25 +4,23 @@ import java.util.List;
 
 public class ProductDetail {
     private int pdDetailId;
-    private int pdId;
+    private int productId; // Thay thế pdId bằng productId để phản ánh cấu trúc mới của bảng
     private String title;
     private String content;
     private String morphologyDescription;
-    private String utilityDescription;
     private String plantingCareDescription;
     private List<String> imageUrls; // Danh sách đường dẫn hình ảnh từ bảng images
 
     // Constructors, getters, setters
 
-    public ProductDetail(int pdDetailId, int pdId, String title, String content,
-                         String morphologyDescription, String utilityDescription, String plantingCareDescription,
+    public ProductDetail(int pdDetailId, int productId, String title, String content,
+                         String morphologyDescription, String plantingCareDescription,
                          List<String> imageUrls) {
         this.pdDetailId = pdDetailId;
-        this.pdId = pdId;
+        this.productId = productId;
         this.title = title;
         this.content = content;
         this.morphologyDescription = morphologyDescription;
-        this.utilityDescription = utilityDescription;
         this.plantingCareDescription = plantingCareDescription;
         this.imageUrls = imageUrls;
     }
@@ -38,12 +36,12 @@ public class ProductDetail {
         this.pdDetailId = pdDetailId;
     }
 
-    public int getPdId() {
-        return pdId;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setPdId(int pdId) {
-        this.pdId = pdId;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
     public String getTitle() {
@@ -70,14 +68,6 @@ public class ProductDetail {
         this.morphologyDescription = morphologyDescription;
     }
 
-    public String getUtilityDescription() {
-        return utilityDescription;
-    }
-
-    public void setUtilityDescription(String utilityDescription) {
-        this.utilityDescription = utilityDescription;
-    }
-
     public String getPlantingCareDescription() {
         return plantingCareDescription;
     }
@@ -98,11 +88,10 @@ public class ProductDetail {
     public String toString() {
         return "ProductDetail{" +
                 "pdDetailId=" + pdDetailId +
-                ", pdId=" + pdId +
+                ", productId=" + productId +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", morphologyDescription='" + morphologyDescription + '\'' +
-                ", utilityDescription='" + utilityDescription + '\'' +
                 ", plantingCareDescription='" + plantingCareDescription + '\'' +
                 ", imageUrls=" + imageUrls +
                 '}';

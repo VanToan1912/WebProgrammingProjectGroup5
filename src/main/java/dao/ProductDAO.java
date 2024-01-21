@@ -60,6 +60,7 @@ public class ProductDAO {
 
 
 
+
     public static List<Product> getAllProductByCategory(String category) {
         String query = "SELECT p.productId, p.productName, p.categories, p.quanity, p.price, i.imgUrl " +
                 "FROM products p LEFT JOIN images i ON p.productId = i.productId " +
