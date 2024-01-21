@@ -38,7 +38,7 @@
                 <input type="date" id="dob" name="dob" required>
 
                 <div class="btn-container">
-                    <a href="${pageContext.request.contextPath}/WebProject/change_password.jsp">
+                    <a href="${pageContext.request.contextPath}/change_password.jsp">
                         <button type="button" class="change-password-btn">Đổi mật khẩu</button>
                     </a>
                 </div>
