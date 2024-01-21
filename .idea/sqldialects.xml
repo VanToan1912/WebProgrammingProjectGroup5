@@ -2,5 +2,6 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/src/main/java/controller/java/client_controller/ChangePasswordServlet.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/controller/java/client_controller/UserInfoServlet.java" dialect="MySQL" />
   </component>
 </project>
