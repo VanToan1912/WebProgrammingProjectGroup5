@@ -1,0 +1,125 @@
+
+
+button:hover {
+    background-color: #148259;
+}
+/* ... (Các quy tắc CSS đã cung cấp trước đó) ... */
+
+select {
+    appearance: none; /* Loại bỏ giao diện mặc định trình duyệt */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff; /* Màu nền */
+    border: 1px solid #ccc; /* Viền */
+    padding: 8px; /* Kích thước padding */
+    cursor: pointer; /* Con trỏ khi hover */
+}
+
+select:hover {
+    border-color: #c0392b; /* Viền khi hover */
+}
+
+/* Tùy chỉnh mũi tên dropdown */
+select:after {
+    content: "\25BC"; /* Dấu mũi tên */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    border-radius: 10px
+}
+
+select:hover:after {
+    color: #007bff; /* Màu mũi tên khi hover */
+}
+
+body {
+    margin-top: 150px;
+    font-family: 'Arial', sans-serif;
+    padding: 0;
+}
+
+#main-content {
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.userinfo {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: grid;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+    border-radius: 10px;
+    padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 10px;
+    background-color: #148259;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    padding: 15px 20px;
+}
+/* Thêm định dạng cho nút "Đổi mật khẩu" */
+/* Định dạng nút "Đổi mật khẩu" */
+.change-password-btn {
+    float: left;
+    background-color: #3498db;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+
+    border-radius: 10px;
+    display: inline-block ;
+    justify-content: left;
+    margin-bottom: 1px;
+}
+
+.change-password-btn:hover {
+    background-color: #2980b9;
+}
+
+
+button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+h1{
+    text-align: center;
+}
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
