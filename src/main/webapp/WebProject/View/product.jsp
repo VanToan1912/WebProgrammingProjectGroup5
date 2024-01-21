@@ -51,7 +51,7 @@
 
 <div id="product" style="">
   <header>
-    <jsp:include page="../header/header-level1.jsp"></jsp:include>
+    <jsp:include page="../header/header-level2.jsp"></jsp:include>
   </header>
 
   <div id="main">
@@ -84,21 +84,45 @@
             <a href="products?category=CAY-AN-TRAI" id="category_antrai" class="<%= (category == null || category.equals("CAY_AN_TRAI")) ? "active" : "" %>">
               <b>CÂY ĂN TRÁI</b>
             </a>
+
           </div>
           <div class="menu-product">
             <a href="products?category=CAY-BONSAI" id="category_bonsai" class="<%= (category != null && category.equals("CAY-B0NSAI")) ? "active" : "" %>">
               CÂY BONSAI
             </a>
-          </div>                    <div class="menu-product"><a href="#" id="category-canh">CÂY CẢNH</a></div>
-          <div class="menu-product"><a href="products?category=CAY-CO-HOA">CÂY CÓ HOA</a></div>
-          <div class="menu-product"><a href="#">CÂY ĐỘC LẠ-HIẾM</a></div>
-          <div class="menu-product"><a href="#">CÂY GIA VỊ</a></div>
-          <div class="menu-product"><a href="#">CÂY GIỐNG</a></div>
-          <div class="menu-product"><a href="#">CÂY HOA LEO</a></div>
-          <div class="menu-product"><a href="#">CÂY LỚN</a></div>
-          <div class="menu-product"><a href="#">CỦ GIỐNG</a></div>
-          <div class="menu-product"><a href="#">HOA LAN</a></div>
-          <div class="menu-product"><a href="#">HOA LAN CÂY GIỐNG</a></div>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CAY-CANH" id="category_bonsai" class="<%= (category != null && category.equals("CAY-CANH")) ? "active" : "" %>">
+              CÂY CẢNH
+            </a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CAY-CO-HOA">CÂY CÓ HOA</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CAY-DOC-LA-HIEM">CÂY ĐỘC LẠ HIẾM</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CAY-GIA-VI">CÂY GIA VỊ</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CAY-GIONG">CÂY GIỐNG</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CAY-HOA-LEO">CÂY HOA LEO</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CAY-LON">CÂY LỚN</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=CU-GIONG">CU GIỐNG</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=HOA-LAN">HOALAN</a>
+          </div>
+          <div class="menu-product">
+            <a href="products?category=HOA-LAN-CAY-GIONG">HOA LAN CÂY GIỐNG</a>
+          </div>
           <div class="menu-product"><a href="#">PHÂN BÓN-VẬT TƯ</a></div>
           <div class="menu-product"><a href="#">SẢN PHẨM KHUYẾN MÃI</a></div>
         </div>
@@ -113,7 +137,7 @@
 
               <% List<String> imageUrls = product.getImageUrls(); %>
               <% if (imageUrls != null && !imageUrls.isEmpty()) { %>
-              <a href="<%= request.getContextPath() %>/product-detail?id=<%= product.getPdid()%>">
+              <a href="<%= request.getContextPath() %>/product-detail?id=<%= product.getProductId()%>">
                 <img class="size-img img-product" src="<%= imageUrls.get(0) %>" alt="">
               </a>
 
@@ -124,7 +148,7 @@
 
               <p class="text-sale back-orange">Giảm giá!</p>
               <p class="text-review review">XEM NHANH</p>
-              <p class="name-product"><%= product.getPdname() %></p>
+              <p class="name-product"><%= product.getProductName() %></p>
               <div class="price">
                 <p class="price-initial text-gray"><%= product.getPrice() %>đ</p>
               </div>
