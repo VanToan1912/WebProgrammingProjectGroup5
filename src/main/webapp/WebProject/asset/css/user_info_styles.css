@@ -1,7 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
 
 button:hover {
-    background-color: #148259;
+    background-color: #0056b3;
 }
 /* ... (Các quy tắc CSS đã cung cấp trước đó) ... */
 
@@ -16,7 +54,7 @@ select {
 }
 
 select:hover {
-    border-color: #c0392b; /* Viền khi hover */
+    border-color: #007bff; /* Viền khi hover */
 }
 
 /* Tùy chỉnh mũi tên dropdown */
@@ -26,100 +64,9 @@ select:after {
     top: 50%;
     right: 10px;
     transform: translateY(-50%);
-    pointer-events: none;
-    border-radius: 10px
+    pointer-events: none; /* Không chấp nhận sự kiện click */
 }
 
 select:hover:after {
     color: #007bff; /* Màu mũi tên khi hover */
-}
-
-body {
-    margin-top: 150px;
-    font-family: 'Arial', sans-serif;
-    padding: 0;
-}
-
-#main-content {
-    margin: 20px;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.userinfo {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form {
-    display: grid;
-    gap: 10px;
-}
-
-label {
-    font-weight: bold;
-}
-
-input,
-select,
-button {
-    border-radius: 10px;
-    padding: 5px;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-button {
-    border-radius: 10px;
-    background-color: #148259;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    padding: 15px 20px;
-}
-/* Thêm định dạng cho nút "Đổi mật khẩu" */
-/* Định dạng nút "Đổi mật khẩu" */
-.change-password-btn {
-    float: left;
-    background-color: #3498db;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-
-    border-radius: 10px;
-    display: inline-block ;
-    justify-content: left;
-    margin-bottom: 1px;
-}
-
-.change-password-btn:hover {
-    background-color: #2980b9;
-}
-
-
-button:hover {
-    background-color: #45a049;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-h1{
-    text-align: center;
-}
-.btn-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
 }
