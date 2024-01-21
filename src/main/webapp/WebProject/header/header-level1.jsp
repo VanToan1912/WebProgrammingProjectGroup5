@@ -72,7 +72,7 @@
                 <span class="narrow-down-icon"></span>
                 <div class="dropdown-content">
                   <a href="${pageContext.request.contextPath}/user_page.jsp">Profile</a>
-                  <a href="${pageContext.request.contextPath}/logoutServlet">Logout</a>
+                  <a href="logoutServlet">Logout</a>
                 </div>
               </div>
             </li>
