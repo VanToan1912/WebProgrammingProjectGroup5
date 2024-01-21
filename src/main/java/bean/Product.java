@@ -2,15 +2,14 @@ package bean;
 
 import org.jdbi.v3.core.mapper.reflect.ColumnName;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Product {
-    @ColumnName("pdId")
-    private int pdid;
+    @ColumnName("productId")
+    private int productId;
 
-    @ColumnName("pdName")
-    private String pdname;
+    @ColumnName("productName")
+    private String productName;
 
     @ColumnName("categories")
     private String categories;
@@ -21,36 +20,34 @@ public class Product {
     @ColumnName("price")
     private double price;
 
-
     private List<String> imageUrls;
 
-    public Product(int pdid, String pdname, String categories, int quanity, double price,  List<String> imageUrls) {
-        this.pdid = pdid;
-        this.pdname = pdname;
+    public Product(int productId, String productName, String categories, int quanity, double price, List<String> imageUrls) {
+        this.productId = productId;
+        this.productName = productName;
         this.categories = categories;
         this.quanity = quanity;
         this.price = price;
-
         this.imageUrls = imageUrls;
     }
 
     public Product() {
     }
 
-    public int getPdid() {
-        return pdid;
+    public int getProductId() {
+        return productId;
     }
 
-    public void setPdid(int pdid) {
-        this.pdid = pdid;
+    public void setProductId(int productId) {
+        this.productId = productId;
     }
 
-    public String getPdname() {
-        return pdname;
+    public String getProductName() {
+        return productName;
     }
 
-    public void setPdname(String pdname) {
-        this.pdname = pdname;
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public String getCategories() {
@@ -77,8 +74,6 @@ public class Product {
         this.price = price;
     }
 
-
-
     public List<String> getImageUrls() {
         return imageUrls;
     }
@@ -90,8 +85,8 @@ public class Product {
     @Override
     public String toString() {
         return "Product{" +
-                "pdid=" + pdid +
-                ", pdname='" + pdname + '\'' +
+                "productId=" + productId +
+                ", productName='" + productName + '\'' +
                 ", categories='" + categories + '\'' +
                 ", quanity=" + quanity +
                 ", price=" + price +
@@ -100,7 +95,6 @@ public class Product {
     }
 
     public static void main(String[] args) {
-
-
+        // Các kiểm thử và ví dụ sử dụng ở đây...
     }
 }
