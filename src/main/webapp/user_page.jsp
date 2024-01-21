@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" type="image/x-icon" />
-    <link rel="stylesheet" href="WebProject/asset/css/login_styles.css">
     <link rel="stylesheet" href="WebProject/asset/css/user_info_styles.css">
     <link rel="stylesheet" href="WebProject/asset/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="WebProject/asset/css/head-foot.css">
@@ -19,6 +18,7 @@
     <div class="container" id="container">
         <div class="userinfo">
             <form id="userForm">
+                <h1>HỒ SƠ NGƯỜI DÙNG</h1>
                 <label for="fullName">Họ và tên:</label>
                 <input type="text" id="fullName" name="fullName" required>
 
@@ -37,22 +37,25 @@
                 <label for="dob">Ngày sinh:</label>
                 <input type="date" id="dob" name="dob" required>
 
-                <button type="button" onclick="changePassword()">Đổi mật khẩu</button>
-                <button type="submit">Lưu</button>
-                <button type="button" onclick="cancel()">Hủy</button>
+                <div class="btn-container">
+                    <a href="${pageContext.request.contextPath}/WebProject/change_password.jsp">
+                        <button type="button" class="change-password-btn">Đổi mật khẩu</button>
+                    </a>
+                </div>
+                <a href="${pageContext.request.contextPath}/index.jsp">
+                <button type="submit" class="btn" id="undoButton" onclick=" cancel()">Quay lại</button>
+                </a>
+                <button type="submit" name="saveData" >Lưu</button>
             </form>
         </div>
     </div>
 
 </div>
 <script>
-   function changePassword() {
-        // Add logic for changing password here
-        alert('Chức năng đổi mật khẩu chưa được triển khai.');
-   }
+
 
     function cancel() {
-        document.getElementById('userForm').reset();
+        window.location.href = '${pageContext.request.contextPath}/user_page.jsp';
     }
 </script>
 <footer>
