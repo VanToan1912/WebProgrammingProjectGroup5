@@ -11,12 +11,12 @@ import java.util.Map;
 public class ProductDetailDAO {
 
     public static List<ProductDetail> getAllProductDetail() {
-        String query = "SELECT product_detail.pdDetailId, product_detail.pdId, product_detail.title, " +
+        String query = "SELECT product_detail.pdDetailId, product_detail.productId, product_detail.title, " +
                 "product_detail.content, product_detail.morphologyDescription, " +
-                "product_detail.utilityDescription, product_detail.plantingCareDescription, " +
+                "product_detail.plantingCareDescription, " +
                 "images.imgUrl " +
                 "FROM product_detail " +
-                "LEFT JOIN images ON product_detail.pdId = images.pdId";
+                "LEFT JOIN images ON product_detail.productId = images.productId";
 
         List<ProductDetail> list;
         try {
@@ -25,11 +25,10 @@ public class ProductDetailDAO {
                             .map((rs, ctx) -> {
                                 ProductDetail productDetail = new ProductDetail();
                                 productDetail.setPdDetailId(rs.getInt("pdDetailId"));
-                                productDetail.setPdId(rs.getInt("pdId"));
+                                productDetail.setProductId(rs.getInt("productId"));
                                 productDetail.setTitle(rs.getString("title"));
                                 productDetail.setContent(rs.getString("content"));
                                 productDetail.setMorphologyDescription(rs.getString("morphologyDescription"));
-                                productDetail.setUtilityDescription(rs.getString("utilityDescription"));
                                 productDetail.setPlantingCareDescription(rs.getString("plantingCareDescription"));
 
                                 // Thêm ảnh vào danh sách
@@ -53,16 +52,18 @@ public class ProductDetailDAO {
     }
 
     public static ProductDetail getProductDetailByPdId(int pdId) {
-        String query = "SELECT product_detail.pdDetailId, product_detail.pdId, title, content, morphologyDescription, " +
-                "utilityDescription, plantingCareDescription, imgUrl " +
+        String query = "SELECT product_detail.pdDetailId, product_detail.productId, product_detail.title, " +
+                "product_detail.content, product_detail.morphologyDescription, " +
+                "product_detail.plantingCareDescription, " +
+                "images.imgUrl " +
                 "FROM product_detail " +
-                "LEFT JOIN images ON product_detail.pdId = images.pdId " +
-                "WHERE product_detail.pdId = :pdId";
+                "LEFT JOIN images ON product_detail.productId = images.productId " +
+                "WHERE product_detail.productId = :pdId";
 
         try {
             Map<Integer, ProductDetail> productDetailMap = JDBIConnector.me().withHandle(handle ->
                     handle.createQuery(query)
-                            .bind("pdId", pdId)
+                            .bind("pdId", pdId)  // Sửa đổi tên tham số này thành pdId
                             .reduceResultSet(new HashMap<Integer, ProductDetail>(), (map, rs, ctx) -> {
                                 int currentPdDetailId = rs.getInt("pdDetailId");
                                 ProductDetail productDetail = map.get(currentPdDetailId);
@@ -70,11 +71,10 @@ public class ProductDetailDAO {
                                 if (productDetail == null) {
                                     productDetail = new ProductDetail();
                                     productDetail.setPdDetailId(currentPdDetailId);
-                                    productDetail.setPdId(pdId);
+                                    productDetail.setProductId(pdId);
                                     productDetail.setTitle(rs.getString("title"));
                                     productDetail.setContent(rs.getString("content"));
                                     productDetail.setMorphologyDescription(rs.getString("morphologyDescription"));
-                                    productDetail.setUtilityDescription(rs.getString("utilityDescription"));
                                     productDetail.setPlantingCareDescription(rs.getString("plantingCareDescription"));
                                     productDetail.setImageUrls(new ArrayList<>());
                                 }
@@ -109,17 +109,17 @@ public class ProductDetailDAO {
         List<ProductDetail> productDetailList = getAllProductDetail();
 
         // In thông tin chi tiết sản phẩm
-        System.out.println("Danh sách chi tiết sản phẩm:");
-        for (ProductDetail productDetail : productDetailList) {
-            System.out.println(productDetail);
-        }
+//        System.out.println("Danh sách chi tiết sản phẩm:");
+//        for (ProductDetail productDetail : productDetailList) {
+//            System.out.println(productDetail);
+//        }
 
         // Test lấy chi tiết sản phẩm theo ID
         int pdDetailId = 1; // Thay đổi ID tùy vào dữ liệu thực tế
         ProductDetail productDetailById =  getProductDetailByPdId(pdDetailId);
 
-        // In thông tin chi tiết sản phẩm theo ID
-        System.out.println("Chi tiết sản phẩm theo ID " + pdDetailId + ":");
+//         In thông tin chi tiết sản phẩm theo ID
+        System.out.println("Chi tiet san pham theo id " + pdDetailId + ":");
         System.out.println(productDetailById);
     }
 }

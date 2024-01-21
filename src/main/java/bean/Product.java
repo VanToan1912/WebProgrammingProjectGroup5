@@ -19,7 +19,6 @@ public class Product {
 
     @ColumnName("price")
     private double price;
-
     private List<String> imageUrls;
 
     public Product(int productId, String productName, String categories, int quanity, double price, List<String> imageUrls) {
