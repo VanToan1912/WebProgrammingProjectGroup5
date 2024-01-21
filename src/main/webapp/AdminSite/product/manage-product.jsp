@@ -1,4 +1,6 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
+<%@ page import="bean.Product" %>
+<%@ page import="dao.ProductDAO" %>
 <%@page contentType="text/html" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
@@ -43,39 +45,67 @@
                 <option value="6">CÂY GIA VỊ</option>
                 <option value="7">CÂY GIỐNG</option>
                 <option value="8">CÂY HOA LEO</option>
-                <option value="9">CÂY LỚN</option>
-                <option value="10">CỦ GIỐNG</option>
-                <option value="11">HOA LAN</option>
-                <option value="12">HOA LAN CÂY GIỐNG</option>
-                <option value="13">PHÂN BÓN- VẬT TƯ</option>
-                <option value="14">SẢN PHẨM KHUYẾN MÃI</option>
+                <option value="9">CỦ GIỐNG</option>
+                <option value="10">HOA LAN</option>
+                <option value="11">HOA LAN CÂY GIỐNG</option>
+                <option value="12">GIÁ THỂ</option>
+                <option value="13">CHẬU CÂY</option>
+                <option value="14">PHÂN VÔ CƠ</option>
+                <option value="15">PHÂN HỮU CƠ</option>
             </select>
             <button type="submit" class="product-categorize">Lọc</button>
+            <input type="text" placeholder="Search...">
+            <button type="submit" class="product-add">Search</button>
             <a href="add-product.jsp" class="product-add" style="float: right"><i class="fa fa-plus"></i> Thêm sản phẩm</a>
         </div>
     </div>
 
     <div class="panel panel-container" style="padding-top: 0">
         <div>
-            <form action="${pageContext.request.contextPath}/ADProducts">
+            <form action="ADProducts" method="post">
                 <table class="product-table">
                     <tr>
+                        <th>STT</th>
                         <th>Tên Sản Phẩm</th>
                         <th>Danh Mục</th>
                         <th>Số Lượng</th>
                         <th>Giá</th>
                         <th>Chỉnh sửa</th>
                     </tr>
-                    <c:forEach items="listP" var="o">
-                        <tr>
-                            <td>${o.productId}</td>
-                            <td>${o.productName}</td>
-                            <td>${o.quanity}</td>
-                            <td>${o.price}</td>
-                            <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a
-                                    class="fa fa-trash"></a></td>
-                        </tr>
-                    </c:forEach>
+
+<%--                    <c:forEach items="${listP}" var="o">--%>
+<%--                        <tr>--%>
+<%--                            <td>${o.getProductId()}</td>--%>
+<%--                            <td>${o.getProductName()}</td>--%>
+<%--                            <td>${o.getCategories()}</td>--%>
+<%--                            <td>${o.getQuanity()}</td>--%>
+<%--                            <td>${o.getPrice()}</td>--%>
+<%--                            <td>--%>
+<%--                                <a href="edit-product.jsp?id=${o.getProductId()}" class="fa fa-pencil-square"></a>--%>
+<%--                                <a class="fa fa-trash"></a>--%>
+<%--                            </td>--%>
+<%--                        </tr>--%>
+<%--                    </c:forEach>--%>
+
+                    <% for (Product p : ProductDAO.getAllProduct()) { %>
+                    <tr>
+                        <td><%= p.getProductId() %>
+                        </td>
+                        <td><%= p.getProductName() %>
+                        </td>
+                        <td><%= p.getCategories() %>
+                        </td>
+                        <td><%= p.getQuanity() %>
+                        </td>
+                        <td><%= p.getPrice() %>
+                        </td>
+                        <td>
+                            <a href="edit-product.jsp" class="fa fa-pencil-square"></a>
+                            <a class="fa fa-trash"></a>
+                        </td>
+                    </tr>
+                    <% } %>
+
                     <%--                <tr>--%>
                     <%--                    <td>CÂY CHÀ LÀ</td>--%>
                     <%--                    <td>CÂY ĂN TRÁI, CÂY GIỐNG</td>--%>
