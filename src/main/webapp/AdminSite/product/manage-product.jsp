@@ -62,7 +62,7 @@
 
     <div class="panel panel-container" style="padding-top: 0">
         <div>
-            <form action="ADProducts" method="post">
+<%--            <form action="ADProducts" method="post">--%>
                 <table class="product-table">
                     <tr>
                         <th>STT</th>
@@ -115,7 +115,7 @@
                     <%--                            class="fa fa-trash"></a></td>--%>
                     <%--                </tr>--%>
                 </table>
-            </form>
+<%--            </form>--%>
         </div>
     </div>
 </div>

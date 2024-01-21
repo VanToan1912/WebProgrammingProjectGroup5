@@ -1,3 +1,5 @@
+<%@ page import="bean.Review" %>
+<%@ page import="dao.ReviewDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
@@ -33,73 +35,26 @@
         <table class="interface-table">
             <tr>
                 <th>Tên người dùng</th>
+                <th>Sản phẩm</th>
                 <th>Nội dung</th>
                 <th>Ngày đánh giá</th>
                 <th>Chỉnh sửa</th>
             </tr>
+            <% for (Review r : ReviewDAO.getAllReviews()) { %>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td><%= r.getUserId()%>
+                </td>
+                <td><%= r.getProductId()%>
+                </td>
+                <td><%= r.getReview()%>
+                </td>
+                <td><%= r.getDate()%>
+                </td>
                 <td><a class="fa fa-trash"></a></td>
             </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td><a class="fa fa-trash"></a></td>
-            </tr>
+            <% } %>
         </table>
     </div>
-
 </div>
 <!--Content-->
 
