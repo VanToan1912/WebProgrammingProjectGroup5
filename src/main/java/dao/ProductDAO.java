@@ -66,25 +66,34 @@ public class ProductDAO {
                 "FROM products p LEFT JOIN images i ON p.productId = i.productId " +
                 "WHERE p.categories = :category";
 
+        List<Product> productList = new ArrayList<>();
+        Map<Integer, Product> productMap = new HashMap<>();
 
-        List<Product> productList;
         try {
-            productList = JDBIConnector.me().withHandle(handle ->
+            JDBIConnector.me().withHandle(handle ->
                     handle.createQuery(query)
                             .bind("category", category)
                             .map((rs, ctx) -> {
-                                Product product = new Product();
-                                product.setProductId(rs.getInt("productId"));
-                                product.setProductName(rs.getString("productName"));
-                                product.setCategories(rs.getString("categories"));
-                                product.setQuanity(rs.getInt("quanity"));
-                                product.setPrice(rs.getDouble("price"));
+                                int productId = rs.getInt("productId");
+
+                                Product product;
+                                if (productMap.containsKey(productId)) {
+                                    product = productMap.get(productId);
+                                } else {
+                                    product = new Product();
+                                    product.setProductId(productId);
+                                    product.setProductName(rs.getString("productName"));
+                                    product.setCategories(rs.getString("categories"));
+                                    product.setQuanity(rs.getInt("quanity"));
+                                    product.setPrice(rs.getDouble("price"));
+                                    product.setImageUrls(new ArrayList<>());
+
+                                    productMap.put(productId, product);
+                                    productList.add(product);
+                                }
 
                                 // Thêm ảnh vào danh sách
                                 String imgUrl = rs.getString("imgUrl");
-                                if (product.getImageUrls() == null) {
-                                    product.setImageUrls(new ArrayList<>());
-                                }
                                 if (imgUrl != null) {
                                     product.getImageUrls().add(imgUrl);
                                 }
@@ -99,6 +108,8 @@ public class ProductDAO {
         }
         return productList;
     }
+
+
 
 
 
@@ -170,17 +181,17 @@ public class ProductDAO {
 
 
     public static List<Product> pagingProductByCategory(int pageIndex, String category) {
-        int pageSize = 12;
-        int pageOffset = (pageIndex - 1) * pageSize;
+        List<Product> productList = new ArrayList<>();
+        int pageSize = 12; // Số lượng sản phẩm trên mỗi trang
+        int pageOffset = (pageIndex - 1) * pageSize; // Tính vị trí bắt đầu cho trang hiện tại
 
         String query = "SELECT p.productId, p.productName, p.categories, " +
-                "p.quanity AS quanity, p.price AS price, " +
-                "i.imgUrl AS imgUrl FROM products p LEFT JOIN images i ON p.productId = i.productId " +
+                "p.quanity AS quanity, p.price AS price FROM products p " +
                 "WHERE p.categories = :category " +
                 "ORDER BY p.productId LIMIT :pageSize OFFSET :pageOffset";
 
         try {
-            return JDBIConnector.me().withHandle(handle ->
+            productList = JDBIConnector.me().withHandle(handle ->
                     handle.createQuery(query)
                             .bind("category", category)
                             .bind("pageSize", pageSize)
@@ -194,24 +205,31 @@ public class ProductDAO {
                                 product.setQuanity(rs.getInt("quanity"));
                                 product.setPrice(rs.getDouble("price"));
 
-                                // Thêm ảnh vào danh sách
-                                String imgUrl = rs.getString("imgUrl");
-                                if (product.getImageUrls() == null) {
-                                    product.setImageUrls(new ArrayList<>());
-                                }
-                                if (imgUrl != null) {
-                                    product.getImageUrls().add(imgUrl);
-                                }
+                                // Lấy danh sách hình ảnh cho sản phẩm
+                                List<String> imageUrls = handle.createQuery("SELECT imgUrl FROM images WHERE productId = :productId")
+                                        .bind("productId", productId)
+                                        .mapTo(String.class)
+                                        .list();
+
+                                // Gán danh sách hình ảnh vào sản phẩm
+                                product.setImageUrls(imageUrls);
 
                                 return product;
                             })
                             .list()
             );
         } catch (Exception e) {
+            // Xử lý ngoại lệ nếu cần thiết
             System.err.println("Lỗi khi phân trang sản phẩm theo danh mục: " + e.getMessage());
             throw e;
         }
+
+        System.out.println("Số lượng sản phẩm thực tế: " + productList.size());
+        return productList;
     }
+
+
+
 
 
 
@@ -289,15 +307,15 @@ public class ProductDAO {
     public static void main(String[] args) {
         try {
 //            // Lấy danh sách tất cả sản phẩm
-            List<Product> allProducts = getAllProduct();
-
-            System.out.println("Danh sach tat ca san pham va hinh anh:");
-            printProductList(allProducts);
+//            List<Product> allProducts = getAllProduct();
+//
+//            System.out.println("Danh sach tat ca san pham va hinh anh:");
+//            printProductList(allProducts);
 
             // Lấy danh sách sản phẩm theo danh mục
             String category = "CAY-BONSAI";
 //            List<Product> productsByCategory = getAllProductByCategory(category);
-//
+
 //            System.out.println("Danh sách sản phẩm theo danh mục '" + category + "' và hình ảnh:");
 //           printProductList(productsByCategory);
             // Lấy tổng số sản phẩm
@@ -312,10 +330,10 @@ public class ProductDAO {
 //            printProductList(paginatedProducts);
 //
             // Phân trang sản phẩm theo danh mục
-//            List<Product> paginatedProductsByCategory = pagingProductByCategory(pageIndex, category);
-//
-//            System.out.println("Danh sách sản phẩm trang " + pageIndex + " theo danh mục '" + category + "' và hình ảnh:");
-//            printProductList(paginatedProductsByCategory);
+            List<Product> paginatedProductsByCategory = pagingProductByCategory(pageIndex, category);
+
+            System.out.println("Danh sách sản phẩm trang " + pageIndex + " theo danh mục '" + category + "' và hình ảnh:");
+            printProductList(paginatedProductsByCategory);
 //
             // Lấy tổng số sản phẩm theo danh mục
 //            int totalProductsByCategory = getTotalProductByCategory(category);

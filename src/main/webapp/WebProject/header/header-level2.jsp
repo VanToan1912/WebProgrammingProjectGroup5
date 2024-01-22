@@ -10,16 +10,13 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    //    HttpSession sessiona = (HttpSession) request.getSession();
-//
-//    Cart cart = (Cart) sessiona.getAttribute("cart");
-//    int numberOfItems = (cart != null) ? cart.getNumberOfItems() : 0;
+
     HttpSession sessiona = (HttpSession) request.getSession();
     int numberOfItems = 0;
     if (sessiona != null) {
         Cart cart = (Cart) sessiona.getAttribute("cart");
         numberOfItems = (cart != null) ? cart.getNumberOfItems() : 0;
-        // Sử dụng numberOfItems trong trang HTML của bạn
+
     }
 %>
 <html>
@@ -57,23 +54,38 @@
                     <a href="mailto:mail@mail.com" class="tooltip ti-email">
                         <span class="tooltiptext">Đóng góp ý kiến</span></a>
                 </li>
-                <li>
-                    <a href="register.html">
-                        <button class="sign-up-button">
-                            Đăng Ký
-                        </button>
-                    </a>
 
-                    /
-                    <a href="login.html">
-                        <button class="login-button">
-                            Đăng Nhập
-                        </button>
-                    </a>
-                    <a href="user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
-                        <span class="tooltiptext">Tài khoản của tôi</span></a>
-                    <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp"> Admin</a>
-                </li>
+                <c:choose>
+                    <c:when test="${empty sessionScope.email}">
+                        <!-- User is not logged in -->
+                        <li>
+                            <a href="${pageContext.request.contextPath}/register.jsp">
+                                <button class="sign-up-button">Đăng Ký</button>
+                            </a>
+                            /
+                            <a href="${pageContext.request.contextPath}/login.jsp">
+                                <button class="login-button">Đăng Nhập</button>
+                            </a>
+                            /
+                            <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp">Admin</a>
+                        </li>
+                    </c:when>
+                    <c:otherwise>
+                        <!-- User is logged in -->
+                        <li>
+                            <!-- Display the user's email with dropdown menu -->
+                            <div class="dropdown">
+                                <span>Welcome, ${sessionScope.email}!</span>
+                                <!-- Display the narrow down icon next to the email -->
+                                <span class="narrow-down-icon"></span>
+                                <div class="dropdown-content">
+                                    <a href="${pageContext.request.contextPath}/user_page.jsp">Profile</a>
+                                    <a href="logoutServlet">Logout</a>
+                                </div>
+                            </div>
+                        </li>
+                    </c:otherwise>
+                </c:choose>
 
             </ul>
         </nav>
