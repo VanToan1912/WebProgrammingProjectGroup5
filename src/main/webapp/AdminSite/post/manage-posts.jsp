@@ -1,3 +1,5 @@
+<%@ page import="bean.News" %>
+<%@ page import="dao.NewsDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
@@ -36,54 +38,34 @@
                 <th class="column">Hiển thị</th>
                 <th class="column">Chỉnh sửa</th>
             </tr>
-            <tr class="rows" id="row-1">
-                <td class="column name">PHÂN BIỆT MAI XANH THÁI VÀ MAI XANH ĐÀ LẠT</td>
-                <td class="column">
+
+            <%for (News n : NewsDAO.getAllNews()) {%>
+            <tr>
+                <td><%=n.getTitle()%>
+                </td>
+                <td>
                     <label>
                         <input type="checkbox" checked>
                     </label>
                 </td>
-                <td class="column">
-                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
-                    <a class="fa fa-trash" onclick="deleteRow('row-1')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-2">
-                <td class="column name">Mua cây chuối tài lộc ở đâu?</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
-                    <a class="fa fa-trash" onclick="deleteRow('row-2')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-3">
-                <td class="column name">Cây chuối sen</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
-                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
-                    <a class="fa fa-trash" onclick="deleteRow('row-3')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-4">
-                <td class="column name">Khám phá bất ngờ cây chuối tài lộc hình dáng độc lạ</td>
-                <td class="column">
-                    <label>
-                        <input type="checkbox" checked>
-                    </label>
-                </td>
-                <td class="column">
+                <td>
                     <a href="edit-post.jsp" class="fa fa-pencil-square"></a>
                     <a class="fa fa-trash" onclick="deleteRow('row-4')"></a>
                 </td>
             </tr>
+            <%}%>
+            <%--            <tr class="rows" id="row-4">--%>
+            <%--                <td class="column name">Tên bài viết</td>--%>
+            <%--                <td class="column">--%>
+            <%--                    <label>--%>
+            <%--                        <input type="checkbox" checked>--%>
+            <%--                    </label>--%>
+            <%--                </td>--%>
+            <%--                <td class="column">--%>
+            <%--                    <a href="edit-post.jsp" class="fa fa-pencil-square"></a>--%>
+            <%--                    <a class="fa fa-trash" onclick="deleteRow('row-4')"></a>--%>
+            <%--                </td>--%>
+            <%--            </tr>--%>
             <tr class="rows">
                 <td class="column" colspan="3">
                     <a href="add-post.jsp"><i class="fa fa-plus"> Thêm bài viết</i></a>
@@ -97,10 +79,7 @@
 
 <!--Script-->
 <script>
-    function deleteRow(rowId) {
-        let row = document.getElementById(rowId);
-        row.parentNode.removeChild(row);
-    }
+
 </script>
 <!--Script-->
 </body>
