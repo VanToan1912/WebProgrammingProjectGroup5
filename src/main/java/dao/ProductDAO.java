@@ -2,12 +2,11 @@ package dao;
 
 import db.JDBIConnector;
 import bean.Product;
+import org.jdbi.v3.core.JdbiException;
 
 import java.util.*;
 
 public class ProductDAO {
-
-
 
 
     public static List<Product> getAllProduct() {
@@ -57,10 +56,6 @@ public class ProductDAO {
     }
 
 
-
-
-
-
     public static List<Product> getAllProductByCategory(String category) {
         String query = "SELECT p.productId, p.productName, p.categories, p.quanity, p.price, i.imgUrl " +
                 "FROM products p LEFT JOIN images i ON p.productId = i.productId " +
@@ -99,10 +94,6 @@ public class ProductDAO {
         }
         return productList;
     }
-
-
-
-
 
 
     public static int getTotalProduct() {
@@ -167,8 +158,6 @@ public class ProductDAO {
     }
 
 
-
-
     public static List<Product> pagingProductByCategory(int pageIndex, String category) {
         int pageSize = 12;
         int pageOffset = (pageIndex - 1) * pageSize;
@@ -212,7 +201,6 @@ public class ProductDAO {
             throw e;
         }
     }
-
 
 
     public static int getTotalProductByCategory(String category) {
@@ -281,9 +269,47 @@ public class ProductDAO {
         }
     }
 
+    public static boolean updateProduct(Product product) {
+        try {
+            // Your update SQL statement here
+            String updateSql = "UPDATE your_product_table SET productName = :productName, " +
+                    "categories = :categories, quanity = :quanity, price = :price WHERE productId = :productId";
 
+            JDBIConnector.me().withHandle(handle ->
+                    handle.createUpdate(updateSql)
+                            .bind("productId", product.getProductId())
+                            .bind("productName", product.getProductName())
+                            .bind("categories", product.getCategories())
+                            .bind("quanity", product.getQuanity())
+                            .bind("price", product.getPrice())
+                            .execute()
+            );
 
+            return true;
+        } catch (Exception e) {
+            System.err.println("Error updating product: " + e.getMessage());
+            throw e;
+        }
+    }
 
+    public static boolean deleteProduct(int productId) {
+        String deleteProductQuery = "DELETE FROM products WHERE productId = :productId";
+
+        try {
+            int affectedRows = JDBIConnector.me().withHandle(handle ->
+                    handle.createUpdate(deleteProductQuery)
+                            .bind("productId", productId)
+                            .execute()
+            );
+
+            // Check if any rows were affected to determine if the deletion was successful
+            return affectedRows > 0;
+        } catch (JdbiException e) {
+            // Handle the exception as needed
+            System.err.println("Error deleting product: " + e.getMessage());
+            throw e; // or handle the error according to your requirements
+        }
+    }
 
 
     public static void main(String[] args) {
@@ -356,9 +382,6 @@ public class ProductDAO {
             System.out.println("------------------------");
         }
     }
-
-
-
 
 
 }
