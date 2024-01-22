@@ -26,7 +26,7 @@ public class RegisterServlet extends HttpServlet {
 
         // Step 2: Check for duplicate email
         if (isEmailDuplicate(email)) {
-            out.println("Email already exists. Please choose a different email.");
+            out.println("Email đã đăng ký hoặc không đúng. Vui lòng nhập email khác.");
             return;
         }
 
@@ -37,10 +37,10 @@ public class RegisterServlet extends HttpServlet {
 
             // Step 5: Store user in the database (or perform other registration logic)
             if (registerUser(email, password)) {
-                out.println("Registration successful!");
+                out.println("Đăng nhập thành công");
             }
             else {
-                out.println("Registration failed! Please try again.");
+                out.println("Đăng ký thất bại. Vui lòng thử lại. ");
             }
 
         } else {
