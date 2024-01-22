@@ -233,7 +233,7 @@ public class ProductDAO {
     }
 
 
-    public static Product getAllProductByPdID(int pdId) {
+    public static Product getProductByPdID(int pdId) {
         String query = "SELECT p.productId, p.productName, p.categories, " +
                 "p.quanity AS quanity, p.price AS price, " +
                 "i.imgUrl FROM products p LEFT JOIN images i ON p.productId = i.productId " +
@@ -322,7 +322,7 @@ public class ProductDAO {
 //            System.out.println("Tổng số sản phẩm theo danh mục '" + category + "': " + totalProductsByCategory);
 //
             int productIdToRetrieve = 1; // Đổi pdId sản phẩm cần lấy thông tin
-            Product productByPdId = getAllProductByPdID(productIdToRetrieve);
+            Product productByPdId = getProductByPdID(productIdToRetrieve);
 //
             // In ra thông tin sản phẩm theo pdId để kiểm tra
             System.out.println("Thông tin sản phẩm theo pdId '" + productIdToRetrieve + "':");
