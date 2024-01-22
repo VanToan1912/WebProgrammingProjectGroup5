@@ -56,6 +56,7 @@
                     </a>
                     <a href="user_page.html" class="tooltip ti-user" id="userIcon" style="display: none;">
                         <span class="tooltiptext">Tài khoản của tôi</span></a>
+                    <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp"> Admin</a>
                 </li>
 
             </ul>
@@ -144,7 +145,7 @@
         </li>
         <li class="nav-text-product nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
         <li class="nav-togethger"><a href="introduce.html" class="nav-togethger">GIỚI THIỆU</a></li>
-        <li class=" nav-togethger"><a href="product.html">SẢN PHẨM</a></li>
+        <li class=" nav-togethger"><a href="products">SẢN PHẨM</a></li>
         <li class="nav-togethger"><a href="instruct.html">HƯỚNG DẪN MUA HÀNG</a></li>
         <li class="nav-togethger"><a href="news.html">TIN TỨC</a></li>
     </ul>

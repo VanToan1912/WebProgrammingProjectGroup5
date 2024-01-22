@@ -57,8 +57,8 @@
                             <a href="${pageContext.request.contextPath}/login.jsp">
                                 <button class="login-button">Đăng Nhập</button>
                             </a>
-                            /
-                            <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp">Admin</a>
+<%--                            /--%>
+<%--                            <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp">Admin</a>--%>
                         </li>
                     </c:when>
                     <c:otherwise>

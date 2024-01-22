@@ -17,7 +17,7 @@
 <div id="main-content">
     <div class="container" id="container">
         <div class="userinfo">
-            <form id="userForm">
+            <form id="userForm" action="EditUserServlet" method="post" enctype="multipart/form-data">
                 <h1>HỒ SƠ NGƯỜI DÙNG</h1>
                 <label for="fullName">Họ và tên:</label>
                 <input type="text" id="fullName" name="fullName" required>
