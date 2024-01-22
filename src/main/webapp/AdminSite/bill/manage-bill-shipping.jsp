@@ -78,7 +78,7 @@
                 <td>0123456789</td>
                 <td>Sản phẩm 1 x10, Sản phẩm 2 x5, Sản Phẩm 3 x2</td>
                 <td>1.000.000đ</td>
-                <td><a class="fa fa-check approve-button"> Duyệt</a></td>
+                <td><a class="fa fa-check"> Duyệt</a></td>
             </tr>
             <tr class="rows">
                 <td>MD005</td>

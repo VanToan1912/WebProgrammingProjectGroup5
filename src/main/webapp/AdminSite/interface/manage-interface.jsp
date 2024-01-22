@@ -29,21 +29,10 @@
         </div>
     </div>
 
-    <div class="panel panel-container" style="padding-top: 0">
-        <div class="category">
-            <label for="product-category"></label>
-            <select id="product-category">
-                <option value="0">Danh mục chính</option>
-                <option value="1">Danh mục sản phẩm</option>
-            </select>
-            <button type="submit" class="product-categorize">Lọc</button>
-        </div>
-    </div>
-
     <div class="panel main-interface">
         <table class="interface-table">
             <tr class="rows">
-                <th colspan="5">Quản lý danh mục chính</th>
+                <th colspan="5">Quản lý danh mục</th>
             </tr>
             <tr class="rows">
                 <th class="column">Tên danh mục</th>
@@ -109,19 +98,6 @@
                 </td>
                 <td class="column"><a href="edit-interface.jsp" class="fa fa-pencil-square"></a> <a
                         class="fa fa-trash"></a></td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="panel product-interface">
-        <table class="interface-table">
-            <tr class="rows">
-                <th colspan="5">Quản lý danh mục sản phẩm</th>
-            </tr>
-            <tr class="rows">
-                <th class="column">Tên danh mục</th>
-                <th class="column">Hiển thị</th>
-                <th class="column">Chỉnh sửa</th>
             </tr>
             <tr class="rows">
                 <td class="column name">CÂY ĂN TRÁI</td>
@@ -270,49 +246,7 @@
 
 <!--Script-->
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log('DOMContentLoaded event fired.');
 
-        // Get references to elements
-        let categorySelect = document.getElementById('product-category');
-        let mainInterfaceTable = document.querySelector('.main-interface .interface-table');
-        let productInterfaceTable = document.querySelector('.product-interface .interface-table');
-
-        // Log the elements to the console
-        console.log('categorySelect:', categorySelect);
-        console.log('mainInterfaceTable:', mainInterfaceTable);
-        console.log('productInterfaceTable:', productInterfaceTable);
-
-        // Check if elements exist before accessing their properties
-        if (categorySelect && mainInterfaceTable && productInterfaceTable) {
-            // Set initial display based on the selected category
-            let selectedCategory = categorySelect.value;
-            if (selectedCategory === '0') {
-                mainInterfaceTable.style.display = 'table';
-                productInterfaceTable.style.display = 'none';
-            } else if (selectedCategory === '1') {
-                mainInterfaceTable.style.display = 'none';
-                productInterfaceTable.style.display = 'table';
-            }
-
-            // Add event listener to the filter button
-            document.querySelector('.product-categorize').addEventListener('click', function () {
-                // Get the selected value from the category dropdown
-                let selectedCategory = categorySelect.value;
-
-                // Show/hide tables based on the selected category
-                if (selectedCategory === '0') {
-                    mainInterfaceTable.style.display = 'table';
-                    productInterfaceTable.style.display = 'none';
-                } else if (selectedCategory === '1') {
-                    mainInterfaceTable.style.display = 'none';
-                    productInterfaceTable.style.display = 'table';
-                }
-            });
-        } else {
-            console.error('One or more elements not found.');
-        }
-    });
 </script>
 <!--Script-->
 </body>
