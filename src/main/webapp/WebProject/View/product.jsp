@@ -2,7 +2,8 @@
 <%@ page import="bean.Product" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="bean.ProductDetail" %>
-
+<%@ page import="controller.Cart" %>
+<%@ page isELIgnored="false" %>
 <%--
   Created by IntelliJ IDEA.
   User: trung
@@ -32,6 +33,9 @@
   }
 
 %>
+<% Cart cart  = (Cart) session.getAttribute("cart");
+   if ( cart == null ) cart = new Cart();
+%>
 
 <%@ page isELIgnored="false" %>
 
@@ -45,6 +49,8 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/head-foot.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/product.css">
   <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/fonts/themify-icons/themify-icons.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 
 <body>
@@ -152,8 +158,9 @@
               <div class="price">
                 <p class="price-initial text-gray"><%= product.getPrice() %>đ</p>
               </div>
+              <button id="addToCartButton_<%= product.getProductId()%>" class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
 
-              <button class="btn-add-product back-orange">Thêm vào giỏ hàng</button>
+
             </div>
             <% count++; %>
             <% if (count == 3) { %>
@@ -203,6 +210,29 @@
   <footer>
     <jsp:include page="../footer/footer-level1.jsp"></jsp:include>
   </footer>
+  <script>
+    $(document).ready(function () {
+      <% for (Product product : productList) { %>
+      $("#addToCartButton_<%= product.getProductId()%>").on("click", function (event) {
+        event.preventDefault(); // Ngăn chặn hành động mặc định của nút (chẳng hạn, chuyển hướng)
+        // Gọi hàm thêm sản phẩm vào giỏ hàng
+        var productId = <%= product.getProductId()%>;
+        var quantity = 1; // Số lượng có thể được điều chỉnh tùy ý
+        addToCart(productId, quantity);
+      });
+      <% } %>
+
+      // Hàm thêm sản phẩm vào giỏ hàng
+      function addToCart(productId, quantity) {
+        // Gọi AJAX để gửi yêu cầu đến Servlet hoặc Controller xử lý
+        $.post("<%= request.getContextPath() %>/add-cart", { id: productId }, function (data) {
+          // Xử lý phản hồi từ server (nếu cần)
+          console.log("Sản phẩm đã được thêm vào giỏ hàng");
+          // Cập nhật thông tin giỏ hàng hoặc thực hiện các hành động khác
+        });
+      }
+    });
+  </script>
 </div>
 
 </body>

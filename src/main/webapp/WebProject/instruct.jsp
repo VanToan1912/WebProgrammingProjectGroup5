@@ -77,7 +77,7 @@
                 <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
             </form>
         </div>
-        <a href="purchase.jsp">
+        <a href="View/purchase.jsp">
             <div class="col-head">
                 <button class="cart-button">
                     <i class="ti-shopping-cart">0.000đ</i>

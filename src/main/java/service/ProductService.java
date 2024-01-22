@@ -67,6 +67,15 @@ public class ProductService {
             return Collections.emptyList();
         }
     }
+    public Product getProductByPdID(int pdId) {
+        try {
+            return ProductDAO.getProductByPdID(pdId);
+        } catch (Exception e) {
+            // Xử lý ngoại lệ nếu có
+            System.err.println("Lỗi khi lấy sản phẩm theo pdId từ ProductService: " + e.getMessage());
+            throw e; // hoặc xử lý lỗi tùy theo yêu cầu của bạn
+        }
+    }
 
 
 

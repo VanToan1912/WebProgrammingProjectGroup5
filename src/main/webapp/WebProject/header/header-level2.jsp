@@ -1,3 +1,6 @@
+
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="controller.Cart" %>
 <%--
   Created by IntelliJ IDEA.
   User: trung
@@ -6,6 +9,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    //    HttpSession sessiona = (HttpSession) request.getSession();
+//
+//    Cart cart = (Cart) sessiona.getAttribute("cart");
+//    int numberOfItems = (cart != null) ? cart.getNumberOfItems() : 0;
+    HttpSession sessiona = (HttpSession) request.getSession();
+    int numberOfItems = 0;
+    if (sessiona != null) {
+        Cart cart = (Cart) sessiona.getAttribute("cart");
+        numberOfItems = (cart != null) ? cart.getNumberOfItems() : 0;
+        // Sử dụng numberOfItems trong trang HTML của bạn
+    }
+%>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -74,10 +90,10 @@
                 <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
             </form>
         </div>
-        <a href="purchase.html">
+        <a href="add-cart">
             <div class="col-head">
                 <button class="cart-button">
-                    <i class="ti-shopping-cart">0.000đ</i>
+                    <i class="ti-shopping-cart"><%=numberOfItems%> sản phẩm</i>
                 </button>
             </div>
         </a>
@@ -144,13 +160,14 @@
         </li>
         <li class="nav-text-product nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
         <li class="nav-togethger"><a href="introduce.html" class="nav-togethger">GIỚI THIỆU</a></li>
-        <li class=" nav-togethger"><a href="products">SẢN PHẨM</a></li>
+        <li class=" nav-togethger"><a href="${pageContext.request.contextPath}/products">SẢN PHẨM</a></li>
         <li class="nav-togethger"><a href="instruct.html">HƯỚNG DẪN MUA HÀNG</a></li>
         <li class="nav-togethger"><a href="news.html">TIN TỨC</a></li>
     </ul>
     <!-- END NAV -->
     <div class="clear"></div>
 </header>
+<script href="${pageContext.request.contextPath}/WebProject/asset/js/show-hide-menu.js" ></script>
 
 </body>
 </html>
