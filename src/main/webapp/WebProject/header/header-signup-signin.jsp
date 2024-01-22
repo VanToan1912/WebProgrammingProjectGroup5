@@ -70,8 +70,8 @@
                                 <!-- Display the narrow down icon next to the email -->
                                 <span class="narrow-down-icon"></span>
                                 <div class="dropdown-content">
-                                    <a href="${pageContext.request.contextPath}/user_page.jsp">Profile</a>
-                                    <a href="${pageContext.request.contextPath}/logoutServlet">Logout</a>
+                                    <a href="${pageContext.request.contextPath}/user_page.jsp">Hồ sơ</a>
+                                    <a href="${pageContext.request.contextPath}/logoutServlet">Đăng xuất</a>
                                 </div>
                             </div>
                         </li>
