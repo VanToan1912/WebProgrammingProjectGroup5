@@ -1,3 +1,5 @@
+<%@ page import="bean.General_Info" %>
+<%@ page import="dao.General_InfoDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
@@ -36,37 +38,37 @@
                 <th colspan="2">Nội dung</th>
                 <th>Chỉnh sửa</th>
             </tr>
+            <%General_Info g = General_InfoDAO.getAllInfo();%>
             <tr class="rows">
                 <td>Email</td>
-                <td colspan="2">nls@hcmuaf.edu.vn</td>
+                <td colspan="2"><%=g.getEmail()%></td>
                 <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
             </tr>
             <tr class="rows">
                 <td>Facebook</td>
-                <td colspan="2">https://www.facebook.com/NongLamUniversity</td>
+                <td colspan="2"><%=g.getFacebook()%></td>
                 <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
             </tr>
             <tr class="rows">
                 <td>Số điện thoại</td>
-                <td colspan="2">028-28974560</td>
+                <td colspan="2"><%=g.getPhone_number()%></td>
                 <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
             </tr>
             <tr class="rows">
                 <td>Địa Chỉ</td>
-                <td colspan="2">Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</td>
+                <td colspan="2"><%=g.getAddress()%></td>
                 <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
             </tr>
             <tr class="rows">
                 <td>Giới thiệu</td>
-                <td colspan="2">Điểm đến lý tưởng cho những người yêu đam mê và đang tìm kiếm cây giống nông nghiệp chất
-                    lượng cao. Với mục tiêu hỗ trợ và nâng cao năng suất trong nông nghiệp.
-                </td>
+                <td colspan="2"><%=g.getIntroduction()%>                </td>
                 <td><a href="edit-info.jsp" class="fa fa-pencil-square"></a></td>
             </tr>
             <tr class="rows">
-                <td colspan="3">Ảnh Slideshow</td>
+                <td colspan="3">Ảnh SlideShow</td>
                 <td><a href="edit-slideshow.jsp" class="fa fa-pencil-square"></a></td>
             </tr>
+            <%;%>
         </table>
     </div>
 </div>
