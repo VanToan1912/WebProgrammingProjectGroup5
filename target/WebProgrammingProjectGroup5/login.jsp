@@ -35,7 +35,7 @@
                 </div>
                 <div class="input-remember-checkbox">
                     <label><input type="checkbox">Ghi nhớ tài khoản</label>
-                    <a href="./WebProject/password_reset.jsp">Quên mật khẩu?</a>
+                    <a href="password_reset.jsp">Quên mật khẩu?</a>
                 </div>
                 <button type="submit" class="btn" id="agreeButton">Đồng ý</button>
                 <div class="login-register">

@@ -11,6 +11,16 @@ public class User {
     private String lastName;
     private String gender;
 
+    private String code;
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -18,7 +28,7 @@ public class User {
     public User() {
     }
 
-    public User(String email, String password, String address, int userID, String role, String phone, String firstName, String lastName, String gender) {
+    public User(String email, String password, String address, int userID, String role, String phone, String firstName, String lastName, String gender, String code) {
         this.email = email;
         this.password = password;
         this.address = address;
@@ -28,6 +38,7 @@ public class User {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
+        this.code = code;
     }
 
     @Override
@@ -113,7 +124,4 @@ public class User {
         this.gender = gender;
     }
 
-    public void register(){
-
-    }
 }

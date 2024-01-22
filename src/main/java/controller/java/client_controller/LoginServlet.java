@@ -19,6 +19,12 @@ public class LoginServlet extends HttpServlet {
 
     private static final String SESSION_EMAIL_ATTRIBUTE = "email";
 
+    /////////
+    private static final String SESSION_FIRST_NAME_ATTRIBUTE = "firstName";
+    private static final String SESSION_PHONE_ATTRIBUTE = "phone";
+    private static final String SESSION_GENDER_ATTRIBUTE = "gender";
+    private static final String SESSION_ADDRESS_ATTRIBUTE = "address";
+    ////////
     private Connection connection;
 
     public void init() {
@@ -94,6 +100,8 @@ public class LoginServlet extends HttpServlet {
             int userRole = getUserRole(email);
             HttpSession httpSession = request.getSession();
             httpSession.setAttribute(SESSION_EMAIL_ATTRIBUTE, email);
+
+            setUserDetailsInSession(email, httpSession);
             if (userRole == 1) {
                 // Redirect to admin.jsp if user has role=1
                 response.sendRedirect("AdminSite/index-admin.jsp");
@@ -129,9 +137,46 @@ public class LoginServlet extends HttpServlet {
         }
     }
 
+    /////////
+    private void setUserDetailsInSession(String email, HttpSession session) {
+        try {
+            if (this.connection != null) {
+                String query = "SELECT * FROM users WHERE email = ?";
+               try (PreparedStatement preparedStatement = this.connection.prepareStatement(query, ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE)) {
+                    preparedStatement.setString(1, email);
+                    try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                        if (resultSet.next()) {
+                            // Retrieve user details from the database
+                            String fullName = resultSet.getString("firstname");
+                            String phone = resultSet.getString("phone");
+                            String gender = resultSet.getString("gender");
+                            String address = resultSet.getString("address");
 
-    
+                            // Update user details in the session
+                            session.setAttribute(SESSION_FIRST_NAME_ATTRIBUTE, fullName);
+                            session.setAttribute(SESSION_PHONE_ATTRIBUTE, phone);
+                            session.setAttribute(SESSION_GENDER_ATTRIBUTE, gender);
+                            session.setAttribute(SESSION_ADDRESS_ATTRIBUTE, address);
+
+                            // Modify the ResultSet to update user details in the database
+                            resultSet.updateString("firstname", "new_firstname");
+                            resultSet.updateString("phone", "new_phone");
+                            resultSet.updateString("gender", "new_gender");
+                            resultSet.updateString("address", "new_address");
+                            resultSet.updateRow();  // Commit the changes to the database
+                        }
+                    }
+                }
+            } else {
+                System.err.println("Connection is not initialized.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
+
 
 
 
