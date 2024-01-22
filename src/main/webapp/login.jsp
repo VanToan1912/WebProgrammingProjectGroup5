@@ -87,52 +87,7 @@
 
 </div>
 <footer>
-    <div class="row-footer">
-        <div class="col-footer">
-            <img src="WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="" class="logo-footer" width="75%">
-        </div>
-        <div class="col-footer">
-            <h3>Giới Thiệu</h3>
-            <p>Điểm đến lý tưởng cho những người yêu đam mê và đang tìm kiếm cây giống nông nghiệp chất lượng
-                cao. Với
-                mục tiêu hỗ trợ và nâng cao năng suất trong nông nghiệp.</p>
-        </div>
-        <div class="col-footer">
-            <h3>Văn phòng</h3>
-            <p>Khu phố 6, Phường Linh Trung, TP. Thủ Đức, TP. Hồ Chí Minh</p>
-            <p class="email-id">nls@hcmuaf.edu.vn</p>
-            <p>028-38974560</p>
-        </div>
-        <div class="col-footer">
-            <h3>Thông Tin</h3>
-            <ul>
-                <li><a href="index.jsp">Trang Chủ</a></li>
-                <li><a href="WebProject/introduce.jsp">Giới Thiệu</a></li>
-                <li><a href="WebProject/product.jsp">Sản Phẩm</a></li>
-                <li><a href="instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
-                <li><a href="news.jsp">Tin Tức</a></li>
-
-            </ul>
-        </div>
-        <div class="col-footer">
-            <h3>Nhận Email Thông Báo</h3>
-            <form>
-                <i class="ti ti-email"></i>
-                <label>
-                    <input type="email" placeholder="Nhập email của bạn..." required>
-                </label>
-                <button type="submit"><i class="ti ti-arrow-right"></i></button>
-            </form>
-            <nav class="socials">
-                <a href="#" class="tooltip ti-facebook">
-                    <span class="tooltiptext">Theo Dõi Chúng Tôi</span></a>
-                <a href="#" class="tooltip ti-mobile">
-                    <span class="tooltiptext">0929729120</span></a>
-                <a href="mailto:mail@mail.com" class="tooltip ti-email">
-                    <span class="tooltiptext">Đóng Góp Ý Kiến</span></a>
-            </nav>
-        </div>
-    </div>
+    <jsp:include page="WebProject/footer/footer-level1.jsp"></jsp:include>
 </footer>
 </body>
 </html>

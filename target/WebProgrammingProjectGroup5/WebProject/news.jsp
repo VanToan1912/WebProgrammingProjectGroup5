@@ -10,147 +10,8 @@
 </head>
 
 <body>
-<!--Header Section-->
-<header id="header">
-    <div class="nav-bar top-bar ">
-        <div class="web-name mg-left" style="font-weight: bold"> Trung Tâm Cây Giống Sài Gòn</div>
-        <nav class="list-contact-infor ">
-            <ul>
-                <li>
-                    <div class="contact-infor">
-                        <i class="ti-help"></i>
-                        <p class="tooltip">Hỗ trợ
-                            <span class="tooltiptext">Hỗ trợ</span>
-                        </p>
-
-                    </div>
-                </li>
-                <li>
-                    <a href="#" class="tooltip ti-time"> 8:00 - 17:00
-                        <span class="tooltiptext">8:00 - 17:00</span></a>
-                </li>
-                <li>
-                    <a href="#" class="tooltip ti-mobile"> 0929729120
-                        <span class="tooltiptext">0929729120</span></a>
-                </li>
-                <li>
-                    <a href="#" class="tooltip ti-facebook">
-                        <span class="tooltiptext">Theo dõi chúng tôi</span></a>
-                </li>
-                <li>
-                    <a href="mailto:mail@mail.com" class="tooltip ti-email">
-                        <span class="tooltiptext">Đóng góp ý kiến</span></a>
-                </li>
-                <li>
-                    <a href="../register.jsp">
-                        <button class="sign-up-button">
-                            Đăng Ký
-                        </button>
-                    </a>
-
-                    /
-                    <a href="../login.jsp">
-                        <button class="login-button">
-                            Đăng Nhập
-                        </button>
-                    </a>
-                    <a href="../user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
-                        <span class="tooltiptext">Tài khoản của tôi</span></a>
-                </li>
-
-            </ul>
-        </nav>
-    </div>
-
-    <div class="nav-bar middle-bar row-head ">
-        <div class="col-head mg-left">
-            <a href="index.html"><img src="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
-        </div>
-        <div class="col-head">
-            <form>
-                <label>
-                    <input placeholder="Tìm kiếm...">
-                </label>
-                <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
-            </form>
-        </div>
-        <a href="View/purchase.jsp">
-            <div class="col-head">
-                <button class="cart-button">
-                    <i class="ti-shopping-cart">0.000đ</i>
-                </button>
-            </div>
-        </a>
-    </div>
-    <!-- BEGIN NAV -->
-    <ul id="nav" class="back-dark-green">
-        <li>
-            <a href="#" id="toggle-products">
-                <i class="nav-menu ti-menu"></i>
-                DANH MỤC SẢN PHẨM
-
-            </a>
-            <ul class="sub-nav" style="display: none;">
-                <li><a href="product.html">
-                    <i class="ti-control-play"></i>
-                    CÂY ĂN TRÁI
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    CÂY CÓ HOA
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    CÂY HOA LEO
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    CÂY CÂY CẢNH
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    CÂY LỚN
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    CÂY ĐỘC LẠ - HIẾM
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    CÂY BONSAI
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    CÂY GIỐNG
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    HOA LAN
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    HOA LAN CÂY GIỐNG
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    PHÂN BÓN-VẬT TƯ
-                </a></li>
-                <li><a href="#">
-                    <i class="ti-control-play"></i>
-                    SẢN PHẨM KHUYẾN MÃI
-                </a></li>
-            </ul>
-        </li>
-        <li class=" nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
-        <li class="nav-togethger"><a href="introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
-        <li class=" nav-togethger"><a href="product.html">SẢN PHẨM</a></li>
-        <li class="nav-togethger"><a href="instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
-        <li class=" nav-text-product  nav-togethger"><a href="news.html">TIN TỨC</a></li>
-    </ul>
-
-
-    <!-- END NAV -->
-    <div class="clear"></div>
+<header>
+    <jsp:include page="WebProject/header/header-level1.jsp"></jsp:include>
 </header>
 <!--Body Section-->
 <div class="card">
@@ -207,14 +68,14 @@
         </div>
         <div class="row">
             <div class="col image">
-                <a href="stock-news.html">
+                <a href="stock-news.jsp">
                     <img width="400" height="400" src="asset/img/tin-tuc/stock-image.jpg" alt="photo">
                 </a></div>
             <div class="col content">
                 <p><a>Trên thị trường rất nhiều nơi bán cây mai xanh với giá khách nhau. Bạn hãy là người mua hàng thông
                     thái, tìm hiểu rõ người bán và thông tin sản phẩm. 1- Khi mua hàng nên đề nghị người bán cho xem cây
                     trước qua zalo 2- Khi nhận hàng yêu cầu người bán cho […]</a></p>
-                <button><a href="stock-news.html">Xem Thêm</a></button>
+                <button><a href="stock-news.jsp">Xem Thêm</a></button>
             </div>
         </div>
     </div>
@@ -244,9 +105,9 @@
             <h3>Thông Tin</h3>
             <ul>
                 <li><a href="index.html">Trang Chủ</a></li>
-                <li><a href="introduce.jsp">Giới Thiệu</a></li>
+                <li><a href="../introduce.jsp">Giới Thiệu</a></li>
                 <li><a href="product.html">Sản Phẩm</a></li>
-                <li><a href="instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
+                <li><a href="../instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
                 <li><a href="news.html">Tin Tức</a></li>
 
             </ul>

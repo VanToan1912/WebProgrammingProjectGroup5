@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="WebProject/asset/css/user_info_styles.css">
     <link rel="stylesheet" href="WebProject/asset/fonts/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="WebProject/asset/css/head-foot.css">
-    <title>User Information Form</title>
+    <title>CÂY GIỐNG NÔNG LÂM - HỒ SƠ NGƯỜI DÙNG</title>
 </head>
 <body>
 <header>

@@ -88,7 +88,7 @@
                 <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
             </form>
         </div>
-        <a href="purchase.html">
+        <a href="purchase.jsp">
             <div class="col-head">
                 <button class="cart-button">
                     <i class="ti-shopping-cart">0.000đ</i>
@@ -158,9 +158,9 @@
             </ul>
         </li>
         <li class="nav-text-product nav-togethger"><a href="./index.jsp">TRANG CHỦ</a></li>
-        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
+        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
         <li class=" nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/product.jsp">SẢN PHẨM</a></li>
-        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
+        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
         <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/news.jsp">TIN TỨC</a></li>
     </ul>
     <!-- END NAV -->

@@ -11,14 +11,14 @@
         <url-pattern>/products</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>ADProdController</servlet-name>
-        <servlet-class>controller.ADProdController</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ADProdController</servlet-name>
-        <url-pattern>/ADProducts</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>ADProdController</servlet-name>-->
+<!--        <servlet-class>controller.ADProdController</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>ADProdController</servlet-name>-->
+<!--        <url-pattern>/ADProducts</url-pattern>-->
+<!--    </servlet-mapping>-->
 
     <servlet>
         <servlet-name>jsp</servlet-name>
