@@ -62,67 +62,92 @@
 
     <div class="panel panel-container" style="padding-top: 0">
         <div>
-<%--            <form action="ADProducts" method="post">--%>
-                <table class="product-table">
-                    <tr>
-                        <th>STT</th>
-                        <th>Tên Sản Phẩm</th>
-                        <th>Danh Mục</th>
-                        <th>Số Lượng</th>
-                        <th>Giá</th>
-                        <th>Chỉnh sửa</th>
-                    </tr>
+            <%--            <form action="ADProducts" method="post">--%>
+            <table class="product-table">
+                <tr>
+                    <th>STT</th>
+                    <th>Tên Sản Phẩm</th>
+                    <th>Danh Mục</th>
+                    <th>Số Lượng</th>
+                    <th>Giá</th>
+                    <th>Chỉnh sửa</th>
+                </tr>
 
-<%--                    <c:forEach items="${listP}" var="o">--%>
-<%--                        <tr>--%>
-<%--                            <td>${o.getProductId()}</td>--%>
-<%--                            <td>${o.getProductName()}</td>--%>
-<%--                            <td>${o.getCategories()}</td>--%>
-<%--                            <td>${o.getQuanity()}</td>--%>
-<%--                            <td>${o.getPrice()}</td>--%>
-<%--                            <td>--%>
-<%--                                <a href="edit-product.jsp?id=${o.getProductId()}" class="fa fa-pencil-square"></a>--%>
-<%--                                <a class="fa fa-trash"></a>--%>
-<%--                            </td>--%>
-<%--                        </tr>--%>
-<%--                    </c:forEach>--%>
+                <%--                    <c:forEach items="${listP}" var="o">--%>
+                <%--                        <tr>--%>
+                <%--                            <td>${o.getProductId()}</td>--%>
+                <%--                            <td>${o.getProductName()}</td>--%>
+                <%--                            <td>${o.getCategories()}</td>--%>
+                <%--                            <td>${o.getQuanity()}</td>--%>
+                <%--                            <td>${o.getPrice()}</td>--%>
+                <%--                            <td>--%>
+                <%--                                <a href="edit-product.jsp?id=${o.getProductId()}" class="fa fa-pencil-square"></a>--%>
+                <%--                                <a class="fa fa-trash"></a>--%>
+                <%--                            </td>--%>
+                <%--                        </tr>--%>
+                <%--                    </c:forEach>--%>
 
-                    <% for (Product p : ProductDAO.getAllProduct()) { %>
-                    <tr>
-                        <td><%= p.getProductId() %>
-                        </td>
-                        <td><%= p.getProductName() %>
-                        </td>
-                        <td><%= p.getCategories() %>
-                        </td>
-                        <td><%= p.getQuanity() %>
-                        </td>
-                        <td><%= p.getPrice() %>
-                        </td>
-                        <td>
-                            <a href="edit-product.jsp" class="fa fa-pencil-square"></a>
-                            <a class="fa fa-trash"></a>
-                        </td>
-                    </tr>
-                    <% } %>
+                <% for (Product p : ProductDAO.getAllProduct()) { %>
+                <tr>
+                    <td><%= p.getProductId() %>
+                    </td>
+                    <td><%= p.getProductName() %>
+                    </td>
+                    <td><%= p.getCategories() %>
+                    </td>
+                    <td><%= p.getQuanity() %>
+                    </td>
+                    <td><%= p.getPrice() %>
+                    </td>
+                    <td>
+                        <a href="edit-product.jsp?productId=<%= p.getProductId() %>" class="fa fa-pencil-square"></a>
+                        <a href="javascript:void(0);" onclick="deleteProduct(<%= p.getProductId() %>)"
+                           class="fa fa-trash"></a></td>
+                </tr>
+                <% } %>
 
-                    <%--                <tr>--%>
-                    <%--                    <td>CÂY CHÀ LÀ</td>--%>
-                    <%--                    <td>CÂY ĂN TRÁI, CÂY GIỐNG</td>--%>
-                    <%--                    <td>64</td>--%>
-                    <%--                    <td>0%</td>--%>
-                    <%--                    <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a--%>
-                    <%--                            class="fa fa-trash"></a></td>--%>
-                    <%--                </tr>--%>
-                </table>
-<%--            </form>--%>
+                <%--                <tr>--%>
+                <%--                    <td>CÂY CHÀ LÀ</td>--%>
+                <%--                    <td>CÂY ĂN TRÁI, CÂY GIỐNG</td>--%>
+                <%--                    <td>64</td>--%>
+                <%--                    <td>0%</td>--%>
+                <%--                    <td class="column"><a href="edit-product.jsp" class="fa fa-pencil-square"></a> <a--%>
+                <%--                            class="fa fa-trash"></a></td>--%>
+                <%--                </tr>--%>
+            </table>
+            <%--            </form>--%>
         </div>
     </div>
 </div>
 <!--Content-->
 
 <!--Script-->
+<script>
+    // Function to delete the product asynchronously and refresh the page
+    function deleteProduct(productId) {
+        if (confirm('Are you sure you want to delete this product?')) {
+            // Use AJAX to send a request to the DeleteProductServlet
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', '/DeleteProductServlet-servlet', true);
+            xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
+            // Set up the callback function to handle the response
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    // Reload the page if the deletion was successful
+                    location.reload();
+                } else {
+                    // Handle the case when the deletion failed (optional)
+                    alert('Failed to delete the product. Please try again.');
+                }
+            };
+
+            // Send the productId as a parameter in the request
+            var params = 'productId=' + encodeURIComponent(productId);
+            xhr.send(params);
+        }
+    }
+</script>
 <!--Script-->
 </body>
 </html>

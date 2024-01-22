@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="asset/fonts/themify-icons/themify-icons.css">
     <!-- <link rel="stylesheet" href="./asset/css/styles.css"> -->
     <link rel="stylesheet" href="asset/css/head-foot.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/logged-in-header-style.css">
     <title>Hướng dẫn</title>
 </head>
 <body>
@@ -45,29 +47,45 @@
                         <span class="tooltiptext">Đóng góp ý kiến</span></a>
                 </li>
                 <li>
-                    <a href="../register.jsp">
-                        <button class="sign-up-button">
-                            Đăng Ký
-                        </button>
+                    <c:choose>
+                    <c:when test="${empty sessionScope.email}">
+                    <!-- User is not logged in -->
+                <li>
+                    <a href="${pageContext.request.contextPath}/register.jsp">
+                        <button class="sign-up-button">Đăng Ký</button>
                     </a>
-
                     /
-                    <a href="../login.jsp">
-                        <button class="login-button">
-                            Đăng Nhập
-                        </button>
+                    <a href="${pageContext.request.contextPath}/login.jsp">
+                        <button class="login-button">Đăng Nhập</button>
                     </a>
-                    <a href="../user_page.jsp" class="tooltip ti-user" id="userIcon" style="display: none;">
-                        <span class="tooltiptext">Tài khoản của tôi</span></a>
+                        <%--              /--%>
+                        <%--              <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp">Admin</a>--%>
                 </li>
-
+                </c:when>
+                <c:otherwise>
+                    <!-- User is logged in -->
+                    <li>
+                        <!-- Display the user's email with dropdown menu -->
+                        <div class="dropdown">
+                            <span>Welcome, ${sessionScope.email}!</span>
+                            <!-- Display the narrow down icon next to the email -->
+                            <span class="narrow-down-icon"></span>
+                            <div class="dropdown-content">
+                                <a href="${pageContext.request.contextPath}/user_page.jsp">Profile</a>
+                                <a href="logoutServlet">Logout</a>
+                            </div>
+                        </div>
+                    </li>
+                </c:otherwise>
+                </c:choose>
             </ul>
         </nav>
     </div>
 
+
     <div class="nav-bar middle-bar row-head ">
         <div class="col-head mg-left">
-            <a href="index.html"><img src="asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
+            <a href=""><img src="${pageContext.request.contextPath}/WebProject/asset/img/header/LOGO-CAY-GIONG-SAI-GON.jpg" alt="logo" class="logo "></a>
         </div>
         <div class="col-head">
             <form>
@@ -144,12 +162,14 @@
                 </a></li>
             </ul>
         </li>
-        <li class=" nav-togethger"><a href="index.html">TRANG CHỦ</a></li>
-        <li class="  nav-togethger"><a href="introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
-        <li class=" nav-togethger"><a href="product.html">SẢN PHẨM</a></li>
-        <li class="nav-text-product nav-togethger"><a href="instruct.html">HƯỚNG DẪN MUA HÀNG</a></li>
-        <li class="nav-togethger"><a href="news.html">TIN TỨC</a></li>
+        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/index.jsp">TRANG CHỦ</a></li>
+        <li class=" nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/introduce.jsp" class="nav-togethger">GIỚI THIỆU</a></li>
+        <li class=" nav-togethger"><a href="products">SẢN PHẨM</a></li>
+        <li class="nav-text-product nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/instruct.jsp">HƯỚNG DẪN MUA HÀNG</a></li>
+        <li class="nav-togethger"><a href="${pageContext.request.contextPath}/WebProject/news.jsp">TIN TỨC</a></li>
     </ul>
+
+
     <!-- END NAV -->
     <div class="clear"></div>
 </header>
@@ -229,7 +249,7 @@
                 <li><a href="introduce.jsp">Giới Thiệu</a></li>
                 <li><a href="product.html">Sản Phẩm</a></li>
                 <li><a href="instruct.html">Hướng Dẫn Mua Hàng</a></li>
-                <li><a href="news.html">Tin Tức</a></li>
+                <li><a href="news.jsp">Tin Tức</a></li>
 
             </ul>
         </div>

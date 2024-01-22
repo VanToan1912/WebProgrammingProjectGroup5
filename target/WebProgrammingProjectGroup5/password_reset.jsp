@@ -58,7 +58,7 @@
                 <li><a href="WebProject/introduce.jsp">Giới Thiệu</a></li>
                 <li><a href="WebProject/product.html">Sản Phẩm</a></li>
                 <li><a href="WebProject/instruct.jsp">Hướng Dẫn Mua Hàng</a></li>
-                <li><a href="WebProject/news.html">Tin Tức</a></li>
+                <li><a href="WebProject/news.jsp">Tin Tức</a></li>
 
             </ul>
         </div>
