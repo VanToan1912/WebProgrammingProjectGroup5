@@ -21,7 +21,7 @@
 
     <%--    header--%>
     <header>
-        <jsp:include page="WebProject/header/header-level2.jsp"></jsp:include>
+        <jsp:include page="WebProject/header/header-level1.jsp"></jsp:include>
     </header>
     <%--    end header--%>
     <!-- BEGIN SLIDER -->

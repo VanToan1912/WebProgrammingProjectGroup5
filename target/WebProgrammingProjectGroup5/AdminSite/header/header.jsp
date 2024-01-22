@@ -36,26 +36,31 @@
     <ul class="nav menu">
         <li>
             <a href="${pageContext.request.contextPath}/index.jsp">
-                <em class="fa fa-tree"></em> Cây Giống Sài Gòn</a>
+                <em class="fa fa-tree"></em> Cây Giống Sài Gòn
+            </a>
         </li>
         <li>
             <a href="${pageContext.request.contextPath}/AdminSite/index-admin.jsp">
-                <em class="fa fa-dashboard"></em> Thông Tin</a>
+                <em class="fa fa-dashboard"></em> Thông Tin
+            </a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/AdminSite/info/manage-info.jsp"><em
-                    class="fa fa-pencil-square-o"></em> Quản lý thông tin chung</a>
+            <a href="${pageContext.request.contextPath}/AdminSite/info/manage-info.jsp">
+                <em class="fa fa-pencil-square-o"></em> Quản lý thông tin chung
+            </a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/AdminSite/comment/manage-comment.jsp"><em
-                    class="fa fa-comment"></em> Quản lý đánh giá</a>
+            <a href="${pageContext.request.contextPath}/AdminSite/comment/manage-comment.jsp">
+                <em class="fa fa-comment"></em> Quản lý đánh giá
+            </a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/AdminSite/interface/manage-interface.jsp"><em
-                    class="fa fa-toggle-off"></em> Quản lý giao diện</a>
+            <a href="${pageContext.request.contextPath}/AdminSite/interface/manage-interface.jsp">
+                <em class="fa fa-toggle-off"></em> Quản lý giao diện
+            </a>
         </li>
         <li>
-            <a class="" href="${pageContext.request.contextPath}/ADProducts">
+            <a class="" href="${pageContext.request.contextPath}/AdminSite/product/manage-product.jsp">
                 <em class="fa fa-shopping-cart"> </em> Quản lý sản phẩm
             </a>
         </li>
@@ -75,8 +80,9 @@
             </a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/#"><em class="fa fa-power-off"></em> Đăng
-                xuất</a>
+            <a href="${pageContext.request.contextPath}/#"><em class="fa fa-power-off"></em>
+                Đăng xuất
+            </a>
         </li>
     </ul>
 </div>

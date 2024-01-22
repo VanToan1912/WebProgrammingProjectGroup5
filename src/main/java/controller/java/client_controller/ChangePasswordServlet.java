@@ -76,7 +76,7 @@ public class ChangePasswordServlet extends HttpServlet {
     // Example method to fetch the stored plaintext password from the database
     private String getStoredPasswordFromDatabase(String email) {
         // Database connection parameters
-        String url = "jdbc:mysql://localhost:3306/test";
+        String url = "jdbc:mysql://localhost:3306/caygiongnonglam";
         String username = "root";
         String password = "123456";
 

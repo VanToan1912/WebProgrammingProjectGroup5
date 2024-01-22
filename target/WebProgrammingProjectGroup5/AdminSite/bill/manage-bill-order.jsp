@@ -290,8 +290,6 @@
                         <textarea rows="1"></textarea>
                     </label></td>
                 </tr>
-
-
             </table>
             <p><b>Tổng cộng:</b>
             </p>
@@ -314,8 +312,7 @@
             <p>Thủ Đức, ngày
                 <label>
                     <textarea rows="1"></textarea>
-                </label>
-                , tháng
+                </label>, tháng
                 <label>
                     <textarea rows="1"></textarea>
                 </label>, năm
