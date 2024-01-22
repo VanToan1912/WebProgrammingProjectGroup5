@@ -7,6 +7,22 @@
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page import="javax.servlet.http.HttpSession" %>
+<%@ page import="controller.Cart" %>
+
+<%
+
+//  HttpSession sessiona = (HttpSession) request.getSession();
+//  HttpSession sessiona = (HttpSession) request.getSession(true);
+  jakarta.servlet.http.HttpSession sessiona = request.getSession(true);
+
+  int numberOfItems = 0;
+  if (sessiona != null) {
+    Cart cart = (Cart) sessiona.getAttribute("cart");
+    numberOfItems = (cart != null) ? cart.getNumberOfItems() : 0;
+
+  }
+%>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -95,10 +111,10 @@
         <button type="submit" class="search-button"><i class="ti ti-search"></i></button>
       </form>
     </div>
-    <a href="purchase.html">
+    <a href="add-cart">
       <div class="col-head">
         <button class="cart-button">
-          <i class="ti-shopping-cart">0.000đ</i>
+          <i class="ti-shopping-cart"><%=numberOfItems%> sản phẩm</i>
         </button>
       </div>
     </a>

@@ -14,6 +14,14 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/css/purchase.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/WebProject/asset/fonts/themify-icons/themify-icons.css">
 </head>
+<STYLE>
+ .sub-nav{
+     display: none;
+
+ }
+
+</STYLE>
+
 
 <body>
 <header>
