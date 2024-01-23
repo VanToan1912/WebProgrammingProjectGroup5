@@ -2,6 +2,7 @@ package dao;
 
 import db.JDBIConnector;
 import bean.Product;
+import org.jdbi.v3.core.JdbiException;
 
 import java.util.*;
 
@@ -299,7 +300,70 @@ public class ProductDAO {
         }
     }
 
+    public static boolean updateProduct(Product product) {
+        try {
+            // Your update SQL statement here
+            String updateSql = "UPDATE products SET productName = :productName, " +
+                    "categories = :categories, quanity = :quanity, price = :price WHERE productId = :productId";
 
+            int updatedRows = JDBIConnector.me().withHandle(handle ->
+                    handle.createUpdate(updateSql)
+                            .bind("productId", product.getProductId())
+                            .bind("productName", product.getProductName())
+                            .bind("categories", product.getCategories())
+                            .bind("quanity", product.getQuanity())
+                            .bind("price", product.getPrice())
+                            .execute()
+            );
+
+            return updatedRows > 0;
+        } catch (Exception e) {
+            System.err.println("Error updating product: " + e.getMessage());
+            throw e;
+        }
+    }
+
+
+    public static boolean deleteProduct(int productId) {
+        String deleteProductQuery = "DELETE FROM products WHERE productId = :productId";
+
+        try {
+            int affectedRows = JDBIConnector.me().withHandle(handle ->
+                    handle.createUpdate(deleteProductQuery)
+                            .bind("productId", productId)
+                            .execute()
+            );
+
+            // Check if any rows were affected to determine if the deletion was successful
+            return affectedRows > 0;
+        } catch (JdbiException e) {
+            // Handle the exception as needed
+            System.err.println("Error deleting product: " + e.getMessage());
+            throw e; // or handle the error according to your requirements
+        }
+    }
+
+    public static boolean addProduct(Product product) {
+        try {
+            // Your insert SQL statement here
+            String insertSql = "INSERT INTO products (productName, categories, quanity, price) " +
+                    "VALUES (:productName, :categories, :quanity, :price)";
+
+            int insertedRows = JDBIConnector.me().withHandle(handle ->
+                    handle.createUpdate(insertSql)
+                            .bind("productName", product.getProductName())
+                            .bind("categories", product.getCategories())
+                            .bind("quanity", product.getQuanity())
+                            .bind("price", product.getPrice())
+                            .execute()
+            );
+
+            return insertedRows > 0;
+        } catch (Exception e) {
+            System.err.println("Error adding product: " + e.getMessage());
+            throw e;
+        }
+    }
 
 
 

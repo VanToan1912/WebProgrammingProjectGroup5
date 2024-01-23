@@ -55,11 +55,6 @@
             </a>
         </li>
         <li>
-            <a href="${pageContext.request.contextPath}/AdminSite/interface/manage-interface.jsp">
-                <em class="fa fa-toggle-off"></em> Quản lý giao diện
-            </a>
-        </li>
-        <li>
             <a class="" href="${pageContext.request.contextPath}/AdminSite/product/manage-product.jsp">
                 <em class="fa fa-shopping-cart"> </em> Quản lý sản phẩm
             </a>

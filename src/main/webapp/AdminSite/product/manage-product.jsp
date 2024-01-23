@@ -128,7 +128,7 @@
         if (confirm('Are you sure you want to delete this product?')) {
             // Use AJAX to send a request to the DeleteProductServlet
             var xhr = new XMLHttpRequest();
-            xhr.open('POST', '/DeleteProductServlet-servlet', true);
+            xhr.open('POST', '/AdminSite/product/DeleteProduct-servlet', true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
             // Set up the callback function to handle the response
@@ -147,6 +147,19 @@
             xhr.send(params);
         }
     }
+
+    function checkAddSuccess() {
+        var urlParams = new URLSearchParams(window.location.search);
+        var addSuccess = urlParams.get('addSuccess');
+
+        if (addSuccess === 'true') {
+            alert('Product added successfully!');
+        } else if (addSuccess === 'false') {
+            alert('Failed to add the product. Please try again.');
+        }
+    }
+
+    window.onload = checkAddSuccess;
 </script>
 <!--Script-->
 </body>

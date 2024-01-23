@@ -29,58 +29,45 @@
         </div>
     </div>
 
-    <div class="panel product">
-        <div class="input-component">
-            <label for="heading"></label>
-            <input type="text" id="heading" required="required" placeholder="Tên sản phẩm">
-        </div>
-    </div>
+    <form action="${pageContext.request.contextPath}/AdminSite/product/AddProduct" method="post"
+          enctype="multipart/form-data">
+        <label for="productName">Tên sản phẩm: </label>
+        <input type="text" id="productName" name="productName" required="required"
+               placeholder="Tên sản phẩm"> <br>
+        <label for="quanity">Số lượng: </label>
+        <input type="number" id="quanity" name="quanity" required="required"
+               placeholder="Số lượng"> <br>
+        <label for="price">Giá: </label>
+        <input type="number" name="price" id="price" required="required"
+               placeholder="Giá"> <br>
 
-    <div class="panel product">
-        <div class="input-component">
-            <label for="stock"></label>
-            <input type="text" id="stock" required="required" placeholder="Số lượng">
-        </div>
-    </div>
 
-    <div class="panel product">
-        <div class="input-component">
-            <label for="product-price"></label>
-            <textarea name="comment" id="product-price" rows="3" tabindex="4"
-                      placeholder="Giá"></textarea>
+        <!-- Uncomment the sections below if you want to include them -->
+        <!--
+        <div class="panel product">
+            <label for="short-description">Mô tả ngắn:</label>
+            <textarea name="shortDescription" id="short-description" rows="7" tabindex="4" required="required" placeholder="Mô tả ngắn gọn"></textarea>
         </div>
-    </div>
 
-    <div class="panel product">
-        <div class="input-component">
-            <label for="short-description" class="required"></label>
-            <textarea name="comment" id="short-description" rows="7" tabindex="4" required="required"
-                      placeholder="Mô tả ngắn gọn"></textarea>
+        <div class="panel product">
+            <label for="description">Mô tả chi tiết:</label>
+            <textarea name="description" id="description" rows="20" tabindex="4" required="required" placeholder="Mô tả chi tiết"></textarea>
         </div>
-    </div>
-
-    <div class="panel product">
-        <div class="input-component">
-            <label for="description" class="required"></label>
-            <textarea name="comment" id="description" rows="20" tabindex="4" required="required"
-                      placeholder="Mô tả chi tiết"></textarea>
-        </div>
-    </div>
-
-    <div class="panel product">
-        <div class="input-component">
-            <label for="pictures" class="required"></label>
-            <textarea name="comment" id="pictures" rows="10" tabindex="4" required="required"
-                      placeholder="Thêm ảnh"></textarea>
-            <input type="file" id="image-upload" accept="image/*" style="display: none;">
+        <--
+        <div class="panel product">
+            <label for="pictures">Hình ảnh:</label>
+            <textarea name="pictures" id="pictures" rows="10" tabindex="4" required="required" placeholder="Thêm ảnh"></textarea>
+            <input type="file" id="image-upload" name="imageUpload" accept="image/*" style="display: none;">
             <label for="image-upload" class="upload-button"><i class="fa fa-picture-o"></i></label>
         </div>
-    </div>
+        -->
 
-    <div class="panel product">
-        <button type="submit" class="post"><i class="fa fa-plus"> Thêm sản phẩm</i></button>
-    </div>
+        <div class="panel product">
+            <button type="submit" class="post"><i class="fa fa-plus"> Thêm sản phẩm</i></button>
+        </div>
+    </form>
 </div>
+
 <!--Content-->
 
 <!--Script-->
