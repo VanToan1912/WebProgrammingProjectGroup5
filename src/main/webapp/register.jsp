@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +20,20 @@
 <div id="main-content">
     <div class="container" id="container">
         <div class="sign-up-form">
+            <script>
+                // Display success message if it exists
+                var successMessage = "<c:out value='${requestScope.success}'/>";
+                if (successMessage) {
+                    alert(successMessage);
+                    window.location.replace("login.jsp"); // Redirect to the login page
+                }
 
+                // Display error message if it exists
+                var errorMessage = "<c:out value='${requestScope.error}'/>";
+                if (errorMessage) {
+                    alert(errorMessage);
+                }
+            </script>
             <script>
                 function validateForm() {
                     var email = document.getElementById("email").value;
