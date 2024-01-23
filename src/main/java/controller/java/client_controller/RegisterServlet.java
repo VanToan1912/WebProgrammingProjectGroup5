@@ -1,5 +1,6 @@
 package controller.java.client_controller;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import org.mindrot.jbcrypt.BCrypt;
@@ -26,6 +27,7 @@ public class RegisterServlet extends HttpServlet {
 
         // Step 2: Check for duplicate email
         if (isEmailDuplicate(email)) {
+            request.setAttribute("error", "Email đã đăng ký hoặc không đúng. Vui lòng nhập email khác!");
             out.println("Email đã đăng ký hoặc không đúng. Vui lòng nhập email khác.");
             return;
         }
@@ -37,15 +39,20 @@ public class RegisterServlet extends HttpServlet {
 
             // Step 5: Store user in the database (or perform other registration logic)
             if (registerUser(email, password)) {
-                out.println("Đăng nhập thành công");
+                request.setAttribute("success", "Đăng ký thành công!");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+                dispatcher.forward(request, response);
+
             }
             else {
-                out.println("Đăng ký thất bại. Vui lòng thử lại. ");
+                request.setAttribute("error", "Đăng ký thất bại. Vui lòng thử lại.");
             }
 
         } else {
-            out.println("Invalid password format or passwords do not match.");
+            request.setAttribute("error", "Định dạng không đúng! Vui lòng thử lại!");
         }
+        RequestDispatcher dispatcher = request.getRequestDispatcher("register.jsp");
+        dispatcher.forward(request, response);
     }
 
     private boolean isEmailDuplicate(String email) {
