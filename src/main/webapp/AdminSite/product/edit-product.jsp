@@ -19,7 +19,7 @@
     </div>
 
     <!-- Form for editing product -->
-    <form action="UpdateProductServlet" method="post">
+    <form action="${pageContext.request.contextPath}/AdminSite/product/UpdateProduct" method="post">
         <!-- Hidden input field for productId -->
         <input type="hidden" name="productId" value="<%= request.getParameter("productId") %>">
         <% Product product;

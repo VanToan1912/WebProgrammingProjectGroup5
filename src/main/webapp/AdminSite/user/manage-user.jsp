@@ -1,3 +1,5 @@
+<%@ page import="model.User" %>
+<%@ page import="dao.UserDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="">
@@ -30,130 +32,36 @@
         </div>
     </div>
 
-    <div class="panel panel-container" style="padding-top: 0">
-        <div class="category">
-            <label for="product-category"></label>
-            <select id="product-category">
-                <option value="0">Quản Trị Viên/Quản Lí</option>
-                <option value="1">Người Dùng</option>
-            </select>
-            <button type="submit" class="product-categorize">Lọc</button>
-            <a href="add-user.jsp" class="product-add" style="float: right"><i class="fa fa-plus"></i> Thêm người
-                dùng</a>
-        </div>
-    </div>
 
-    <div class="panel admin-role" style="padding-top: 0">
+    <div class="panel" style="padding-top: 0">
         <table class="interface-table">
             <tr class="rows">
-                <th colspan="3">Quản trị viên/Quản Lí</th>
-            </tr>
-            <tr class="rows">
+                <th class="column">Tài khoản</th>
+                <th class="column">Vai trò</th>
                 <th class="column">Tên người dùng</th>
-                <th class="column">Đặt lại mật khẩu</th>
+                <th class="column">Giới tính</th>
+                <th class="column">Địa chỉ</th>
+                <th class="column">Số điện thoại</th>
                 <th class="column">Chỉnh sửa</th>
             </tr>
-            <tr class="rows" id="row-1">
-                <td class="column">
-                    group5@st.hcmuaf.edu.vn
-                </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
-                </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-1')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-2">
-                <td class="column">
-                    21130572@st.hcmuaf.edu.vn
-                </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
-                </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-2')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-3">
-                <td class="column">
-                    21130335@st.hcmuaf.edu.vn
-                </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
-                </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-3')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-4">
-                <td class="column">
-                    21130584@st.hcmuaf.edu.vn
-                </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
-                </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-4')"></a>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="panel user-role" style="padding-top: 0">
-        <table class="interface-table">
+            <% for (User u : UserDAO.getAllUser()) { %>
             <tr class="rows">
-                <th colspan="3">Người dùng</th>
-            </tr>
-            <tr class="rows">
-                <th class="column">Tên người dùng</th>
-                <th class="column">Đặt lại mật khẩu</th>
-                <th class="column">Chỉnh sửa</th>
-            </tr>
-            <tr class="rows" id="row-01">
-                <td class="column">
-                    group5@gmail.com
+                <td><%=u.getEmail()%>
                 </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
+                <td><%=u.getRole()%>
                 </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-01')"></a>
+                <td><%=u.getFirstName() + u.getLastName()%>
+                </td>
+                <td><%=u.getGender()%>
+                </td>
+                <td><%=u.getAddress()%>
+                </td>
+                <td><%=u.getPhone()%>
+                </td>
+                <td><a class="fa fa-trash" onclick="deleteRow('row-1')"></a>
                 </td>
             </tr>
-            <tr class="rows" id="row-02">
-                <td class="column">
-                    jun@gmail.com
-                </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
-                </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-02')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-03">
-                <td class="column">
-                    eliza@gmail.com
-                </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
-                </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-03')"></a>
-                </td>
-            </tr>
-            <tr class="rows" id="row-04">
-                <td class="column">
-                    chunlee@gmail.com
-                </td>
-                <td class="column">
-                    <a class="fa fa-repeat"></a>
-                </td>
-                <td class="column">
-                    <a class="fa fa-trash" onclick="deleteRow('row-04')"></a>
-                </td>
-            </tr>
+            <% } %>
         </table>
     </div>
 </div>
