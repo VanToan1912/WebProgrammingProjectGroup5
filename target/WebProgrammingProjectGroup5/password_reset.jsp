@@ -26,7 +26,8 @@
         </div>
         <div class="h" ><p>Gửi email khôi phục mật khẩu hoặc quay lại đăng nhập</p></div>
         <div class="button-container">
-          <button type="submit" class="btn">Gửi đến Email</button>
+
+          <button type="submit" class="btn" ><a href="reset_passord.jsp"> Gửi đến Email </a> <button>
           <button type="button" class="btn" onclick="window.location.href='login.jsp'">Quay lại đăng nhập</button>
         </div>
       </form>
